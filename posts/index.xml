@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Mia&#39;s Blog Posts</title>
+    <link>https://Mia-zhao.github.io/blog/posts/</link>
+    <description>Recent content in Posts on Mia&#39;s Blog Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Sun, 02 Aug 2020 22:08:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://Mia-zhao.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML入门笔记1</title>
+      <link>https://Mia-zhao.github.io/blog/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
+      <pubDate>Sun, 02 Aug 2020 22:08:23 +0800</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
+      <description>这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。
+HTML的起源 HTML的发明者是Tim Berners-Lee。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。
+HTML的起手 HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型：
+&amp;lt;!DOCTYPE html&amp;gt; 虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到&amp;lt;!DOCTYPE html&amp;gt;应该被使用。
+另外，html标签的lang属性被用来设置文本语言。例如，
+&amp;lt;html lang=&amp;quot;en-US&amp;quot;&amp;gt; &amp;lt;!-- 表示英文(美国) --&amp;gt; &amp;lt;html lang=&amp;quot;zh-CN&amp;quot;&amp;gt; &amp;lt;!-- 表示中文(中国) --&amp;gt; 此外，字符编码方式是必须的：
+&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; 值得注意的是编码方式应在文本head块以内，并且要尽可能靠前。 最后，为了让内容与移动设备更兼容，需加上meta标签的viewport：
+&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; 在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下!，出现Emmet Abbreviation后回车： 以下是自动生成的HTML的起手：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 常用章节标签    标签 含义     h1~h6 标题，h1~h6有不同默认字体格式   section 章节   p 段落   header 头部   footer 脚部   main 主要内容   aside 次要内容   div 划分    以下是一个例子： 全局属性  class  用于给标签定义class 一个标签可以有多个class 多个标签可以是同一个class *，.</description>
+    </item>
+    
+  </channel>
+</rss>
