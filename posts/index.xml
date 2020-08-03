@@ -6,10 +6,24 @@
     <description>Recent content in Posts on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 02 Aug 2020 22:08:23 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 13:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML常用标签</title>
+      <link>https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 03 Aug 2020 13:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <description>这篇博文主要为了个人学习目的。此篇总结了HTML常用标签:
+ a img table form  注意：应用网址浏览方式打开html文件，例如：利用工具http-server,parcel,etc.
+1. &amp;lt;a&amp;gt;标签 作用 又称anchor (锚)，用于创建超链接。按功能分，可以通向：
+ 同页面的其他元素 其他网页 文件 JavaScript 电子邮件/电话  以上功能通过元素的href属性达成，例如：
+&amp;lt;!-- example 1 链接通向同页面的id=&amp;quot;hey&amp;quot;的p元素 --&amp;gt;&amp;lt;p id=&amp;quot;hey&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;#hey&amp;quot;&amp;gt;example 1&amp;lt;/a&amp;gt;&amp;lt;!-- example 2 链接通向无协议的google.com, https://google.com或者http://google.com也是合法值--&amp;gt;&amp;lt;a href=&amp;quot;//google.com&amp;quot;&amp;gt;example 2&amp;lt;/a&amp;gt;&amp;lt;!-- example 3 链接通向文件路径, &amp;quot;subdir1/subdir2&amp;quot;等效，也可以是&amp;quot;index.html&amp;quot;, &amp;quot;./index.html&amp;quot;等效 --&amp;gt;&amp;lt;a href=&amp;quot;/subdir1/subdir2&amp;quot;&amp;gt;example 3&amp;lt;/a&amp;gt;&amp;lt;!-- example 4 链接运行javascript代码&amp;lt;code&amp;gt;部分，如果是空则什么都不做 (不需要刷新的时候用) --&amp;gt;&amp;lt;a href=&amp;quot;javascript:&amp;lt;code&amp;gt;;&amp;quot;&amp;gt;example 4&amp;lt;/a&amp;gt;&amp;lt;!-- example 5 链接发送邮件，&amp;quot;tel:110&amp;quot;则拨电话 --&amp;gt;&amp;lt;a href=&amp;quot;mailto:abc@example.com&amp;quot;&amp;gt;example 5&amp;lt;/a&amp;gt;target属性 默认值是_self, 表明链接在&amp;lt;a&amp;gt;所在窗口打开。其他值包括：
+ _blank: 在新窗口打开，在新tab或是window打开取决于浏览器设置 _parent: 在&amp;lt;a&amp;gt;的父级元素环境打开，若无父级元素，效果等同_self _top: 在&amp;lt;a&amp;gt;的最高祖先级元素环境打开，若无，则等同_self &amp;quot;some_value&amp;quot;: 任意String。若&amp;quot;some_value&amp;quot;窗口已存在，则在其窗口打开；否则新建一个&amp;quot;some_value&amp;quot;窗口并在此打开链接  download属性 指示浏览器下载，可以有值或者没有值：</description>
+    </item>
     
     <item>
       <title>HTML入门笔记1</title>
