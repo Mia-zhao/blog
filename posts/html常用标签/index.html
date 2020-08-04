@@ -11,19 +11,19 @@
   <link rel="icon" type="image/x-icon" href="/blog/">
   <link rel="apple-touch-icon" href="/blog/">
   <link rel="canonical" href="https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/">
-<link rel="preload" as="style" href="/blog/bundle.css?v=1596461680" media="all">
-<link rel="stylesheet" href="/blog/bundle.css?v=1596461680" media="all">
+<link rel="preload" as="style" href="/blog/bundle.css?v=1596549822" media="all">
+<link rel="stylesheet" href="/blog/bundle.css?v=1596549822" media="all">
 <style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}</style>
 
-<link rel="preload" as="image" href="/blog/image/TitleImage.jpg">
+<link rel="preload" as="image" href="/blog/images/Cover1.jpg">
 
 <title>HTML常用标签 : Mia&#39;s Blog Posts</title>
 
 <meta property="og:title" content="HTML常用标签">
 <meta property="og:site_name" content="Mia&#39;s Blog Posts">
 <meta property="og:url" content="https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/">
-<link rel="image_src" href="https://Mia-zhao.github.io/blog/image/TitleImage.jpg">
-<meta property="og:image" content="https://Mia-zhao.github.io/blog/image/TitleImage.jpg">
+<link rel="image_src" href="https://Mia-zhao.github.io/blog/images/Cover1.jpg">
+<meta property="og:image" content="https://Mia-zhao.github.io/blog/images/Cover1.jpg">
 <meta property="og:image:width" content="">
 <meta property="og:image:height" content="">
 <meta property="og:type" content="article">
@@ -43,7 +43,7 @@
   "headline": "HTML常用标签",
   "alternativeHeadline": "这篇博文主要为了个人学习目的。此篇总结了HTML常用标签: a img table form 注意：应用网址浏览方式打开html文件，例如：利用工具http-server,parcel,etc. 1. \u0026lt;a\u0026gt;标签 作用 又称anchor (锚)，用于创建超链接。按功能分，可以通向： 同页面的其他元素 其他网页 文件 JavaScript 电子邮件/电话 以上功能通过元素的href属性达成，例如： \u0026lt;!\u0026ndash; example 1 链接通向同页面的id=\u0026quot;hey\u0026quot;的p元素 \u0026ndash;\u0026gt;\r\u0026lt;p id=\u0026quot;hey\u0026quot;\u0026gt;\r\u0026lt;a href=\u0026quot;#hey\u0026quot;\u0026gt;example 1\u0026lt;/a\u0026gt;\r\u0026lt;!\u0026ndash; example 2 链接通向无协议的google.com, https://google.com或者http://google.com也是合法值\u0026ndash;\u0026gt;\r\u0026lt;a href=\u0026quot;//google.com\u0026quot;\u0026gt;example 2\u0026lt;/a\u0026gt;\r\u0026lt;!\u0026ndash; example 3 链接通向文件路径, \u0026quot;subdir1/subdir2\u0026quot;等效，也可以是\u0026quot;index.html\u0026quot;, \u0026quot;./index.html\u0026quot;等效 \u0026ndash;\u0026gt;\r\u0026lt;a href=\u0026quot;/subdir1/subdir2\u0026quot;\u0026gt;example 3\u0026lt;/a\u0026gt;\r\u0026lt;!\u0026ndash; example 4 链接运行javascript代码\u0026lt;code\u0026gt;部分，如果是空则什么都不做 (不需要刷新的时候用) \u0026ndash;\u0026gt;\r\u0026lt;a href=\u0026quot;javascript:\u0026lt;code\u0026gt;;\u0026quot;\u0026gt;example 4\u0026lt;/a\u0026gt;\r\u0026lt;!\u0026ndash; example 5 链接发送邮件，\u0026quot;tel:110\u0026quot;则拨电话 \u0026ndash;\u0026gt;\r\u0026lt;a href=\u0026quot;mailto:abc@example.com\u0026quot;\u0026gt;example 5\u0026lt;/a\u0026gt;\rtarget属性 默认值是_self, 表明链接在\u0026lt;a\u0026gt;所在窗口打开。其他值包括： _blank: 在新窗口打开，在新tab或是window打开取决于浏览器设置 _parent: 在\u0026lt;a\u0026gt;的父级元素环境打开，若无父级元素，效果等同_self _top: 在\u0026lt;a\u0026gt;的最高祖先级元素环境打开，若无，则等同_self \u0026quot;some_value\u0026quot;: 任意String。若\u0026quot;some_value\u0026quot;窗口已存在，则在其窗口打开；否则新建一个\u0026quot;some_value\u0026quot;窗口并在此打开链接 download属性 指示浏览器下载，可以有值或者没有值：",
   "url": "https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/",
-  "image": "https://Mia-zhao.github.io/blog/image/TitleImage.jpg",
+  "image": "https://Mia-zhao.github.io/blog/images/Cover1.jpg",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/"
@@ -67,7 +67,7 @@
 }
 </script>
 
-<link rel="preload" as="script" href="/blog/bundle.js?v=1596461680">
+<link rel="preload" as="script" href="/blog/bundle.js?v=1596549822">
 
 
 </head>
@@ -101,7 +101,7 @@
   <div class="flex-shrink-0">
     <img
     class="w-12 h-12 sm:w-14 sm:h-14 object-cover p-3px rounded-full border border-blue-300"
-    src="/blog/image/author/default.webp"
+    src="/blog/images/author/default.webp"
     alt="Mia Zhao">
   </div>
   <div class="flex-shrink-0 ml-2 leading-tight font-content-sans">
@@ -129,7 +129,7 @@
 <figure>
 <img
 class="mb-2 mx-auto leading-none shadow-xl"
-src="/blog/image/TitleImage.jpg"
+src="/blog/images/Cover1.jpg"
 alt="HTML常用标签">
 </figure>
 
@@ -308,7 +308,7 @@ alt="HTML常用标签">
   </div>
 </footer>
 
-<script src="/blog/bundle.js?v=1596461680"></script>
+<script src="/blog/bundle.js?v=1596549822"></script>
 
 
 </body>

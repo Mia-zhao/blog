@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 03 Aug 2020 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 13:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML Practice</title>
+      <link>https://Mia-zhao.github.io/blog/posts/html-practice/</link>
+      <pubDate>Tue, 04 Aug 2020 13:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/html-practice/</guid>
+      <description>这篇博文主要为了个人学习目的。
+HTML实践练习作业
+Tips meta viewport &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt;
+VSCode快捷键（快速生成list等）  选中多行内容 ctrl + shift + p emmet wrap ul&amp;gt;li*  图片大小兼容手机 &amp;lt;style&amp;gt;img {max-width: 100%;}&amp;lt;/style&amp;gt;Chrome远程调试 Remote Debugging
+ Enable USB debugging on phone Navigate to chrome://inspect/#devices on PC  </description>
+    </item>
     
     <item>
       <title>HTML常用标签</title>
