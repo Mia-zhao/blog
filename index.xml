@@ -6,10 +6,24 @@
     <description>Recent content on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 06 Aug 2020 08:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2020 10:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅析 URL</title>
+      <link>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-url/</link>
+      <pubDate>Thu, 06 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-url/</guid>
+      <description>这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。
+URL URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：
+ protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS domain name 域名: 表明请求的服务器，也可以直接使用对应的IP port 端口: 访问服务器的服务端口  HTTP标准端口: 80 HTTPS标准端口: 443   path 路径: 服务器上访问的资源路径 extra parameters 其他参数: 参数是用&amp;amp;分隔的键值对  例如：http://www.baidu.com/s?wd=hi中wd=hi是搜索请求的参数   anchor 锚点: 指示浏览器显示锚点的位置, 用#anchorInDoc表示  #后的内容不会发送到服务器    https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。
+DNS DNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。
+nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain-name命令输出对域名a-domain-name的解析。例如：
+&amp;gt; nslookup google.comServer: your-routerAddress: 192.</description>
+    </item>
     
     <item>
       <title>CSS 知识总结2</title>
