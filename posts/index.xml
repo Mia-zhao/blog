@@ -6,10 +6,41 @@
     <description>Recent content in Posts on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 04 Aug 2020 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2020 08:59:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS 知识总结2</title>
+      <link>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</link>
+      <pubDate>Thu, 06 Aug 2020 08:59:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</guid>
+      <description>这篇博文主要为了个人学习目的，内容包括CSS定位，层叠上下文，浏览器渲染原理以及动画 (transition, animation)。
+1 定位 文档流和盒模型讨论的是二维平面的布局，定位讨论的是垂直于平面的z-axis布局。从上到下（或者人眼俯视屏幕的方向）分别是：
+ 内联子元素 浮动元素 块级子元素 边框 背景  position的默认值是static, 其余值有：
+ relative: 配合absolute/z-index使用 absolute: 相对于祖先中最近一个定位元素（非static）定位  有些浏览器若没有top left会错乱 注意善用百分值和负margin定位   fixed: 相对于viewport  特殊属性除外（transform）   sticky: 不常用  2 层叠上下文 元素在z轴的顺序由z-index影响，然而不是由z-index的值决定，应在层叠上下文(stacking context)中考虑。 一下是常见层叠上下文的形成：
+ 根元素html position为absolute或relative并且z-index值不为auto opacity小于1 position为fixed或sticky transform不为none  注：参考 stacking context
+考虑层叠上下文时注意：
+ 每个层叠上下文是新的context 处在同一context才能比较  3 浏览器渲染原理 3.1 渲染步骤 浏览器渲染分为六个步骤：
+ 构建DOM 构建CCSOM 合并成渲染树(render-tree) layout paint composite  注：参考 https://csstriggers.com了解CSS特性触发的浏览器渲染过程</description>
+    </item>
+    
+    <item>
+      <title>CSS 知识总结1</title>
+      <link>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</link>
+      <pubDate>Thu, 06 Aug 2020 07:40:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</guid>
+      <description>这篇博文主要为了个人学习目的，内容包括CSS基础知识，重要概念（文档流normal flow和盒模型box model）以及布局 (float, flex, grid) 。
+1 基础知识 CSS由Håkon Wium Lie 发明，CCS2.1是目前使用最广泛的版本，CSS3开始分模块更新版本。caniuse.com可以用来参考不同浏览器对CSS特性的支持。
+1.1 语法  选择器 { 属性名: 属性值; /*注释*/ }， 举例：  img {max-width: 100%;} @语法  @charset &amp;quot;UTF-8&amp;quot;;@import url(example.css);@media (min-width: 100px) and (max-width: 200px) {}1.2 资料  MDN CCS tricks 张鑫旭的博客  2 重要概念 2.1 文档流 normal flow 在默认布局下，文档流可以是左到右或是上到下。例如，span元素是默认合并的(inline), div元素是默认占一行不合并的(block): 除此以外，inline元素不能指定width/height, 元素的高度由line-height间接确定。block元素可以指定width/height,元素高度由内部文档流元素决定。
+注：文档流元素是指处于文档流的元素，position: [absolute|fixed] 以及 float会使元素脱离文档流。
+除了inline和block, 还可以通过display: inline-block;设置元素为inline-block。inline-block兼顾inline和block两者的特点，宽度流动与inline一致，高度流动与block一致，可以通过width/height设置宽高。
+注意：
+ block默认width的值是auto而非100% 不要用设置width为100% inline元素不能包含block元素  2.</description>
+    </item>
     
     <item>
       <title>HTML Practice</title>
