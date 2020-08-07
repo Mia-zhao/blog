@@ -6,10 +6,26 @@
     <description>Recent content on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 06 Aug 2020 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2020 06:12:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript 的诞生</title>
+      <link>https://Mia-zhao.github.io/blog/posts/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
+      <pubDate>Fri, 07 Aug 2020 06:12:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</guid>
+      <description>这篇博文主要为了个人学习目的。此篇总结了JavaScript 历史, Javascript 诞生以及10个设计缺陷。
+参考：
+ 维基百科 JavaScript 阮一峰 《Javascript诞生记》 阮一峰 《Javascript的10个设计缺陷》  JavaScript 历史 1995年, 占据大部分浏览器市场的NetScape Communications公司招聘了Brendan Eich, 目标是将Scheme语言嵌入该公司的浏览器中。后来NetScape决定发明一种与Java搭配的辅助脚本语言。Eich花了十天设计出JavaScript原型。
+JavaScript的推出大获成功, 微软随后为IE3推出JScript来同NetScape竞争。这一时期, JavaScript的标准尚未确立。1996年11月, NetScape向ECMA提交语言标准。1997年, 以JavaScript为基础制定的ECMAScript标准规范ECMA-262推出。JavaScript成为ECMAScript最著名的实现之一。
+JavaScript 的诞生 NetScape在做网页脚本语言选择的决定时, 受到Sun公司推出Java的影响, 两家公司达成合作。允许Java程序以Applet形式在浏览器中运行, 网页脚本语言JavaScript须与Java相似。
+Eich只花了十天时间设计JavaScript, 导致语言的一些细节不够严谨。Eich的设计思路如下：
+ 借鉴C语言的基本语法 借鉴Java语言的数据类型和内存管理 借鉴Scheme语言, 将函数提升为first class地位 借鉴Self语言, 使用基于原型的继承机制  因此, JavaScript是函数式编程和面向对象编程的混合。
+JavaScript 的10个设计缺陷  不适合开发大型程序  JavaScript没有namespace, 难以模块化 缺乏如何将代码分布在多个文件的规范   JavaScript标准函数库很小 null 和 undefined 容易混淆 全局变量难以控制  全局变量在所有模块可见 任何函数内部都可以生成全局变量   自动插入行尾分号  解释器不报错, 自动加分号    function(){return{i=1};}/*解析为function(){return;{i=1};}*/加号运算符既可表示数字运算也可以表示字符相连, 加剧运算复杂性 NaN (Not a Number) 特性不利于简化程序 难以区分数组和对象 == 和 === 判断结果不符合直觉 基本数据类型和其相应的对象类型区别不大却造成很大混淆  alert( typeof 1234); // numberalert( typeof new Number(1234)); // object尽管JavaScript有设计缺陷, 在第三方函数库的辅助下配合良好编程习惯, 大部分缺陷都能被回避。</description>
+    </item>
     
     <item>
       <title>浅析 URL</title>
