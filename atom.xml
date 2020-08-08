@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <title type="text">Hugo 主题 MemE</title>
+    <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
+    <updated>2020-08-08T23:42:22&#43;08:00</updated>
+    <id>https://example.com/</id>
+    <link rel="alternate" type="text/html" href="https://example.com/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
+    <author>
+            <name>reuixiy</name>
+            <uri>https://example.com/</uri>
+            
+                <email>reuixiy@gmail.com</email>
+            </author>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
+    <generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator>
+        <entry>
+            <title type="text">JavaScript 对象基本用法</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" />
+            <id>https://example.com/posts/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</id>
+            <updated>2020-08-08T14:05:00&#43;00:00</updated>
+            <published>2020-08-08T14:05:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的。 最新 ECMAScript 定义了9种类型: 包括6种原始数据类型 undefined Boolean Number String BigInt Symbol……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的。&lt;/p&gt;
+&lt;p&gt;最新 ECMAScript 定义了9种类型:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;包括6种原始数据类型
+&lt;ul&gt;
+&lt;li&gt;undefined&lt;/li&gt;
+&lt;li&gt;Boolean&lt;/li&gt;
+&lt;li&gt;Number&lt;/li&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;li&gt;BigInt&lt;/li&gt;
+&lt;li&gt;Symbol&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;null&lt;/li&gt;
+&lt;li&gt;Object&lt;/li&gt;
+&lt;li&gt;Function 并非数据结构, 属于Object, 但是有便利的 &lt;code&gt;typeof instance === &amp;quot;function&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;注意MDN中英文翻译不太一致&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures&#34;&gt;数据结构&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此篇总结对象 (Object) 的基本用法, 包括对象的声明, 删除、查看、修改或增加对象属性。&lt;/p&gt;
+&lt;h2 id=&#34;声明对象&#34;&gt;声明对象&lt;/h2&gt;
+&lt;p&gt;以下是两种声明对象的方式:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let object1 = {};
+
+let object2 = new Object();
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;对象属性&#34;&gt;对象属性&lt;/h2&gt;
+&lt;p&gt;一个对象可以有多个属性, 属性名和属性值构成的一个键值对依附于所属对象。对象的属性可以被删除、查看、修改或增加。&lt;/p&gt;
+&lt;h3 id=&#34;删除&#34;&gt;删除&lt;/h3&gt;
+&lt;p&gt;对于已有对象&lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let object = {&#39;name&#39;: &#39;myName&#39;, &#39;value&#39;: 100};
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;删除属性&lt;code&gt;value&lt;/code&gt;有以下方式 (注意区别):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;object.value = undefined; // object[&#39;value&#39;] = undefined;
+// result: {name: &amp;quot;myName&amp;quot;, value: undefined}
+
+delete object.value; // delete object[&#39;value&#39;];
+// result: {name: &amp;quot;myName&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;查看&#34;&gt;查看&lt;/h3&gt;
+&lt;p&gt;用&lt;code&gt;Object.keys(object)&lt;/code&gt;可以查看对象&lt;code&gt;object&lt;/code&gt;所有属性名, &lt;code&gt;Object.values(object)&lt;/code&gt;查看对象&lt;code&gt;object&lt;/code&gt;所有属性值, &lt;code&gt;console.dir(object)&lt;/code&gt;查看&lt;code&gt;object&lt;/code&gt;自身及共有属性。用&lt;code&gt;object.hasOwnProperty(&#39;property&#39;)&lt;/code&gt;可以判断属性是否属于对象本身 (i.e., 不是共有属性)。&lt;br&gt;
+&lt;br&gt;
+获得对象的某一个属性可以用如下方式 (还是以上面的&lt;code&gt;object&lt;/code&gt;为例):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;console.log(object.name);
+console.log(object[&#39;name&#39;]);
+// 注意与 object[name] 的区别
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;修改或增加&#34;&gt;修改或增加&lt;/h3&gt;
+&lt;p&gt;可以采用直接赋值的方法修改或增加对象属性, 以上面的&lt;code&gt;object&lt;/code&gt;为例:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;object.name = &#39;myNewName&#39;; // object[&#39;name&#39;] = &#39;myNewName&#39;;
+object.comment = &#39;comment&#39;; // object[&#39;comment&#39;] = &#39;comment&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;Object.assign&lt;/code&gt;可以批量赋值:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Object.assign(object, {&#39;name&#39;: &#39;myNewName&#39;, &#39;comment&#39;: &#39;comment&#39;});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;若要修改对象共有属性, 可以用&lt;code&gt;Object.create&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;name-in-object-vs-objecthasownpropertyname&#34;&gt;&#39;name&#39; in object VS object.hasOwnProperty(&#39;name&#39;)&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;&#39;name&#39; in object&lt;/code&gt;判断对象是否含有属性, &lt;code&gt;object.hasOwnProperty(&#39;name&#39;)&lt;/code&gt;判断属性是否是对象自己的属性（不是共有属性）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let object = {&#39;name&#39;: &#39;hi&#39;};
+&#39;name&#39; in object;                  // true
+object.hasOwnProperty(&#39;name&#39;);     // true
+&#39;toString&#39; in object;              // true
+object.hasOwnProperty(&#39;toString&#39;); // false
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">JavaScript 的基本语法总结</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/-javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/" />
+            <id>https://example.com/posts/-javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</id>
+            <updated>2020-08-08T04:40:00&#43;00:00</updated>
+            <published>2020-08-08T04:40:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的。推荐阅读： 网道JavaScript教程 《你不知道的Ja……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的。推荐阅读：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wangdoc.com/javascript/&#34;&gt;网道JavaScript教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/26351021/&#34;&gt;《你不知道的JavaScript（上卷）》&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;表达式-expression-和语句-statement&#34;&gt;表达式 (expression) 和语句 (statement)&lt;/h2&gt;
+&lt;p&gt;总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var a = 1 + 4;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这是一个赋值语句，其中&lt;code&gt;1 + 4&lt;/code&gt;是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如&lt;code&gt;add(1,2)&lt;/code&gt;, &lt;code&gt;console.log()&lt;/code&gt;等)。&lt;br&gt;
+&lt;br&gt;
+值得注意的是 JavaScript 中的 &lt;a href=&#34;https://en.wikibooks.org/wiki/JavaScript/Automatic_semicolon_insertion&#34;&gt;Automatic Semicolon Insertion (ASI)&lt;/a&gt;。在语句末尾, 分号 (semicolon) 不是强制性的, JavaScript 会自动补全分号, 然而在某些情况下, 自动补全分号会引入意外。例如:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* 例子一 */
+return
+{
+    // some code
+};
+/* 例子一被解析为
+    return;
+    {
+        // some code
+    };
+*/
+
+
+/* 例子二 */
+i
+++;
+/* 例子二被解析为
+    i;
+    ++;
+*/
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;标识符-identifier&#34;&gt;标识符 (identifier)&lt;/h2&gt;
+&lt;p&gt;标识符用来标识变量名, 函数或属性名。标识符是大小写敏感的并且可以包含:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unicode&lt;/li&gt;
+&lt;li&gt;$&lt;/li&gt;
+&lt;li&gt;_&lt;/li&gt;
+&lt;li&gt;数字 0-9 (不能以数字开头)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这意味着中文字符等也能做标识符来命名变量。&lt;/p&gt;
+&lt;h2 id=&#34;if-else-语句&#34;&gt;if else 语句&lt;/h2&gt;
+&lt;p&gt;语句syntax如下, 其中&lt;code&gt;expression1&lt;/code&gt;, &lt;code&gt;expression2&lt;/code&gt;是之前提到的表达式。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (expression1) {
+    // some code
+} else {
+    // some other code
+}
+// 或者
+if (expression1) {
+    // some code
+} else if (expression2) {
+    // some other code
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;while-for-语句&#34;&gt;while for 语句&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;while&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt;执行循环, 可以互相替代。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while (expression) {
+    // some code
+}
+
+do {
+    // some code
+} while (expression)
+
+for ( initial; expression; step) {
+    // some code
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;break-continue&#34;&gt;break continue&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;break&lt;/code&gt;用来中断执行, &lt;code&gt;continue&lt;/code&gt;用来跳过执行。&lt;/p&gt;
+&lt;h2 id=&#34;label&#34;&gt;label&lt;/h2&gt;
+&lt;p&gt;标签语句与&lt;code&gt;break&lt;/code&gt;以及&lt;code&gt;continue&lt;/code&gt;配合使用。label的格式为:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;label:
+    statement
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;break&lt;/code&gt;和&lt;code&gt;continue&lt;/code&gt;单独使用作用域在单层循环中, 配合label可以中断或跳过多层循环。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">JavaScript 的诞生</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/" />
+            <id>https://example.com/posts/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</id>
+            <updated>2020-08-07T04:12:00&#43;00:00</updated>
+            <published>2020-08-07T06:12:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的。此篇总结了JavaScript 历史, Javascript 诞生以及10个设……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的。此篇总结了JavaScript 历史, Javascript 诞生以及10个设计缺陷。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;参考：&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-cn/JavaScript#%E5%8E%86%E5%8F%B2&#34;&gt;维基百科 JavaScript&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html&#34;&gt;阮一峰 《Javascript诞生记》&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2011/06/10_design_defects_in_javascript.html&#34;&gt;阮一峰 《Javascript的10个设计缺陷》&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;javascript-历史&#34;&gt;JavaScript 历史&lt;/h2&gt;
+&lt;p&gt;1995年, 占据大部分浏览器市场的NetScape Communications公司招聘了&lt;a href=&#34;https://en.wikipedia.org/wiki/Brendan_Eich&#34;&gt;Brendan Eich&lt;/a&gt;, 目标是将Scheme语言嵌入该公司的浏览器中。后来NetScape决定发明一种与Java搭配的辅助脚本语言。Eich花了十天设计出JavaScript原型。&lt;br&gt;
+&lt;br&gt;
+JavaScript的推出大获成功, 微软随后为IE3推出JScript来同NetScape竞争。这一时期, JavaScript的标准尚未确立。1996年11月, NetScape向ECMA提交语言标准。1997年, 以JavaScript为基础制定的&lt;a href=&#34;https://en.wikipedia.org/wiki/ECMAScript&#34;&gt;ECMAScript&lt;/a&gt;标准规范ECMA-262推出。JavaScript成为ECMAScript最著名的实现之一。&lt;/p&gt;
+&lt;h2 id=&#34;javascript-的诞生&#34;&gt;JavaScript 的诞生&lt;/h2&gt;
+&lt;p&gt;NetScape在做网页脚本语言选择的决定时, 受到Sun公司推出Java的影响, 两家公司达成合作。允许Java程序以Applet形式在浏览器中运行, 网页脚本语言JavaScript须与Java相似。&lt;/p&gt;
+&lt;p&gt;Eich只花了十天时间设计JavaScript, 导致语言的一些细节不够严谨。Eich的设计思路如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;借鉴C语言的基本语法&lt;/li&gt;
+&lt;li&gt;借鉴Java语言的数据类型和内存管理&lt;/li&gt;
+&lt;li&gt;借鉴Scheme语言, 将函数提升为first class地位&lt;/li&gt;
+&lt;li&gt;借鉴Self语言, 使用基于原型的继承机制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因此, JavaScript是函数式编程和面向对象编程的混合。&lt;/p&gt;
+&lt;h2 id=&#34;javascript-的10个设计缺陷&#34;&gt;JavaScript 的10个设计缺陷&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;不适合开发大型程序
+&lt;ul&gt;
+&lt;li&gt;JavaScript没有namespace, 难以模块化&lt;/li&gt;
+&lt;li&gt;缺乏如何将代码分布在多个文件的规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JavaScript标准函数库很小&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;null&lt;/code&gt; 和 &lt;code&gt;undefined&lt;/code&gt; 容易混淆&lt;/li&gt;
+&lt;li&gt;全局变量难以控制
+&lt;ul&gt;
+&lt;li&gt;全局变量在所有模块可见&lt;/li&gt;
+&lt;li&gt;任何函数内部都可以生成全局变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自动插入行尾分号
+&lt;ul&gt;
+&lt;li&gt;解释器不报错, 自动加分号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;function(){
+　　return
+　　　　{
+    　　　　i=1
+　　　　};
+}
+/*
+解析为
+function(){
+　　return;
+　　　　{
+    　　　　i=1
+　　　　};
+}
+*/
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;加号运算符既可表示数字运算也可以表示字符相连, 加剧运算复杂性&lt;/li&gt;
+&lt;li&gt;NaN (Not a Number) 特性不利于简化程序&lt;/li&gt;
+&lt;li&gt;难以区分数组和对象&lt;/li&gt;
+&lt;li&gt;== 和 === 判断结果不符合直觉&lt;/li&gt;
+&lt;li&gt;基本数据类型和其相应的对象类型区别不大却造成很大混淆&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;alert( typeof 1234); // number
+alert( typeof new Number(1234)); // object
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;尽管JavaScript有设计缺陷, 在第三方函数库的辅助下配合良好编程习惯, 大部分缺陷都能被回避。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">浅析 URL</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/%E6%B5%85%E6%9E%90-url/" />
+            <id>https://example.com/posts/%E6%B5%85%E6%9E%90-url/</id>
+            <updated>2020-08-06T10:00:00&#43;00:00</updated>
+            <published>2020-08-06T10:00:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。 URL URL (Uniform Resource Locator) 指……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。&lt;/p&gt;
+&lt;h2 id=&#34;url&#34;&gt;URL&lt;/h2&gt;
+&lt;p&gt;URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS&lt;/li&gt;
+&lt;li&gt;domain name 域名: 表明请求的服务器，也可以直接使用对应的IP&lt;/li&gt;
+&lt;li&gt;port 端口: 访问服务器的服务端口
+&lt;ul&gt;
+&lt;li&gt;HTTP标准端口: 80&lt;/li&gt;
+&lt;li&gt;HTTPS标准端口: 443&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;path 路径: 服务器上访问的资源路径&lt;/li&gt;
+&lt;li&gt;extra parameters 其他参数: 参数是用&amp;amp;分隔的键值对
+&lt;ul&gt;
+&lt;li&gt;例如：&lt;code&gt;http://www.baidu.com/s?wd=hi&lt;/code&gt;中&lt;code&gt;wd=hi&lt;/code&gt;是搜索请求的参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;anchor 锚点: 指示浏览器显示锚点的位置, 用&lt;code&gt;#anchorInDoc&lt;/code&gt;表示
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#&lt;/code&gt;后的内容不会发送到服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。&lt;/p&gt;
+&lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;
+&lt;p&gt;DNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。&lt;br&gt;
+&lt;br&gt;
+&lt;code&gt;nslookup&lt;/code&gt; 是一个命令行工具用来解析DNS域名查找。&lt;code&gt;nslookup a-domain-name&lt;/code&gt;命令输出对域名&lt;code&gt;a-domain-name&lt;/code&gt;的解析。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; nslookup google.com
+Server:  your-router
+Address:  192.168.0.1
+
+Non-authoritative answer:
+Name:    google.com
+Address:  8.7.198.46
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ip&#34;&gt;IP&lt;/h2&gt;
+&lt;p&gt;IP (Internet Protocol) 提供网络中设备的地址, 格式为&lt;code&gt;xxx.xxx.xxx.xxx&lt;/code&gt;, &lt;code&gt;.&lt;/code&gt;间隔开4组0~255的数值。IP可以是静态或是动态的, 静态IP不会发生变化; 动态IP是分配给设备的地址, 会发生变化。&lt;br&gt;
+&lt;br&gt;
+&lt;code&gt;127.0.0.1&lt;/code&gt;是本机地址, &lt;code&gt;localhost&lt;/code&gt;被解析为&lt;code&gt;127.0.0.1&lt;/code&gt;。在Windows中, 可以通过管理者权限更改&lt;code&gt;C:\Windows\System32\drivers\etc\hosts&lt;/code&gt;来更新本地域名解析。在Linux中, 可以通过&lt;code&gt;sudo&lt;/code&gt;来更新&lt;code&gt;/etc/hosts&lt;/code&gt;文件。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ping&lt;/code&gt; 是一个命令行工具用来检测域名/服务器/网络是否能联通。例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; ping baidu.com
+
+Pinging baidu.com [220.181.38.148] with 32 bytes of data:
+Reply from 220.181.38.148: bytes=32 time=31ms TTL=53
+Reply from 220.181.38.148: bytes=32 time=32ms TTL=53
+Reply from 220.181.38.148: bytes=32 time=31ms TTL=53
+Reply from 220.181.38.148: bytes=32 time=31ms TTL=53
+
+Ping statistics for 220.181.38.148:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 31ms, Maximum = 32ms, Average = 31ms
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;ping&lt;/code&gt;可以通过参数&lt;code&gt;-n&lt;/code&gt;设置发送的请求数, 在Windows上默认请求数是4。还可以通过&lt;code&gt;-w&lt;/code&gt;设置timeout等等。&lt;/p&gt;
+&lt;h2 id=&#34;domain-name&#34;&gt;Domain Name&lt;/h2&gt;
+&lt;p&gt;域名 (domain name) 是网址的名, 例如：&lt;code&gt;google.com&lt;/code&gt;, &lt;code&gt;wikipedia.org&lt;/code&gt;都是域名。域名分为顶级域名, 二级域名（俗称一级域名）, 三级域名（俗称二级域名）。例如, &lt;code&gt;com&lt;/code&gt;是顶级域名, &lt;code&gt;google.com&lt;/code&gt;是二级域名, &lt;code&gt;drive.google.com&lt;/code&gt;是三级域名。&lt;br&gt;
+&lt;br&gt;
+一个域名可以对应多个IP。一个IP可以对应不同域名。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">CSS 知识总结2</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/" />
+            <id>https://example.com/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</id>
+            <updated>2020-08-06T08:59:00&#43;00:00</updated>
+            <published>2020-08-06T08:59:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的，内容包括CSS定位，层叠上下文，浏览器渲染原理以及动画……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的，内容包括CSS定位，层叠上下文，浏览器渲染原理以及动画 (transition, animation)。&lt;/p&gt;
+&lt;h2 id=&#34;1-定位&#34;&gt;1 定位&lt;/h2&gt;
+&lt;p&gt;文档流和盒模型讨论的是二维平面的布局，定位讨论的是垂直于平面的z-axis布局。从上到下（或者人眼俯视屏幕的方向）分别是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内联子元素&lt;/li&gt;
+&lt;li&gt;浮动元素&lt;/li&gt;
+&lt;li&gt;块级子元素&lt;/li&gt;
+&lt;li&gt;边框&lt;/li&gt;
+&lt;li&gt;背景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;position&lt;/code&gt;的默认值是&lt;code&gt;static&lt;/code&gt;, 其余值有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;relative&lt;/code&gt;: 配合&lt;code&gt;absolute&lt;/code&gt;/&lt;code&gt;z-index&lt;/code&gt;使用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;absolute&lt;/code&gt;: 相对于祖先中最近一个定位元素（非&lt;code&gt;static&lt;/code&gt;）定位
+&lt;ul&gt;
+&lt;li&gt;有些浏览器若没有&lt;code&gt;top&lt;/code&gt; &lt;code&gt;left&lt;/code&gt;会错乱&lt;/li&gt;
+&lt;li&gt;注意善用百分值和负&lt;code&gt;margin&lt;/code&gt;定位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fixed&lt;/code&gt;: 相对于viewport
+&lt;ul&gt;
+&lt;li&gt;特殊属性除外（&lt;code&gt;transform&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sticky&lt;/code&gt;: 不常用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-层叠上下文&#34;&gt;2 层叠上下文&lt;/h2&gt;
+&lt;p&gt;元素在z轴的顺序由&lt;code&gt;z-index&lt;/code&gt;影响，然而不是由&lt;code&gt;z-index&lt;/code&gt;的值决定，应在层叠上下文(stacking context)中考虑。
+以下是常见层叠上下文的形成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根元素&lt;code&gt;html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;position&lt;/code&gt;为&lt;code&gt;absolute&lt;/code&gt;或&lt;code&gt;relative&lt;/code&gt;并且&lt;code&gt;z-index&lt;/code&gt;值不为&lt;code&gt;auto&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;opacity&lt;/code&gt;小于1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;position&lt;/code&gt;为&lt;code&gt;fixed&lt;/code&gt;或&lt;code&gt;sticky&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;transform&lt;/code&gt;不为&lt;code&gt;none&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;注：参考 &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context&#34;&gt;stacking context&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;考虑层叠上下文时注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个层叠上下文是新的context&lt;/li&gt;
+&lt;li&gt;处在同一context才能比较&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-浏览器渲染原理&#34;&gt;3 浏览器渲染原理&lt;/h2&gt;
+&lt;h3 id=&#34;31-渲染步骤&#34;&gt;3.1 渲染步骤&lt;/h3&gt;
+&lt;p&gt;浏览器渲染分为六个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;构建DOM&lt;/li&gt;
+&lt;li&gt;构建CCSOM&lt;/li&gt;
+&lt;li&gt;合并成渲染树(render-tree)&lt;/li&gt;
+&lt;li&gt;layout&lt;/li&gt;
+&lt;li&gt;paint&lt;/li&gt;
+&lt;li&gt;composite&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;注：参考 &lt;a href=&#34;https://csstriggers.com&#34;&gt;https://csstriggers.com&lt;/a&gt;了解CSS特性触发的浏览器渲染过程&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;32-更新方式&#34;&gt;3.2 更新方式&lt;/h3&gt;
+&lt;p&gt;用JavaScript更新样式时有三种更新方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;JavaScript/CSS &amp;gt; style &amp;gt; layout &amp;gt; paint &amp;gt; composite 例如：&lt;code&gt;div.remove()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript/CSS &amp;gt; style &amp;gt; paint &amp;gt; composite 例如：改变背景颜色&lt;/li&gt;
+&lt;li&gt;JavaScript/CSS &amp;gt; style &amp;gt; composite 例如：&lt;code&gt;transform&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;注：可以通过浏览器rendering-&amp;gt;paint flashing设置观察元素渲染&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;33-takeaways&#34;&gt;3.3 Takeaways&lt;/h3&gt;
+&lt;p&gt;依据渲染过程以及更新方式可以对动画进行优化，例如&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;弃&lt;code&gt;left&lt;/code&gt;用&lt;code&gt;will-change&lt;/code&gt;或&lt;code&gt;translate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript优化，如不用&lt;code&gt;setTimeout&lt;/code&gt;/&lt;code&gt;setInterval&lt;/code&gt;，用&lt;code&gt;requestAnimationFrame&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-动画&#34;&gt;4 动画&lt;/h2&gt;
+&lt;p&gt;这里总结用&lt;code&gt;transition&lt;/code&gt;和&lt;code&gt;animation&lt;/code&gt;做动画的方法。两种方法都可以配合元素&lt;code&gt;transform&lt;/code&gt;使用。&lt;/p&gt;
+&lt;h3 id=&#34;41-transform属性&#34;&gt;4.1 &lt;code&gt;transform&lt;/code&gt;属性&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;transform&lt;/code&gt;常用功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;translate&lt;/code&gt;: 常用&lt;code&gt;translateX&lt;/code&gt; &lt;code&gt;translateY&lt;/code&gt; &lt;code&gt;translate&lt;/code&gt;, 善用百分制表达&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scale&lt;/code&gt;: 常用&lt;code&gt;scaleX&lt;/code&gt; &lt;code&gt;scaleY&lt;/code&gt; &lt;code&gt;scale&lt;/code&gt;, 放大容易出现模糊&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rotate&lt;/code&gt;: 常用&lt;code&gt;rotate&lt;/code&gt; &lt;code&gt;rotateX&lt;/code&gt; &lt;code&gt;rotateY&lt;/code&gt; &lt;code&gt;rotateZ&lt;/code&gt;, 可用于360度旋转动画&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skew&lt;/code&gt;: 用得较少&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上可以组合起来使用。&lt;/p&gt;
+&lt;h3 id=&#34;42-transition法&#34;&gt;4.2 &lt;code&gt;transition&lt;/code&gt;法&lt;/h3&gt;
+&lt;p&gt;配合元素&lt;code&gt;transform&lt;/code&gt;, &lt;code&gt;transition&lt;/code&gt;可以补充中间帧。用法：&lt;code&gt;transition: 属性名 时长 过渡方式 延迟&lt;/code&gt;。举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;transition: all 1s linear 400ms
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;注意：&lt;code&gt;display: none&lt;/code&gt;到&lt;code&gt;display: block&lt;/code&gt;不能过渡&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;43-animation法&#34;&gt;4.3 &lt;code&gt;animation&lt;/code&gt;法&lt;/h3&gt;
+&lt;p&gt;配合&lt;code&gt;@keyframes&lt;/code&gt;定义关键帧，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* @keyframes定义法一 */
+@keyframes keyframes1 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* @keyframes定义法二 */
+@keyframes keyframes2 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;设置&lt;code&gt;animation&lt;/code&gt;, 例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;animation: 1s keyframes1 infinite;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;animation&lt;/code&gt;接受以下参数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时长&lt;/li&gt;
+&lt;li&gt;动画名&lt;/li&gt;
+&lt;li&gt;过渡方式&lt;/li&gt;
+&lt;li&gt;延迟&lt;/li&gt;
+&lt;li&gt;次数&lt;/li&gt;
+&lt;li&gt;方向&lt;/li&gt;
+&lt;li&gt;填充模式&lt;/li&gt;
+&lt;li&gt;是否暂停&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">CSS 知识总结1</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/" />
+            <id>https://example.com/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</id>
+            <updated>2020-08-06T07:50:00&#43;00:00</updated>
+            <published>2020-08-06T07:40:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的，内容包括CSS基础知识，重要概念（文档流normal f……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的，内容包括CSS基础知识，重要概念（文档流normal flow和盒模型box model）以及布局 (float, flex, grid) 。&lt;/p&gt;
+&lt;h2 id=&#34;1-基础知识&#34;&gt;1 基础知识&lt;/h2&gt;
+&lt;p&gt;CSS由&lt;a href=&#34;https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie&#34;&gt;Håkon Wium Lie&lt;/a&gt; 发明，CCS2.1是目前使用最广泛的版本，CSS3开始分模块更新版本。&lt;a href=&#34;https://caniuse.com/&#34;&gt;caniuse.com&lt;/a&gt;可以用来参考不同浏览器对CSS特性的支持。&lt;/p&gt;
+&lt;h3 id=&#34;11-语法&#34;&gt;1.1 语法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;选择器 { 属性名: 属性值; /*注释*/ }， 举例：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;img {
+    max-width: 100%;
+}   
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;@语法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;@charset &amp;quot;UTF-8&amp;quot;;
+@import url(example.css);
+@media (min-width: 100px) and (max-width: 200px) {}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;12-资料&#34;&gt;1.2 资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MDN&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://css-tricks.com/&#34;&gt;CCS tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zhangxinxu.com/wordpress/category/css/&#34;&gt;张鑫旭的博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-重要概念&#34;&gt;2 重要概念&lt;/h2&gt;
+&lt;h3 id=&#34;21-文档流-normal-flow&#34;&gt;2.1 文档流 normal flow&lt;/h3&gt;
+&lt;p&gt;在默认布局下，文档流可以是左到右或是上到下。例如，&lt;code&gt;span&lt;/code&gt;元素是默认合并的(&lt;code&gt;inline&lt;/code&gt;), &lt;code&gt;div&lt;/code&gt;元素是默认占一行不合并的(&lt;code&gt;block&lt;/code&gt;):
+&lt;img src=&#34;https://example.com/blog/images/NormalFlow.png&#34; alt=&#34;Image of Normal Flow&#34;&gt;
+除此以外，&lt;code&gt;inline&lt;/code&gt;元素不能指定&lt;code&gt;width&lt;/code&gt;/&lt;code&gt;height&lt;/code&gt;, 元素的高度由&lt;code&gt;line-height&lt;/code&gt;间接确定。&lt;code&gt;block&lt;/code&gt;元素可以指定&lt;code&gt;width&lt;/code&gt;/&lt;code&gt;height&lt;/code&gt;,元素高度由内部&lt;em&gt;文档流元素&lt;/em&gt;决定。&lt;br&gt;
+&lt;br&gt;
+&lt;em&gt;注：文档流元素是指处于文档流的元素，&lt;code&gt;position: [absolute|fixed]&lt;/code&gt; 以及 &lt;code&gt;float&lt;/code&gt;会使元素脱离文档流。&lt;/em&gt;&lt;br&gt;
+&lt;br&gt;
+除了&lt;code&gt;inline&lt;/code&gt;和&lt;code&gt;block&lt;/code&gt;, 还可以通过&lt;code&gt;display: inline-block;&lt;/code&gt;设置元素为&lt;code&gt;inline-block&lt;/code&gt;。&lt;code&gt;inline-block&lt;/code&gt;兼顾&lt;code&gt;inline&lt;/code&gt;和&lt;code&gt;block&lt;/code&gt;两者的特点，宽度流动与&lt;code&gt;inline&lt;/code&gt;一致，高度流动与&lt;code&gt;block&lt;/code&gt;一致，可以通过&lt;code&gt;width&lt;/code&gt;/&lt;code&gt;height&lt;/code&gt;设置宽高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;block&lt;/code&gt;默认&lt;code&gt;width&lt;/code&gt;的值是&lt;code&gt;auto&lt;/code&gt;而非&lt;code&gt;100%&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;不要用设置&lt;code&gt;width&lt;/code&gt;为&lt;code&gt;100%&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inline&lt;/code&gt;元素不能包含&lt;code&gt;block&lt;/code&gt;元素&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;22-盒模型-box-model&#34;&gt;2.2 盒模型 box model&lt;/h3&gt;
+&lt;p&gt;CSS盒模型分为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内容盒模型(content box)&lt;/li&gt;
+&lt;li&gt;边框盒模型(border box)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;区别在于内容盒模型宽度高度设置只包含内容(content)，边框盒模型宽度高度设置包含内容(content), 内边距(padding), 边框(border)。
+CSS里盒模型用box-sizing设置，默认用的是内容盒模型，建议用&lt;code&gt;border-box&lt;/code&gt;。&lt;br&gt;
+&lt;code&gt;box-sizing: content-box; /*内容盒模型*/&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;box-sizing: border-box; /*边框盒模型*/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;举例：
+&lt;img src=&#34;https://example.com/blog/images/BoxModel.png&#34; alt=&#34;Image of Box Model&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注意margin合并的情况:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;只上下合并&lt;/li&gt;
+&lt;li&gt;发生在元素margin之间没有其他属性（如：border, padding）
+&lt;img src=&#34;https://example.com/blog/images/MarginCollapsing.png&#34; alt=&#34;Image of Margin Collapsing&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-布局&#34;&gt;3 布局&lt;/h2&gt;
+&lt;p&gt;CSS布局可以将页面分为上中下或左中右等结构，分为固定宽度布局，不固定宽度布局，响应式布局。布局通过float, flex, grid完成。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;若要求兼容IE9 ——&amp;gt; 用float布局 
+       否则 | 
+            ——&amp;gt; 若要求兼容最新浏览器 ——&amp;gt; 用grid布局 
+                              否则 | 
+                                   ——&amp;gt; 用flex布局 
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;31-float布局&#34;&gt;3.1 float布局&lt;/h3&gt;
+&lt;p&gt;步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;子元素加&lt;code&gt;float&lt;/code&gt; 和 &lt;code&gt;width&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;父元素加&lt;code&gt;.clearfix&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;.clearfix:after {
+  content: &#39;&#39;;
+  display: block;
+  clear: both;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;32-flex布局&#34;&gt;3.2 flex布局&lt;/h3&gt;
+&lt;p&gt;可以通过&lt;a href=&#34;https://flexboxfroggy.com/&#34;&gt;flex 青蛙游戏&lt;/a&gt;熟悉flex属性用法。&lt;/p&gt;
+&lt;p&gt;flex设置分为container和items设置，container和items举例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;menu&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;logo&amp;quot;&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;menu 1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;menu 2&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;menu 3&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以上例子需要CCS reset:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, ol {
+  list-style: none;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;常用container元素属性有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;display: [flex|inline-flex]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-direction: [row|row-reverse|column|column-reverse]&lt;/code&gt; 定义主轴方向&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-wrap: [nowrap|wrap|wrap-reverse]&lt;/code&gt; 改变折行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;justify-content: [flex-start|flex-end|center|space-between|space-around]&lt;/code&gt; 设置主轴对齐方式&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-items: [flex-start|flex-end|center|stretch]&lt;/code&gt; 设置次轴对齐方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用items元素属性有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;order&lt;/code&gt; 元素按照&lt;code&gt;order&lt;/code&gt;值的大小进行排序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-grow&lt;/code&gt; 设置变宽系数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-shrink&lt;/code&gt; 设置变窄系数，0防止缩短&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-basis&lt;/code&gt; 基准宽度，默认&lt;code&gt;auto&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex: flex-grow flex-shrink flex-basis&lt;/code&gt; 属性缩写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-self&lt;/code&gt; 单独设置&lt;code&gt;align-items&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;33-grid布局&#34;&gt;3.3 grid布局&lt;/h3&gt;
+&lt;p&gt;flex是一维布局方式，grid是二维布局方式。可以通过&lt;a href=&#34;https://cssgridgarden.com&#34;&gt;grid 花园游戏&lt;/a&gt;熟悉grid用法。&lt;br&gt;
+&lt;br&gt;
+grid也分为container和items, 与flex类似。通过&lt;code&gt;display: [grid|inline-grid]&lt;/code&gt;设置container, container可以被划分：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.container {
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: 25% 100px auto; 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;以上将container分为三列三行, 每一个item可以通过划分的结构设置范围：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">HTML Practice</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/html-practice/" />
+            <id>https://example.com/posts/html-practice/</id>
+            <updated>2020-08-04T13:00:00&#43;00:00</updated>
+            <published>2020-08-04T13:00:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的。 HTML实践练习作业 Tips meta viewport &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt; VSCode快……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的。&lt;br&gt;
+&lt;br&gt;
+&lt;a href=&#34;http://miazhao.net/html-practice&#34;&gt;HTML实践练习作业&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tips&#34;&gt;Tips&lt;/h3&gt;
+&lt;h4 id=&#34;meta-viewport&#34;&gt;meta viewport&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;vscode快捷键快速生成list等&#34;&gt;VSCode快捷键（快速生成list等）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;选中多行内容&lt;/li&gt;
+&lt;li&gt;ctrl + shift + p&lt;/li&gt;
+&lt;li&gt;emmet wrap&lt;/li&gt;
+&lt;li&gt;ul&amp;gt;li*&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;图片大小兼容手机&#34;&gt;图片大小兼容手机&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;
+    img {
+        max-width: 100%;
+    }
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;chrome远程调试&#34;&gt;Chrome远程调试&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/web/tools/chrome-devtools/remote-debugging&#34;&gt;Remote Debugging&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable USB debugging on phone&lt;/li&gt;
+&lt;li&gt;Navigate to &lt;a href=&#34;chrome://inspect/#devices&#34;&gt;chrome://inspect/#devices&lt;/a&gt; on PC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/blog/images/RemoteDebug.png&#34; alt=&#34;Remote debugging&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">HTML常用标签</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" />
+            <id>https://example.com/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</id>
+            <updated>2020-08-03T13:00:00&#43;00:00</updated>
+            <published>2020-08-03T13:00:00&#43;00:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的。此篇总结了HTML常用标签: a img table form 注意：应用网址浏览……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的。此篇总结了HTML常用标签:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;table&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;form&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;注意：应用网址浏览方式打开html文件，例如：利用工具http-server,parcel,etc.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-a标签&#34;&gt;1. &amp;lt;a&amp;gt;标签&lt;/h2&gt;
+&lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
+&lt;p&gt;又称anchor (锚)，用于创建超链接。按功能分，可以通向：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同页面的其他元素&lt;/li&gt;
+&lt;li&gt;其他网页&lt;/li&gt;
+&lt;li&gt;文件&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;li&gt;电子邮件/电话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上功能通过元素的&lt;code&gt;href&lt;/code&gt;属性达成，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- example 1 链接通向同页面的id=&amp;quot;hey&amp;quot;的p元素 --&amp;gt;
+&amp;lt;p id=&amp;quot;hey&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;#hey&amp;quot;&amp;gt;example 1&amp;lt;/a&amp;gt;
+
+&amp;lt;!-- example 2 链接通向无协议的google.com, https://google.com或者http://google.com也是合法值--&amp;gt;
+&amp;lt;a href=&amp;quot;//google.com&amp;quot;&amp;gt;example 2&amp;lt;/a&amp;gt;
+
+&amp;lt;!-- example 3 链接通向文件路径, &amp;quot;subdir1/subdir2&amp;quot;等效，也可以是&amp;quot;index.html&amp;quot;, &amp;quot;./index.html&amp;quot;等效 --&amp;gt;
+&amp;lt;a href=&amp;quot;/subdir1/subdir2&amp;quot;&amp;gt;example 3&amp;lt;/a&amp;gt;
+
+&amp;lt;!-- example 4 链接运行javascript代码&amp;lt;code&amp;gt;部分，如果是空则什么都不做 (不需要刷新的时候用) --&amp;gt;
+&amp;lt;a href=&amp;quot;javascript:&amp;lt;code&amp;gt;;&amp;quot;&amp;gt;example 4&amp;lt;/a&amp;gt;
+
+&amp;lt;!-- example 5 链接发送邮件，&amp;quot;tel:110&amp;quot;则拨电话 --&amp;gt;
+&amp;lt;a href=&amp;quot;mailto:abc@example.com&amp;quot;&amp;gt;example 5&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;target属性&#34;&gt;&lt;code&gt;target&lt;/code&gt;属性&lt;/h3&gt;
+&lt;p&gt;默认值是&lt;code&gt;_self&lt;/code&gt;, 表明链接在&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;所在窗口打开。其他值包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;_blank&lt;/code&gt;: 在新窗口打开，在新tab或是window打开取决于浏览器设置&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_parent&lt;/code&gt;: 在&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;的父级元素环境打开，若无父级元素，效果等同&lt;code&gt;_self&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_top&lt;/code&gt;: 在&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;的最高祖先级元素环境打开，若无，则等同&lt;code&gt;_self&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;some_value&amp;quot;&lt;/code&gt;: 任意String。若&lt;code&gt;&amp;quot;some_value&amp;quot;&lt;/code&gt;窗口已存在，则在其窗口打开；否则新建一个&lt;code&gt;&amp;quot;some_value&amp;quot;&lt;/code&gt;窗口并在此打开链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;download属性&#34;&gt;&lt;code&gt;download&lt;/code&gt;属性&lt;/h3&gt;
+&lt;p&gt;指示浏览器下载，可以有值或者没有值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有值：作为下载文件名&lt;/li&gt;
+&lt;li&gt;无值：浏览器提出文件名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rel属性&#34;&gt;&lt;code&gt;rel&lt;/code&gt;属性&lt;/h3&gt;
+&lt;p&gt;代表链接对象的关系，用空格分隔的&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types&#34;&gt;Link Type&lt;/a&gt;表示&lt;/p&gt;
+&lt;h2 id=&#34;2-img标签&#34;&gt;2. &amp;lt;img&amp;gt;标签&lt;/h2&gt;
+&lt;p&gt;关键词：&lt;em&gt;get request&lt;/em&gt;, &lt;em&gt;alt&lt;/em&gt;, &lt;em&gt;src&lt;/em&gt;, &lt;em&gt;响应式&lt;/em&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;的功能是将图片嵌入在文本里。以下是重要属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;src&lt;/code&gt;: 必须有的，提供图片路径&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt&lt;/code&gt;: 提供图片文本描述，不是强制属性但是有用且建议。若图片加载失败，此属性能提供具体图片信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;height&lt;/code&gt;/&lt;code&gt;width&lt;/code&gt;: 提供任意一个，另一个相适应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;重要事件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;onload&lt;/code&gt;: 加载成功事件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;onerror&lt;/code&gt;: 加载失败事件，在此加error handling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;重要样式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;响应式(电脑，移动设备屏等)用 &lt;code&gt;max-width: 100%&lt;/code&gt;
+以下是用法：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 用法一：style  --&amp;gt;
+&amp;lt;style&amp;gt;
+  img {
+      max-width: 100%;
+  }
+&amp;lt;/style&amp;gt;
+
+&amp;lt;!-- 用法二：sizes  --&amp;gt;
+&amp;lt;img src=&amp;quot;/path/to/image&amp;quot; alt=&amp;quot;description&amp;quot; sizes=&amp;quot;(max-width: 100%)&amp;quot; &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;3-table标签&#34;&gt;3. &amp;lt;table&amp;gt;标签&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;table&lt;/code&gt;结构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;thead&amp;gt;&lt;/code&gt;/&lt;code&gt;&amp;lt;tbody&amp;gt;&lt;/code&gt;/&lt;code&gt;&amp;lt;tfoot&amp;gt;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt; (row)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;th&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;table&lt;/code&gt;样式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;table-layout&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;auto&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;fixed&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;border-collapse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;border-spacing&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-form标签&#34;&gt;4. &amp;lt;form&amp;gt;标签&lt;/h2&gt;
+&lt;p&gt;关键词：&lt;em&gt;get/post&lt;/em&gt;, &lt;em&gt;action&lt;/em&gt;, &lt;em&gt;onsubmit&lt;/em&gt;, &lt;em&gt;input&lt;/em&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;表示用来提交信息的交互式控制组件。重要属性包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;action&lt;/code&gt;: 处理提交的URL (后端)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;method&lt;/code&gt;: (不区分大小写)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;POST&amp;quot;&lt;/code&gt;: 数据通过&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Body&#34;&gt;request body&lt;/a&gt;发送&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;GET&amp;quot;&lt;/code&gt;: 数据附加在&lt;code&gt;action&lt;/code&gt;URL中&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;DIALOG&amp;quot;&lt;/code&gt;: 在&lt;code&gt;&amp;lt;dialog&amp;gt;&lt;/code&gt;中提交表示关闭对话框&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;autocomplete&lt;/code&gt; (&lt;code&gt;&amp;quot;on&amp;quot;&lt;/code&gt;/&lt;code&gt;&amp;quot;off&amp;quot;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt;: 同&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;的&lt;code&gt;target&lt;/code&gt;属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;重要事件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;onsubmit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;包含&lt;code&gt;input&lt;/code&gt;/&lt;code&gt;button&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;里必须有一个&lt;code&gt;type&lt;/code&gt; &lt;code&gt;&amp;quot;submit&amp;quot;&lt;/code&gt;, 如果&lt;code&gt;type&lt;/code&gt;没有标明，默认为&lt;code&gt;&amp;quot;submit&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;input&lt;/code&gt; (&lt;code&gt;type=&amp;quot;submit&amp;quot;&lt;/code&gt;) vs &lt;code&gt;button&lt;/code&gt; (&lt;code&gt;type=&amp;quot;submit&amp;quot;&lt;/code&gt;)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;button&lt;/code&gt;可以用标签包裹内容, &lt;code&gt;input&lt;/code&gt;不可以&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 自动补全功能只有input name存在时才有用 --&amp;gt;
+&amp;lt;form action=&amp;quot;&amp;quot; method=&amp;quot;POST&amp;quot; autocomplete=&amp;quot;on&amp;quot;&amp;gt;
+  &amp;lt;input name=&amp;quot;username&amp;quot; type=&amp;quot;text&amp;quot;/&amp;gt;
+  &amp;lt;input type=&amp;quot;submit&amp;quot; /&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;input&lt;/code&gt; &lt;code&gt;type&lt;/code&gt;有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;text, color, password, radio, checkbox, file, hidden&lt;/li&gt;
+&lt;li&gt;radio, checkbox 用同一&lt;code&gt;name&lt;/code&gt; group&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-其他感想&#34;&gt;5. 其他感想&lt;/h2&gt;
+&lt;p&gt;元素互相之间可能有关联，有reference, hierarchy等层级关系；属性选项也可能相似，要养成经常总结的习惯，并学会选取最合适的来应用。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">HTML入门笔记1</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" />
+            <id>https://example.com/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</id>
+            <updated>2020-08-04T13:46:51&#43;08:00</updated>
+            <published>2020-08-02T22:08:23&#43;08:00</published>
+            <author>
+                    <name>reuixiy</name>
+                    <uri>https://io-oi.me/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发……</summary>
+            
+                <content type="html">&lt;p&gt;这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。&lt;/p&gt;
+&lt;h2 id=&#34;html的起源&#34;&gt;HTML的起源&lt;/h2&gt;
+&lt;p&gt;HTML的发明者是&lt;a href=&#34;https://www.w3.org/People/Berners-Lee/&#34;&gt;Tim Berners-Lee&lt;/a&gt;。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。&lt;/p&gt;
+&lt;h2 id=&#34;html的起手&#34;&gt;HTML的起手&lt;/h2&gt;
+&lt;p&gt;HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;应该被使用。&lt;br&gt;
+&lt;br&gt;
+另外，&lt;code&gt;html&lt;/code&gt;标签的&lt;code&gt;lang&lt;/code&gt;属性被用来设置文本语言。例如，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;html lang=&amp;quot;en-US&amp;quot;&amp;gt; &amp;lt;!-- 表示英文(美国) --&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-CN&amp;quot;&amp;gt; &amp;lt;!-- 表示中文(中国) --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此外，字符编码方式是必须的：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;值得注意的是编码方式应在文本&lt;code&gt;head&lt;/code&gt;块以内，并且要尽可能靠前。
+&lt;br&gt;
+&lt;br&gt;
+最后，为了让内容与移动设备更兼容，需加上&lt;code&gt;meta&lt;/code&gt;标签的&lt;code&gt;viewport&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下&lt;code&gt;!&lt;/code&gt;，出现&lt;code&gt;Emmet Abbreviation&lt;/code&gt;后回车：
+&lt;img src=&#34;https://example.com/blog/images/VSCode.png&#34; alt=&#34;Image of Visual Studio&#34;&gt;
+以下是自动生成的HTML的起手：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;常用章节标签&#34;&gt;常用章节标签&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;标签&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;h1~h6&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;标题，h1~h6有不同默认字体格式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;section&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;章节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;p&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;段落&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;header&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;头部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;footer&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;脚部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;main&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;主要内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;aside&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;次要内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;div&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;划分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;以下是一个例子：
+&lt;img src=&#34;https://example.com/blog/images/SectionTags.png&#34; alt=&#34;Image of Tags&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;全局属性&#34;&gt;全局属性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;class
+&lt;ul&gt;
+&lt;li&gt;用于给标签定义class&lt;/li&gt;
+&lt;li&gt;一个标签可以有多个class&lt;/li&gt;
+&lt;li&gt;多个标签可以是同一个class&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;，&lt;code&gt;.className&lt;/code&gt;，&lt;code&gt;[class=className]&lt;/code&gt; reference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;contenteditable
+&lt;ul&gt;
+&lt;li&gt;表示标签内容可以直接编辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;hidden
+&lt;ul&gt;
+&lt;li&gt;隐藏内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;id
+&lt;ul&gt;
+&lt;li&gt;标签唯一才用id(不推荐)&lt;/li&gt;
+&lt;li&gt;注意HTML不能保证id唯一性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;style
+&lt;ul&gt;
+&lt;li&gt;标签样式，JS样式覆盖标签样式覆盖&lt;code&gt;head&lt;/code&gt; &lt;code&gt;style&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;CSS reset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;tabindex
+&lt;ul&gt;
+&lt;li&gt;表示使用tab时的导航，数字1，2，3，...表示顺序&lt;/li&gt;
+&lt;li&gt;1最先访问，0最后访问，-1不访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;title
+&lt;ul&gt;
+&lt;li&gt;显示完整内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;white-space:nowrap&lt;/code&gt;：不换行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow:hidden&lt;/code&gt;：超出部分隐藏&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;text-overflow:ellipsis&lt;/code&gt;: 省略符号表示隐藏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;常用内容标签&#34;&gt;常用内容标签&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;列表&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;ol&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;有序列表，子标签li表示单项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;ul&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;无序列表，子标签li表示单项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;dl&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;描述列表，子标签dt表示术语，子标签dd表示具体描述，可以是一对一，一对多，多对一以及多对多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;例如：&lt;img src=&#34;https://example.com/blog/images/ListTags.png&#34; alt=&#34;Image of List Tags&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;(格式)内容&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;pre&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;预定义格式，排版按照原文本排版&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;code&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;代码块，默认等宽格式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;hr&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;分界，表示转换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;br&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;换行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;a&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;em&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;强调，表示语气强调&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;strong&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;重点，表示重要性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;quote&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;引用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;blockquote&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;块引用，与quote相比，默认格式有缩进&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;例如：&lt;img src=&#34;https://example.com/blog/images/ContentTags.png&#34; alt=&#34;Image of Content Tags&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+</feed>

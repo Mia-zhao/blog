@@ -6,10 +6,27 @@
     <description>Recent content on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 08 Aug 2020 04:40:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 14:05:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript 对象基本用法</title>
+      <link>https://Mia-zhao.github.io/blog/posts/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Sat, 08 Aug 2020 14:05:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>这篇博文主要为了个人学习目的。
+最新 ECMAScript 定义了9种类型:
+ 包括6种原始数据类型  undefined Boolean Number String BigInt Symbol   null Object Function 并非数据结构, 属于Object, 但是有便利的 typeof instance === &amp;quot;function&amp;quot;  注意MDN中英文翻译不太一致:
+ Data Structures 数据结构  此篇总结对象 (Object) 的基本用法, 包括对象的声明, 删除、查看、修改或增加对象属性。
+声明对象 以下是两种声明对象的方式:
+let object1 = {};let object2 = new Object();对象属性 一个对象可以有多个属性, 属性名和属性值构成的一个键值对依附于所属对象。对象的属性可以被删除、查看、修改或增加。
+删除 对于已有对象object
+let object = {&#39;name&#39;: &#39;myName&#39;, &#39;value&#39;: 100};删除属性value有以下方式 (注意区别):
+object.value = undefined; // object[&#39;value&#39;] = undefined;// result: {name: &amp;quot;myName&amp;quot;, value: undefined}delete object.</description>
+    </item>
     
     <item>
       <title> JavaScript 的基本语法总结</title>
