@@ -6,10 +6,25 @@
     <description>Recent content in Posts on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 08 Aug 2020 14:05:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 13:14:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript 函数的执行时机</title>
+      <link>https://Mia-zhao.github.io/blog/posts/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</link>
+      <pubDate>Sun, 09 Aug 2020 13:14:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/posts/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</guid>
+      <description>这篇博文主要为了个人学习目的。
+首先考虑如下代码:
+let i = 0for(i = 0; i&amp;lt;6; i++){setTimeout(()=&amp;gt;{console.log(i)},0)}执行这个代码块打印6个6, 其原因在于setTimeout()函数的调用是在主线程执行完其他任务之后。依照MDN setTimeout documentation中给出的范例:
+function foo() {console.log(&#39;foo has been called&#39;);}setTimeout(foo, 0);console.log(&#39;After setTimeout&#39;);/*Result:After setTimeoutfoo has been called*/同理, 在for循环例子当中, setTimeout()函数被放置在待执行队列中。当for循环结束时, 共有6个setTimeout()待执行, 此时变量i的值为6。也就是说, setTimeout()执行时, 函数作用域的i是6, 因此代码块会打印出6个6。
+若要代码块打印出0、1、2、3、4、5则需要对原代码做出如下改动:
+for(let i = 0; i&amp;lt;6; i++){setTimeout(()=&amp;gt;{console.log(i)},0)}除了以上方法外, 还可以:
+let i = 0for(i = 0; i&amp;lt;6; i++){let j = isetTimeout(()=&amp;gt;{console.</description>
+    </item>
     
     <item>
       <title>JavaScript 对象基本用法</title>
