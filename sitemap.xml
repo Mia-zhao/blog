@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2020-08-12T07:06:00Z</lastmod>
+    <loc>https://Mia-zhao.github.io/blog/posts/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</loc>
+    <lastmod>2020-08-12T14:10:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/</loc>
-    <lastmod>2020-08-12T07:06:00Z</lastmod>
+    <lastmod>2020-08-12T14:10:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/posts/</loc>
+    <lastmod>2020-08-12T14:10:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/posts/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</loc>
     <lastmod>2020-08-12T07:06:00Z</lastmod>
   </url>
   <url>
