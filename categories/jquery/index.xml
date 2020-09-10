@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jquery on Mia&#39;s Blog Posts</title>
+    <link>https://Mia-zhao.github.io/blog/categories/jquery/</link>
+    <description>Recent content in jquery on Mia&#39;s Blog Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Wed, 12 Aug 2020 07:06:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://Mia-zhao.github.io/blog/categories/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>jQuery 的功能</title>
+      <link>https://Mia-zhao.github.io/blog/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Wed, 12 Aug 2020 07:06:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</guid>
+      <description>这篇博文主要为了个人学习目的。
+jQuery 是一个功能丰富的JavaScript 工具库，提供操作HTML、事件处理等API。以下简述jQuery 操作元素的功能。
+1 获取元素 jQuery 主要用法在于返回操作元素的API，然后通过API 操作来实现操控元素的目的。jQuery 库通过window 对象的属性jQuery给开发者以使用jQuery 的函数和属性等，$是jQuery的别名。例如，
+$( document ) // 获取整个文档$( &amp;quot;*&amp;quot; ) // 获取所有元素$( &amp;quot;#elementID&amp;quot; ) // 获取ID为&#39;elementID&#39;的元素jQuery 在获取元素时接受CSS选择器作为参数以及jQuery 特有的选择器。所有合法的jQuery 选择器在jQuery 选择器文档中提到。
+在使用$获取到某些元素后还可以用继续用find获取其子元素。例如，
+$( &amp;quot;#elementID&amp;quot; ).find( &amp;quot;div&amp;quot; ) // 在获取的elementID元素的子元素中获取div元素值得注意的是find不仅可以接受选择器为参数还接受元素或jQuery对象为参数，例如，
+const allListElements = $( &amp;quot;li&amp;quot; )$( &amp;quot;div&amp;quot; ).find( allListElements )2 链式操作 jQuery 的函数返回jQuery 对象使得链式操作成为可能。链式操作使代码更简洁，在通过选择器获取元素时只需获取一次就能实现多重操作。例如，
+$( &amp;quot;div&amp;quot; ).addClass( &amp;quot;new-class&amp;quot; ).css( &amp;quot;color&amp;quot;, &amp;quot;red&amp;quot; )// 给所有div元素加一个类&amp;quot;new-class&amp;quot;并把样式颜色设置为&amp;quot;red&amp;quot;这样的操作可以多重进行下去，代码实现的功能也一目了然。如果要获取子元素或者返回子元素上一层，可以用find和end。
+3 创建元素 用append可以实现创建元素的目的，将特定内容插入到匹配元素的最后作为最后一个子元素。用prepend插入作为第一个子元素。appendTo实现与append相同的功能，只是语法不同，a.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="hugo-theme" content="Axiom 0.7.1">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/">
+  <link rel="icon" type="image/x-icon" href="/blog/">
+  <link rel="apple-touch-icon" href="/blog/">
+  <link rel="canonical" href="https://Mia-zhao.github.io/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+<link rel="preload" as="style" href="/blog/bundle.css?v=1599728288" media="all">
+<link rel="stylesheet" href="/blog/bundle.css?v=1599728288" media="all">
+<style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}</style>
+
+
+
+<title>HTML入门笔记 : Mia&#39;s Blog Posts</title>
+
+<meta property="og:title" content="HTML入门笔记">
+<meta property="og:site_name" content="Mia&#39;s Blog Posts">
+<meta property="og:url" content="https://Mia-zhao.github.io/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+<link rel="image_src" href="https://Mia-zhao.github.io/blog/">
+<meta property="og:image" content="https://Mia-zhao.github.io/blog/">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_Hans">
+<meta property="og:description" content="这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。 HTML的起源 HTML的发明者是Tim Berners-Lee。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。 HTML的起手 HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型： &amp;lt;!DOCTYPE html&amp;gt; 虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到&amp;lt;!DOCTYPE html&amp;gt;应该被使用。 另外，html标签的lang属性被用来设置文本语言。例如， &amp;lt;html lang=&amp;quot;en-US&amp;quot;&amp;gt; &amp;lt;!-- 表示英文(美国) --&amp;gt; &amp;lt;html lang=&amp;quot;zh-CN&amp;quot;&amp;gt; &amp;lt;!-- 表示中文(中国) --&amp;gt; 此外，字符编码方式是必须的： &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; 值得注意的是编码方式应在文本head块以内，并且要尽可能靠前。 最后，为了让内容与移动设备更兼容，需加上meta标签的viewport： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; 在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下!，出现Emmet Abbreviation后回车： 以下是自动生成的HTML的起手： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 常用章节标签    标签 含义     h1~h6 标题，h1~h6有不同默认字体格式   section 章节   p 段落   header 头部   footer 脚部   main 主要内容   aside 次要内容   div 划分    以下是一个例子： 全局属性  class  用于给标签定义class 一个标签可以有多个class 多个标签可以是同一个class *，.">
+<meta name="description" content="这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。 HTML的起源 HTML的发明者是Tim Berners-Lee。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。 HTML的起手 HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型： &amp;lt;!DOCTYPE html&amp;gt; 虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到&amp;lt;!DOCTYPE html&amp;gt;应该被使用。 另外，html标签的lang属性被用来设置文本语言。例如， &amp;lt;html lang=&amp;quot;en-US&amp;quot;&amp;gt; &amp;lt;!-- 表示英文(美国) --&amp;gt; &amp;lt;html lang=&amp;quot;zh-CN&amp;quot;&amp;gt; &amp;lt;!-- 表示中文(中国) --&amp;gt; 此外，字符编码方式是必须的： &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; 值得注意的是编码方式应在文本head块以内，并且要尽可能靠前。 最后，为了让内容与移动设备更兼容，需加上meta标签的viewport： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; 在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下!，出现Emmet Abbreviation后回车： 以下是自动生成的HTML的起手： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 常用章节标签    标签 含义     h1~h6 标题，h1~h6有不同默认字体格式   section 章节   p 段落   header 头部   footer 脚部   main 主要内容   aside 次要内容   div 划分    以下是一个例子： 全局属性  class  用于给标签定义class 一个标签可以有多个class 多个标签可以是同一个class *，.">
+<meta property="og:updated_time" content="2020-08-02T14:08:23Z">
+<meta property="fb:app_id" content="">
+<meta name="author" content="Mia Zhao">
+<meta property="article:author" content="https://mia-zhao.gitee.io/">
+<meta property="article:published_time" content="2020-08-02T14:08:23Z">
+<meta property="article:modified_time" content="2020-08-02T14:08:23Z">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HTML入门笔记",
+  "alternativeHeadline": "这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。 HTML的起源 HTML的发明者是Tim Berners-Lee。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。 HTML的起手 HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型： \u0026lt;!DOCTYPE html\u0026gt; 虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到\u0026lt;!DOCTYPE html\u0026gt;应该被使用。 另外，html标签的lang属性被用来设置文本语言。例如， \u0026lt;html lang=\u0026quot;en-US\u0026quot;\u0026gt; \u0026lt;!-- 表示英文(美国) --\u0026gt; \u0026lt;html lang=\u0026quot;zh-CN\u0026quot;\u0026gt; \u0026lt;!-- 表示中文(中国) --\u0026gt; 此外，字符编码方式是必须的： \u0026lt;meta charset=\u0026quot;utf-8\u0026quot;\u0026gt; 值得注意的是编码方式应在文本head块以内，并且要尽可能靠前。 最后，为了让内容与移动设备更兼容，需加上meta标签的viewport： \u0026lt;meta name=\u0026quot;viewport\u0026quot; content=\u0026quot;width=device-width\u0026quot;\u0026gt; 在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下!，出现Emmet Abbreviation后回车： 以下是自动生成的HTML的起手： \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html lang=\u0026quot;en\u0026quot;\u0026gt; \u0026lt;head\u0026gt; \u0026lt;meta charset=\u0026quot;UTF-8\u0026quot;\u0026gt; \u0026lt;meta name=\u0026quot;viewport\u0026quot; content=\u0026quot;width=device-width, initial-scale=1.0\u0026quot;\u0026gt; \u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; 常用章节标签    标签 含义     h1~h6 标题，h1~h6有不同默认字体格式   section 章节   p 段落   header 头部   footer 脚部   main 主要内容   aside 次要内容   div 划分    以下是一个例子： 全局属性  class  用于给标签定义class 一个标签可以有多个class 多个标签可以是同一个class *，.",
+  "url": "https://Mia-zhao.github.io/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/",
+  "image": "https://Mia-zhao.github.io/blog/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://Mia-zhao.github.io/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"
+  },
+  "description": "这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。 HTML的起源 HTML的发明者是Tim Berners-Lee。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。 HTML的起手 HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型： \u0026lt;!DOCTYPE html\u0026gt; 虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到\u0026lt;!DOCTYPE html\u0026gt;应该被使用。 另外，html标签的lang属性被用来设置文本语言。例如， \u0026lt;html lang=\u0026quot;en-US\u0026quot;\u0026gt; \u0026lt;!-- 表示英文(美国) --\u0026gt; \u0026lt;html lang=\u0026quot;zh-CN\u0026quot;\u0026gt; \u0026lt;!-- 表示中文(中国) --\u0026gt; 此外，字符编码方式是必须的： \u0026lt;meta charset=\u0026quot;utf-8\u0026quot;\u0026gt; 值得注意的是编码方式应在文本head块以内，并且要尽可能靠前。 最后，为了让内容与移动设备更兼容，需加上meta标签的viewport： \u0026lt;meta name=\u0026quot;viewport\u0026quot; content=\u0026quot;width=device-width\u0026quot;\u0026gt; 在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下!，出现Emmet Abbreviation后回车： 以下是自动生成的HTML的起手： \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html lang=\u0026quot;en\u0026quot;\u0026gt; \u0026lt;head\u0026gt; \u0026lt;meta charset=\u0026quot;UTF-8\u0026quot;\u0026gt; \u0026lt;meta name=\u0026quot;viewport\u0026quot; content=\u0026quot;width=device-width, initial-scale=1.0\u0026quot;\u0026gt; \u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; 常用章节标签    标签 含义     h1~h6 标题，h1~h6有不同默认字体格式   section 章节   p 段落   header 头部   footer 脚部   main 主要内容   aside 次要内容   div 划分    以下是一个例子： 全局属性  class  用于给标签定义class 一个标签可以有多个class 多个标签可以是同一个class *，.",
+  "author": {
+    "@type": "Person",
+    "name": "Mia Zhao"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mia's Blog Posts",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://Mia-zhao.github.io/blog/"
+    }
+  },
+  "datePublished": "2020-08-02T14:08:23Z",
+  "dateModified": "2020-08-02T14:08:23Z",
+  "articleBody": "\u003cp\u003e这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。\u003c/p\u003e\n\u003ch2 id=\"html的起源\"\u003eHTML的起源\u003c/h2\u003e\n\u003cp\u003eHTML的发明者是\u003ca href=\"https://www.w3.org/People/Berners-Lee/\"\u003eTim Berners-Lee\u003c/a\u003e。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。\u003c/p\u003e\n\u003ch2 id=\"html的起手\"\u003eHTML的起手\u003c/h2\u003e\n\u003cp\u003eHTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;!DOCTYPE html\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到\u003ccode\u003e\u0026lt;!DOCTYPE html\u0026gt;\u003c/code\u003e应该被使用。\u003cbr\u003e\n\u003cbr\u003e\n另外，\u003ccode\u003ehtml\u003c/code\u003e标签的\u003ccode\u003elang\u003c/code\u003e属性被用来设置文本语言。例如，\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;html lang=\u0026quot;en-US\u0026quot;\u0026gt; \u0026lt;!-- 表示英文(美国) --\u0026gt;\n\u0026lt;html lang=\u0026quot;zh-CN\u0026quot;\u0026gt; \u0026lt;!-- 表示中文(中国) --\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e此外，字符编码方式是必须的：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;meta charset=\u0026quot;utf-8\u0026quot;\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e值得注意的是编码方式应在文本\u003ccode\u003ehead\u003c/code\u003e块以内，并且要尽可能靠前。\n\u003cbr\u003e\n\u003cbr\u003e\n最后，为了让内容与移动设备更兼容，需加上\u003ccode\u003emeta\u003c/code\u003e标签的\u003ccode\u003eviewport\u003c/code\u003e：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;meta name=\u0026quot;viewport\u0026quot; content=\u0026quot;width=device-width\u0026quot;\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下\u003ccode\u003e!\u003c/code\u003e，出现\u003ccode\u003eEmmet Abbreviation\u003c/code\u003e后回车：\n\u003cimg src=\"/blog/images/VSCode.png\" alt=\"Image of Visual Studio\"\u003e\n以下是自动生成的HTML的起手：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;!DOCTYPE html\u0026gt;\n\u0026lt;html lang=\u0026quot;en\u0026quot;\u0026gt;\n\u0026lt;head\u0026gt;\n    \u0026lt;meta charset=\u0026quot;UTF-8\u0026quot;\u0026gt;\n    \u0026lt;meta name=\u0026quot;viewport\u0026quot; content=\u0026quot;width=device-width, initial-scale=1.0\u0026quot;\u0026gt;\n    \u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt;\n\u0026lt;/head\u0026gt;\n\u0026lt;body\u0026gt;\n    \n\u0026lt;/body\u0026gt;\n\u0026lt;/html\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\u003ch2 id=\"常用章节标签\"\u003e常用章节标签\u003c/h2\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth align=\"left\"\u003e标签\u003c/th\u003e\n\u003cth align=\"left\"\u003e含义\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003eh1~h6\u003c/td\u003e\n\u003ctd align=\"left\"\u003e标题，h1~h6有不同默认字体格式\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003esection\u003c/td\u003e\n\u003ctd align=\"left\"\u003e章节\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003ep\u003c/td\u003e\n\u003ctd align=\"left\"\u003e段落\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003eheader\u003c/td\u003e\n\u003ctd align=\"left\"\u003e头部\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003efooter\u003c/td\u003e\n\u003ctd align=\"left\"\u003e脚部\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003emain\u003c/td\u003e\n\u003ctd align=\"left\"\u003e主要内容\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003easide\u003c/td\u003e\n\u003ctd align=\"left\"\u003e次要内容\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003ediv\u003c/td\u003e\n\u003ctd align=\"left\"\u003e划分\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003cp\u003e以下是一个例子：\n\u003cimg src=\"/blog/images/SectionTags.png\" alt=\"Image of Tags\"\u003e\u003c/p\u003e\n\u003ch2 id=\"全局属性\"\u003e全局属性\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eclass\n\u003cul\u003e\n\u003cli\u003e用于给标签定义class\u003c/li\u003e\n\u003cli\u003e一个标签可以有多个class\u003c/li\u003e\n\u003cli\u003e多个标签可以是同一个class\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003e*\u003c/code\u003e，\u003ccode\u003e.className\u003c/code\u003e，\u003ccode\u003e[class=className]\u003c/code\u003e reference\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003econtenteditable\n\u003cul\u003e\n\u003cli\u003e表示标签内容可以直接编辑\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003ehidden\n\u003cul\u003e\n\u003cli\u003e隐藏内容\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eid\n\u003cul\u003e\n\u003cli\u003e标签唯一才用id(不推荐)\u003c/li\u003e\n\u003cli\u003e注意HTML不能保证id唯一性\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003estyle\n\u003cul\u003e\n\u003cli\u003e标签样式，JS样式覆盖标签样式覆盖\u003ccode\u003ehead\u003c/code\u003e \u003ccode\u003estyle\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eCSS reset\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003etabindex\n\u003cul\u003e\n\u003cli\u003e表示使用tab时的导航，数字1，2，3，...表示顺序\u003c/li\u003e\n\u003cli\u003e1最先访问，0最后访问，-1不访问\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003etitle\n\u003cul\u003e\n\u003cli\u003e显示完整内容\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003ewhite-space:nowrap\u003c/code\u003e：不换行\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003eoverflow:hidden\u003c/code\u003e：超出部分隐藏\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003etext-overflow:ellipsis\u003c/code\u003e: 省略符号表示隐藏\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"常用内容标签\"\u003e常用内容标签\u003c/h2\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth align=\"left\"\u003e列表\u003c/th\u003e\n\u003cth align=\"left\"\u003e含义\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003eol\u003c/td\u003e\n\u003ctd align=\"left\"\u003e有序列表，子标签li表示单项\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003eul\u003c/td\u003e\n\u003ctd align=\"left\"\u003e无序列表，子标签li表示单项\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003edl\u003c/td\u003e\n\u003ctd align=\"left\"\u003e描述列表，子标签dt表示术语，子标签dd表示具体描述，可以是一对一，一对多，多对一以及多对多\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003cp\u003e例如：\u003cimg src=\"/blog/images/ListTags.png\" alt=\"Image of List Tags\"\u003e\u003c/p\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth align=\"left\"\u003e(格式)内容\u003c/th\u003e\n\u003cth align=\"left\"\u003e含义\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003epre\u003c/td\u003e\n\u003ctd align=\"left\"\u003e预定义格式，排版按照原文本排版\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003ecode\u003c/td\u003e\n\u003ctd align=\"left\"\u003e代码块，默认等宽格式\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003ehr\u003c/td\u003e\n\u003ctd align=\"left\"\u003e分界，表示转换\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003ebr\u003c/td\u003e\n\u003ctd align=\"left\"\u003e换行\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003ea\u003c/td\u003e\n\u003ctd align=\"left\"\u003e链接\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003eem\u003c/td\u003e\n\u003ctd align=\"left\"\u003e强调，表示语气强调\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003estrong\u003c/td\u003e\n\u003ctd align=\"left\"\u003e重点，表示重要性\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003equote\u003c/td\u003e\n\u003ctd align=\"left\"\u003e引用\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"left\"\u003eblockquote\u003c/td\u003e\n\u003ctd align=\"left\"\u003e块引用，与quote相比，默认格式有缩进\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003cp\u003e例如：\u003cimg src=\"/blog/images/ContentTags.png\" alt=\"Image of Content Tags\"\u003e\u003c/p\u003e"
+}
+</script>
+
+<link rel="preload" as="script" href="/blog/bundle.js?v=1599728288">
+
+
+</head>
+<body>
+
+  <header id="nav" class="header">
+  <div class="ax-l-i max-w-6xl">
+    <div class="ax-logo">
+      <a class="block" href="/blog/" title="Mia&#39;s Blog Posts"><span class="font-semibold text-raven-900">Mia's Blog Posts</span></a>
+    </div>
+    <div class="ax-user">
+      <a class="p-2 w-8 h-8 block text-raven-500 hover:text-gray-800 focus:text-gray-800 focus:outline-none" target="_blank" rel="noopener nofollow" href="https://www.google.com/search?q=site:https://Mia-zhao.github.io/blog/" title="Search">
+        <svg class="fill-current" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.67 12.804c0-5.6 4.544-10.134 10.133-10.134s10.134 4.544 10.134 10.134-4.544 10.133-10.134 10.133S2.67 18.393 2.67 12.804zm28.943 16.923l-8.868-8.868c4.287-5.3 3.68-13.012-1.378-17.57S8.564-1.066 3.75 3.75s-5.017 12.558-.46 17.618 12.28 5.665 17.57 1.378l8.868 8.868a1.33 1.33 0 0 0 2.231-.597c.123-.46-.008-.952-.345-1.29h0z"/></svg>
+
+      </a>
+      <a class="p-2 block text-base leading-none text-raven-500 hover:text-gray-800 focus:text-gray-800 focus:outline-none" href="/blog/blog/posts/">
+        Posts
+      </a>
+    </div>
+  </div>
+
+  
+</header>
+
+  <main>
+<div class="default-single">
+  <div class="ax-title ax-l-o">
+    <div class="ax-l-i max-w-680">
+      <h1 class="post-title font-content-title font-normal leading-tight tracking-default text-40">HTML入门笔记</h1>
+
+      <div class="ax-meta flex items-center mt-5">
+        <div class="flex-grow min-w-0">
+          <div class="flex items-center">
+  <div class="flex-shrink-0">
+    <img
+    class="w-12 h-12 sm:w-14 sm:h-14 object-cover p-3px rounded-full border border-blue-300"
+    src="/blog/images/author/default.webp"
+    alt="Mia Zhao">
+  </div>
+  <div class="flex-shrink-0 ml-2 leading-tight font-content-sans">
+    <a class="block text-sm text-raven-800 hover:text-raven-900 hover:underline focus:underline" target="_blank" rel="noopener nofollow" title="Mia Zhao" href="https://mia-zhao.gitee.io/">Mia Zhao</a>
+    <time class="text-sm text-raven-500" datetime="2020-08-02T14:08:23Z">Aug 2, 2020 10:08PM</time>
+  </div>
+</div>
+
+        </div>
+        <div>
+          <div class="flex items-center">
+  <a class="flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=HTML%e5%85%a5%e9%97%a8%e7%ac%94%e8%ae%b0%20by%20%40%25%21s%28%3cnil%3e%29%20https%3a%2f%2fMia-zhao.github.io%2fblog%2fhtml%25E5%2585%25A5%25E9%2597%25A8%25E7%25AC%2594%25E8%25AE%25B0%2f"><svg class="w-6 h-6 fill-current" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M32 6.078c-1.2.522-2.458.868-3.78 1.036 1.36-.812 2.398-2.088 2.886-3.626a13.11 13.11 0 0 1-4.16 1.588C25.742 3.794 24.026 3 22.154 3a6.56 6.56 0 0 0-6.556 6.562c0 .52.044 1.02.152 1.496-5.454-.266-10.28-2.88-13.522-6.862-.566.982-.898 2.106-.898 3.316a6.57 6.57 0 0 0 2.914 5.452 6.48 6.48 0 0 1-2.964-.808v.072c0 3.188 2.274 5.836 5.256 6.446-.534.146-1.116.216-1.72.216-.42 0-.844-.024-1.242-.112.85 2.598 3.262 4.508 6.13 4.57a13.18 13.18 0 0 1-8.134 2.798c-.538 0-1.054-.024-1.57-.1C2.906 27.93 6.35 29 10.064 29c12.072 0 18.672-10 18.672-18.668 0-.3-.01-.57-.024-.848C30.014 8.56 31.108 7.406 32 6.078z"/></svg>
+</a>
+  <a class="ml-3 flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="Share on Facebook" href="https://www.facebook.com/dialog/share?app_id=&display=page&href=https%3a%2f%2fMia-zhao.github.io%2fblog%2fhtml%25E5%2585%25A5%25E9%2597%25A8%25E7%25AC%2594%25E8%25AE%25B0%2f"><svg class="w-6 h-6 fill-current" viewBox="-7 -3.5 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M30.234 0H1.765C.8.001 0 .79 0 1.766v28.47C.001 31.2.79 32 1.766 32h15.328V19.625h-4.156V14.78h4.156v-3.564c0-4.134 2.523-6.384 6.21-6.384 1.766 0 3.284.13 3.726.2v4.32h-2.543c-2.006 0-2.394.953-2.394 2.352v3.085h4.797l-.625 4.844h-4.172V32h8.14C31.21 32 32 31.2 32 30.234V1.765C32 .8 31.21 0 30.234 0z"/></svg>
+</a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div><div class="ax-content ax-l-o">
+    <div class="ax-l-i max-w-680">
+      <article class="cdata">
+<p>这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。</p>
+<h2 id="html的起源">HTML的起源</h2>
+<p>HTML的发明者是<a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a>。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。</p>
+<h2 id="html的起手">HTML的起手</h2>
+<p>HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+</code></pre><p>虽然MDN的补充阅读提到这行标注是case insensitive，MDN的官方HTML指南写到<code>&lt;!DOCTYPE html&gt;</code>应该被使用。<br>
+<br>
+另外，<code>html</code>标签的<code>lang</code>属性被用来设置文本语言。例如，</p>
+<pre><code>&lt;html lang=&quot;en-US&quot;&gt; &lt;!-- 表示英文(美国) --&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt; &lt;!-- 表示中文(中国) --&gt;
+</code></pre><p>此外，字符编码方式是必须的：</p>
+<pre><code>&lt;meta charset=&quot;utf-8&quot;&gt;
+</code></pre><p>值得注意的是编码方式应在文本<code>head</code>块以内，并且要尽可能靠前。
+<br>
+<br>
+最后，为了让内容与移动设备更兼容，需加上<code>meta</code>标签的<code>viewport</code>：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+</code></pre><p>在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下<code>!</code>，出现<code>Emmet Abbreviation</code>后回车：
+<img src="/blog/images/VSCode.png" alt="Image of Visual Studio">
+以下是自动生成的HTML的起手：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="常用章节标签">常用章节标签</h2>
+<table>
+<thead>
+<tr>
+<th align="left">标签</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">h1~h6</td>
+<td align="left">标题，h1~h6有不同默认字体格式</td>
+</tr>
+<tr>
+<td align="left">section</td>
+<td align="left">章节</td>
+</tr>
+<tr>
+<td align="left">p</td>
+<td align="left">段落</td>
+</tr>
+<tr>
+<td align="left">header</td>
+<td align="left">头部</td>
+</tr>
+<tr>
+<td align="left">footer</td>
+<td align="left">脚部</td>
+</tr>
+<tr>
+<td align="left">main</td>
+<td align="left">主要内容</td>
+</tr>
+<tr>
+<td align="left">aside</td>
+<td align="left">次要内容</td>
+</tr>
+<tr>
+<td align="left">div</td>
+<td align="left">划分</td>
+</tr>
+</tbody>
+</table>
+<p>以下是一个例子：
+<img src="/blog/images/SectionTags.png" alt="Image of Tags"></p>
+<h2 id="全局属性">全局属性</h2>
+<ul>
+<li>class
+<ul>
+<li>用于给标签定义class</li>
+<li>一个标签可以有多个class</li>
+<li>多个标签可以是同一个class</li>
+<li><code>*</code>，<code>.className</code>，<code>[class=className]</code> reference</li>
+</ul>
+</li>
+<li>contenteditable
+<ul>
+<li>表示标签内容可以直接编辑</li>
+</ul>
+</li>
+<li>hidden
+<ul>
+<li>隐藏内容</li>
+</ul>
+</li>
+<li>id
+<ul>
+<li>标签唯一才用id(不推荐)</li>
+<li>注意HTML不能保证id唯一性</li>
+</ul>
+</li>
+<li>style
+<ul>
+<li>标签样式，JS样式覆盖标签样式覆盖<code>head</code> <code>style</code></li>
+<li>CSS reset</li>
+</ul>
+</li>
+<li>tabindex
+<ul>
+<li>表示使用tab时的导航，数字1，2，3，...表示顺序</li>
+<li>1最先访问，0最后访问，-1不访问</li>
+</ul>
+</li>
+<li>title
+<ul>
+<li>显示完整内容</li>
+<li><code>white-space:nowrap</code>：不换行</li>
+<li><code>overflow:hidden</code>：超出部分隐藏</li>
+<li><code>text-overflow:ellipsis</code>: 省略符号表示隐藏</li>
+</ul>
+</li>
+</ul>
+<h2 id="常用内容标签">常用内容标签</h2>
+<table>
+<thead>
+<tr>
+<th align="left">列表</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ol</td>
+<td align="left">有序列表，子标签li表示单项</td>
+</tr>
+<tr>
+<td align="left">ul</td>
+<td align="left">无序列表，子标签li表示单项</td>
+</tr>
+<tr>
+<td align="left">dl</td>
+<td align="left">描述列表，子标签dt表示术语，子标签dd表示具体描述，可以是一对一，一对多，多对一以及多对多</td>
+</tr>
+</tbody>
+</table>
+<p>例如：<img src="/blog/images/ListTags.png" alt="Image of List Tags"></p>
+<table>
+<thead>
+<tr>
+<th align="left">(格式)内容</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">pre</td>
+<td align="left">预定义格式，排版按照原文本排版</td>
+</tr>
+<tr>
+<td align="left">code</td>
+<td align="left">代码块，默认等宽格式</td>
+</tr>
+<tr>
+<td align="left">hr</td>
+<td align="left">分界，表示转换</td>
+</tr>
+<tr>
+<td align="left">br</td>
+<td align="left">换行</td>
+</tr>
+<tr>
+<td align="left">a</td>
+<td align="left">链接</td>
+</tr>
+<tr>
+<td align="left">em</td>
+<td align="left">强调，表示语气强调</td>
+</tr>
+<tr>
+<td align="left">strong</td>
+<td align="left">重点，表示重要性</td>
+</tr>
+<tr>
+<td align="left">quote</td>
+<td align="left">引用</td>
+</tr>
+<tr>
+<td align="left">blockquote</td>
+<td align="left">块引用，与quote相比，默认格式有缩进</td>
+</tr>
+</tbody>
+</table>
+<p>例如：<img src="/blog/images/ContentTags.png" alt="Image of Content Tags"></p>
+
+      </article>
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="footer">
+  <div class="ax-l-i max-w-6xl">
+    <nav class="flex items-center justify-center">
+      <a class="ml-3 first:ml-0 text-sm text-gray-600 hover:text-gray-800" href="/blog/blog/posts/">Posts</a>
+      <a class="ml-3 first:ml-0 text-sm text-gray-600 hover:text-gray-800" href="/blog/blog/contact/">Contact</a>
+    </nav>
+
+    <div class="footer-copyright text-sm text-center text-gray-500 mt-4">
+      &#169; -2020 Mia&#39;s Blog Posts
+    </div>
+    <div class="text-sm sm:text-xs text-center text-gray-500 mt-2">
+      Powered by <a href="https://www.axiomtheme.com/?utm_source=theme-footer&utm_medium=website&utm_campaign=referral">Axiom</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/bundle.js?v=1599728288"></script>
+
+
+</body>
+</html>

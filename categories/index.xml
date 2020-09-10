@@ -6,9 +6,73 @@
     <description>Recent content in Categories on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
+    <lastBuildDate>Fri, 21 Aug 2020 15:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MVC</title>
+      <link>https://Mia-zhao.github.io/blog/categories/mvc/</link>
+      <pubDate>Fri, 21 Aug 2020 15:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/categories/mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DOM</title>
+      <link>https://Mia-zhao.github.io/blog/categories/dom/</link>
+      <pubDate>Wed, 12 Aug 2020 14:10:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/categories/dom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://Mia-zhao.github.io/blog/categories/javascript/</link>
+      <pubDate>Wed, 12 Aug 2020 07:06:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>https://Mia-zhao.github.io/blog/categories/jquery/</link>
+      <pubDate>Wed, 12 Aug 2020 07:06:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/categories/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>URL</title>
+      <link>https://Mia-zhao.github.io/blog/categories/url/</link>
+      <pubDate>Thu, 06 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/categories/url/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://Mia-zhao.github.io/blog/categories/css/</link>
+      <pubDate>Thu, 06 Aug 2020 08:59:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/categories/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://Mia-zhao.github.io/blog/categories/html/</link>
+      <pubDate>Tue, 04 Aug 2020 13:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/categories/html/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

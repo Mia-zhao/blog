@@ -6,9 +6,73 @@
     <description>Recent content in Tags on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
+    <lastBuildDate>Fri, 21 Aug 2020 15:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MVC</title>
+      <link>https://Mia-zhao.github.io/blog/tags/mvc/</link>
+      <pubDate>Fri, 21 Aug 2020 15:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DOM</title>
+      <link>https://Mia-zhao.github.io/blog/tags/dom/</link>
+      <pubDate>Wed, 12 Aug 2020 14:10:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/dom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://Mia-zhao.github.io/blog/tags/javascript/</link>
+      <pubDate>Wed, 12 Aug 2020 07:06:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>https://Mia-zhao.github.io/blog/tags/jquery/</link>
+      <pubDate>Wed, 12 Aug 2020 07:06:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>URL</title>
+      <link>https://Mia-zhao.github.io/blog/tags/url/</link>
+      <pubDate>Thu, 06 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/url/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://Mia-zhao.github.io/blog/tags/css/</link>
+      <pubDate>Thu, 06 Aug 2020 08:59:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://Mia-zhao.github.io/blog/tags/html/</link>
+      <pubDate>Tue, 04 Aug 2020 13:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/html/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

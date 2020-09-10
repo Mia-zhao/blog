@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/</loc>
+    <lastmod>2020-08-21T15:00:00Z</lastmod>
+  </url>
+  <url>
     <loc>https://Mia-zhao.github.io/blog/</loc>
+    <lastmod>2020-08-21T15:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/mvc/</loc>
+    <lastmod>2020-08-21T15:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/mvc/</loc>
     <lastmod>2020-08-21T15:00:00Z</lastmod>
   </url>
   <url>
@@ -9,61 +21,110 @@
     <lastmod>2020-08-21T15:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-mvc/</loc>
+    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
     <lastmod>2020-08-21T15:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</loc>
+    <loc>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-mvc/</loc>
+    <lastmod>2020-08-21T15:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/dom/</loc>
     <lastmod>2020-08-12T14:10:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</loc>
+    <loc>https://Mia-zhao.github.io/blog/categories/dom/</loc>
+    <lastmod>2020-08-12T14:10:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</loc>
+    <lastmod>2020-08-12T14:10:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/javascript/</loc>
     <lastmod>2020-08-12T07:06:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</loc>
+    <loc>https://Mia-zhao.github.io/blog/categories/javascript/</loc>
+    <lastmod>2020-08-12T07:06:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/jquery/</loc>
+    <lastmod>2020-08-12T07:06:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/jquery/</loc>
+    <lastmod>2020-08-12T07:06:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2020-08-12T07:06:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</loc>
     <lastmod>2020-08-09T13:14:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
+    <loc>https://Mia-zhao.github.io/blog/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2020-08-08T14:05:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/-javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2020-08-08T04:40:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
+    <loc>https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
     <lastmod>2020-08-07T04:12:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-url/</loc>
+    <loc>https://Mia-zhao.github.io/blog/tags/url/</loc>
     <lastmod>2020-08-06T10:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</loc>
+    <loc>https://Mia-zhao.github.io/blog/categories/url/</loc>
+    <lastmod>2020-08-06T10:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/</loc>
+    <lastmod>2020-08-06T10:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/css/</loc>
     <lastmod>2020-08-06T08:59:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</loc>
+    <loc>https://Mia-zhao.github.io/blog/categories/css/</loc>
+    <lastmod>2020-08-06T08:59:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</loc>
+    <lastmod>2020-08-06T08:59:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</loc>
     <lastmod>2020-08-06T07:50:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/html-practice/</loc>
+    <loc>https://Mia-zhao.github.io/blog/tags/html/</loc>
     <lastmod>2020-08-04T13:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
+    <loc>https://Mia-zhao.github.io/blog/categories/html/</loc>
+    <lastmod>2020-08-04T13:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/html-practice/</loc>
+    <lastmod>2020-08-04T13:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
     <lastmod>2020-08-03T13:00:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://Mia-zhao.github.io/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-08-02T14:08:23Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/categories/</loc>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
+    <loc>https://Mia-zhao.github.io/blog/contact/</loc>
   </url>
 </urlset>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOM on Mia&#39;s Blog Posts</title>
+    <link>https://Mia-zhao.github.io/blog/tags/dom/</link>
+    <description>Recent content in DOM on Mia&#39;s Blog Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Wed, 12 Aug 2020 14:10:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://Mia-zhao.github.io/blog/tags/dom/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DOM事件和事件委托</title>
+      <link>https://Mia-zhao.github.io/blog/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</link>
+      <pubDate>Wed, 12 Aug 2020 14:10:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</guid>
+      <description>这篇博文主要为了个人学习目的。
+简述 DOM 事件模型或 DOM 事件机制 DOM事件模型概括了事件以及DOM节点的事件注册、事件监听等。事件指在浏览器中触发的被绑定在DOM元素上的事件，例如点击按钮，提交表单，发生错误等等。
+Source:
+https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg
+上图概括了DOM事件的流程，DOM事件传播路径是按照捕获阶段-目标阶段-冒泡阶段发生的。
+ 捕获阶段：事件对象从事件目标的祖先传到目标的父辈 目标阶段：事件对象到达事件目标，如果是不冒泡的事件，那么事件对象的传播在完成这个阶段就停止了 冒泡阶段：事件对象从目标的父辈传到祖先（与捕获的顺序相反）  对于可以停止冒泡的事件，可以用stopPropagation来在冒泡阶段停止事件继续向上冒泡，例如，
+video.onclick = function(e) {e.stopPropagation();video.play(); };有三种方法可以注册DOM元素事件：
+ 通过addEventListener  button.addEventListener(&#39;click&#39;, ()=&amp;gt;{// some code});通过HTML属性  &amp;lt;button onclick=&amp;quot;some code&amp;quot;&amp;gt;// 不推荐通过DOM元素属性  button.onclick = ()=&amp;gt; {// some code};除了MDN定义的事件类型，还可以创建自定义事件来监听，例如：
+const event = new Event(&#39;build&#39;, { detail: elem.dataset.time });elem.addEventListener(&#39;build&#39;, ()=&amp;gt;{});elem.dispatchEvent(event);简述事件委托 冒泡为事件委托提供了方便，如果想要一些代码在大量子元素事件发生的时候运行，只需在父辈元素设置事件监听，这样让子元素事件冒泡到父元素，而不是在每一个子元素中分别设置事件监听。除此以外，如果想要监听的元素是动态的，在元素还不存在时可以在它的父辈设置事件监听，这样就免除了在不同地方增加或移除事件监听的步骤。例如，
+document.getElementById(&amp;quot;myDiv&amp;quot;).addEventListener(&amp;quot;click&amp;quot;, (e)=&amp;gt;{if (e.target &amp;amp;&amp;amp; e.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="hugo-theme" content="Axiom 0.7.1">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/">
+  <link rel="icon" type="image/x-icon" href="/blog/">
+  <link rel="apple-touch-icon" href="/blog/">
+  <link rel="canonical" href="https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/">
+<link rel="preload" as="style" href="/blog/bundle.css?v=1599728288" media="all">
+<link rel="stylesheet" href="/blog/bundle.css?v=1599728288" media="all">
+<style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}</style>
+
+
+
+<title>浅析 URL : Mia&#39;s Blog Posts</title>
+
+<meta property="og:title" content="浅析 URL">
+<meta property="og:site_name" content="Mia&#39;s Blog Posts">
+<meta property="og:url" content="https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/">
+<link rel="image_src" href="https://Mia-zhao.github.io/blog/">
+<meta property="og:image" content="https://Mia-zhao.github.io/blog/">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_Hans">
+<meta property="og:description" content="这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。 URL URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：  protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS domain name 域名: 表明请求的服务器，也可以直接使用对应的IP port 端口: 访问服务器的服务端口  HTTP标准端口: 80 HTTPS标准端口: 443   path 路径: 服务器上访问的资源路径 extra parameters 其他参数: 参数是用&amp;amp;分隔的键值对  例如：http://www.baidu.com/s?wd=hi中wd=hi是搜索请求的参数   anchor 锚点: 指示浏览器显示锚点的位置, 用#anchorInDoc表示  #后的内容不会发送到服务器    https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。 DNS DNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。 nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain-name命令输出对域名a-domain-name的解析。例如： &amp;gt; nslookup google.comServer: your-routerAddress: 192.">
+<meta name="description" content="这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。 URL URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：  protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS domain name 域名: 表明请求的服务器，也可以直接使用对应的IP port 端口: 访问服务器的服务端口  HTTP标准端口: 80 HTTPS标准端口: 443   path 路径: 服务器上访问的资源路径 extra parameters 其他参数: 参数是用&amp;amp;分隔的键值对  例如：http://www.baidu.com/s?wd=hi中wd=hi是搜索请求的参数   anchor 锚点: 指示浏览器显示锚点的位置, 用#anchorInDoc表示  #后的内容不会发送到服务器    https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。 DNS DNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。 nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain-name命令输出对域名a-domain-name的解析。例如： &amp;gt; nslookup google.comServer: your-routerAddress: 192.">
+<meta property="og:updated_time" content="2020-08-06T10:00:00Z">
+<meta property="fb:app_id" content="">
+<meta name="author" content="Mia Zhao">
+<meta property="article:author" content="https://mia-zhao.gitee.io/">
+<meta property="article:published_time" content="2020-08-06T10:00:00Z">
+<meta property="article:modified_time" content="2020-08-06T10:00:00Z">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "浅析 URL",
+  "alternativeHeadline": "这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。 URL URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：  protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS domain name 域名: 表明请求的服务器，也可以直接使用对应的IP port 端口: 访问服务器的服务端口  HTTP标准端口: 80 HTTPS标准端口: 443   path 路径: 服务器上访问的资源路径 extra parameters 其他参数: 参数是用\u0026amp;分隔的键值对  例如：http://www.baidu.com/s?wd=hi中wd=hi是搜索请求的参数   anchor 锚点: 指示浏览器显示锚点的位置, 用#anchorInDoc表示  #后的内容不会发送到服务器    https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary\r在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。 DNS DNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。 nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain-name命令输出对域名a-domain-name的解析。例如： \u0026gt; nslookup google.com\rServer: your-router\rAddress: 192.",
+  "url": "https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/",
+  "image": "https://Mia-zhao.github.io/blog/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/"
+  },
+  "description": "这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。 URL URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：  protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS domain name 域名: 表明请求的服务器，也可以直接使用对应的IP port 端口: 访问服务器的服务端口  HTTP标准端口: 80 HTTPS标准端口: 443   path 路径: 服务器上访问的资源路径 extra parameters 其他参数: 参数是用\u0026amp;分隔的键值对  例如：http://www.baidu.com/s?wd=hi中wd=hi是搜索请求的参数   anchor 锚点: 指示浏览器显示锚点的位置, 用#anchorInDoc表示  #后的内容不会发送到服务器    https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary\r在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。 DNS DNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。 nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain-name命令输出对域名a-domain-name的解析。例如： \u0026gt; nslookup google.com\rServer: your-router\rAddress: 192.",
+  "author": {
+    "@type": "Person",
+    "name": "Mia Zhao"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mia's Blog Posts",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://Mia-zhao.github.io/blog/"
+    }
+  },
+  "datePublished": "2020-08-06T10:00:00Z",
+  "dateModified": "2020-08-06T10:00:00Z",
+  "articleBody": "\u003cp\u003e这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。\u003c/p\u003e\n\u003ch2 id=\"url\"\u003eURL\u003c/h2\u003e\n\u003cp\u003eURL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eprotocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS\u003c/li\u003e\n\u003cli\u003edomain name 域名: 表明请求的服务器，也可以直接使用对应的IP\u003c/li\u003e\n\u003cli\u003eport 端口: 访问服务器的服务端口\n\u003cul\u003e\n\u003cli\u003eHTTP标准端口: 80\u003c/li\u003e\n\u003cli\u003eHTTPS标准端口: 443\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003epath 路径: 服务器上访问的资源路径\u003c/li\u003e\n\u003cli\u003eextra parameters 其他参数: 参数是用\u0026amp;分隔的键值对\n\u003cul\u003e\n\u003cli\u003e例如：\u003ccode\u003ehttp://www.baidu.com/s?wd=hi\u003c/code\u003e中\u003ccode\u003ewd=hi\u003c/code\u003e是搜索请求的参数\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eanchor 锚点: 指示浏览器显示锚点的位置, 用\u003ccode\u003e#anchorInDoc\u003c/code\u003e表示\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e#\u003c/code\u003e后的内容不会发送到服务器\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cpre\u003e\u003ccode\u003ehttps://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。\u003c/p\u003e\n\u003ch2 id=\"dns\"\u003eDNS\u003c/h2\u003e\n\u003cp\u003eDNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。\u003cbr\u003e\n\u003cbr\u003e\n\u003ccode\u003enslookup\u003c/code\u003e 是一个命令行工具用来解析DNS域名查找。\u003ccode\u003enslookup a-domain-name\u003c/code\u003e命令输出对域名\u003ccode\u003ea-domain-name\u003c/code\u003e的解析。例如：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026gt; nslookup google.com\r\nServer:  your-router\r\nAddress:  192.168.0.1\r\n\r\nNon-authoritative answer:\r\nName:    google.com\r\nAddress:  8.7.198.46\r\n\u003c/code\u003e\u003c/pre\u003e\u003ch2 id=\"ip\"\u003eIP\u003c/h2\u003e\n\u003cp\u003eIP (Internet Protocol) 提供网络中设备的地址, 格式为\u003ccode\u003exxx.xxx.xxx.xxx\u003c/code\u003e, \u003ccode\u003e.\u003c/code\u003e间隔开4组0~255的数值。IP可以是静态或是动态的, 静态IP不会发生变化; 动态IP是分配给设备的地址, 会发生变化。\u003cbr\u003e\n\u003cbr\u003e\n\u003ccode\u003e127.0.0.1\u003c/code\u003e是本机地址, \u003ccode\u003elocalhost\u003c/code\u003e被解析为\u003ccode\u003e127.0.0.1\u003c/code\u003e。在Windows中, 可以通过管理者权限更改\u003ccode\u003eC:\\Windows\\System32\\drivers\\etc\\hosts\u003c/code\u003e来更新本地域名解析。在Linux中, 可以通过\u003ccode\u003esudo\u003c/code\u003e来更新\u003ccode\u003e/etc/hosts\u003c/code\u003e文件。\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eping\u003c/code\u003e 是一个命令行工具用来检测域名/服务器/网络是否能联通。例如：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026gt; ping baidu.com\r\n\r\nPinging baidu.com [220.181.38.148] with 32 bytes of data:\r\nReply from 220.181.38.148: bytes=32 time=31ms TTL=53\r\nReply from 220.181.38.148: bytes=32 time=32ms TTL=53\r\nReply from 220.181.38.148: bytes=32 time=31ms TTL=53\r\nReply from 220.181.38.148: bytes=32 time=31ms TTL=53\r\n\r\nPing statistics for 220.181.38.148:\r\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\r\nApproximate round trip times in milli-seconds:\r\n    Minimum = 31ms, Maximum = 32ms, Average = 31ms\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e\u003ccode\u003eping\u003c/code\u003e可以通过参数\u003ccode\u003e-n\u003c/code\u003e设置发送的请求数, 在Windows上默认请求数是4。还可以通过\u003ccode\u003e-w\u003c/code\u003e设置timeout等等。\u003c/p\u003e\n\u003ch2 id=\"domain-name\"\u003eDomain Name\u003c/h2\u003e\n\u003cp\u003e域名 (domain name) 是网址的名, 例如：\u003ccode\u003egoogle.com\u003c/code\u003e, \u003ccode\u003ewikipedia.org\u003c/code\u003e都是域名。域名分为顶级域名, 二级域名（俗称一级域名）, 三级域名（俗称二级域名）。例如, \u003ccode\u003ecom\u003c/code\u003e是顶级域名, \u003ccode\u003egoogle.com\u003c/code\u003e是二级域名, \u003ccode\u003edrive.google.com\u003c/code\u003e是三级域名。\u003cbr\u003e\n\u003cbr\u003e\n一个域名可以对应多个IP。一个IP可以对应不同域名。\u003c/p\u003e"
+}
+</script>
+
+<link rel="preload" as="script" href="/blog/bundle.js?v=1599728288">
+
+
+</head>
+<body>
+
+  <header id="nav" class="header">
+  <div class="ax-l-i max-w-6xl">
+    <div class="ax-logo">
+      <a class="block" href="/blog/" title="Mia&#39;s Blog Posts"><span class="font-semibold text-raven-900">Mia's Blog Posts</span></a>
+    </div>
+    <div class="ax-user">
+      <a class="p-2 w-8 h-8 block text-raven-500 hover:text-gray-800 focus:text-gray-800 focus:outline-none" target="_blank" rel="noopener nofollow" href="https://www.google.com/search?q=site:https://Mia-zhao.github.io/blog/" title="Search">
+        <svg class="fill-current" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.67 12.804c0-5.6 4.544-10.134 10.133-10.134s10.134 4.544 10.134 10.134-4.544 10.133-10.134 10.133S2.67 18.393 2.67 12.804zm28.943 16.923l-8.868-8.868c4.287-5.3 3.68-13.012-1.378-17.57S8.564-1.066 3.75 3.75s-5.017 12.558-.46 17.618 12.28 5.665 17.57 1.378l8.868 8.868a1.33 1.33 0 0 0 2.231-.597c.123-.46-.008-.952-.345-1.29h0z"/></svg>
+
+      </a>
+      <a class="p-2 block text-base leading-none text-raven-500 hover:text-gray-800 focus:text-gray-800 focus:outline-none" href="/blog/blog/posts/">
+        Posts
+      </a>
+    </div>
+  </div>
+
+  
+</header>
+
+  <main>
+<div class="default-single">
+  <div class="ax-title ax-l-o">
+    <div class="ax-l-i max-w-680">
+      <h1 class="post-title font-content-title font-normal leading-tight tracking-default text-40">浅析 URL</h1>
+
+      <div class="ax-meta flex items-center mt-5">
+        <div class="flex-grow min-w-0">
+          <div class="flex items-center">
+  <div class="flex-shrink-0">
+    <img
+    class="w-12 h-12 sm:w-14 sm:h-14 object-cover p-3px rounded-full border border-blue-300"
+    src="/blog/images/author/default.webp"
+    alt="Mia Zhao">
+  </div>
+  <div class="flex-shrink-0 ml-2 leading-tight font-content-sans">
+    <a class="block text-sm text-raven-800 hover:text-raven-900 hover:underline focus:underline" target="_blank" rel="noopener nofollow" title="Mia Zhao" href="https://mia-zhao.gitee.io/">Mia Zhao</a>
+    <time class="text-sm text-raven-500" datetime="2020-08-06T10:00:00Z">Aug 6, 2020 6:00PM</time>
+  </div>
+</div>
+
+        </div>
+        <div>
+          <div class="flex items-center">
+  <a class="flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=%e6%b5%85%e6%9e%90%20URL%20by%20%40%25%21s%28%3cnil%3e%29%20https%3a%2f%2fMia-zhao.github.io%2fblog%2f%25E6%25B5%2585%25E6%259E%2590-url%2f"><svg class="w-6 h-6 fill-current" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M32 6.078c-1.2.522-2.458.868-3.78 1.036 1.36-.812 2.398-2.088 2.886-3.626a13.11 13.11 0 0 1-4.16 1.588C25.742 3.794 24.026 3 22.154 3a6.56 6.56 0 0 0-6.556 6.562c0 .52.044 1.02.152 1.496-5.454-.266-10.28-2.88-13.522-6.862-.566.982-.898 2.106-.898 3.316a6.57 6.57 0 0 0 2.914 5.452 6.48 6.48 0 0 1-2.964-.808v.072c0 3.188 2.274 5.836 5.256 6.446-.534.146-1.116.216-1.72.216-.42 0-.844-.024-1.242-.112.85 2.598 3.262 4.508 6.13 4.57a13.18 13.18 0 0 1-8.134 2.798c-.538 0-1.054-.024-1.57-.1C2.906 27.93 6.35 29 10.064 29c12.072 0 18.672-10 18.672-18.668 0-.3-.01-.57-.024-.848C30.014 8.56 31.108 7.406 32 6.078z"/></svg>
+</a>
+  <a class="ml-3 flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="Share on Facebook" href="https://www.facebook.com/dialog/share?app_id=&display=page&href=https%3a%2f%2fMia-zhao.github.io%2fblog%2f%25E6%25B5%2585%25E6%259E%2590-url%2f"><svg class="w-6 h-6 fill-current" viewBox="-7 -3.5 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M30.234 0H1.765C.8.001 0 .79 0 1.766v28.47C.001 31.2.79 32 1.766 32h15.328V19.625h-4.156V14.78h4.156v-3.564c0-4.134 2.523-6.384 6.21-6.384 1.766 0 3.284.13 3.726.2v4.32h-2.543c-2.006 0-2.394.953-2.394 2.352v3.085h4.797l-.625 4.844h-4.172V32h8.14C31.21 32 32 31.2 32 30.234V1.765C32 .8 31.21 0 30.234 0z"/></svg>
+</a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div><div class="ax-content ax-l-o">
+    <div class="ax-l-i max-w-680">
+      <article class="cdata">
+<p>这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。</p>
+<h2 id="url">URL</h2>
+<p>URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：</p>
+<ul>
+<li>protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS</li>
+<li>domain name 域名: 表明请求的服务器，也可以直接使用对应的IP</li>
+<li>port 端口: 访问服务器的服务端口
+<ul>
+<li>HTTP标准端口: 80</li>
+<li>HTTPS标准端口: 443</li>
+</ul>
+</li>
+<li>path 路径: 服务器上访问的资源路径</li>
+<li>extra parameters 其他参数: 参数是用&amp;分隔的键值对
+<ul>
+<li>例如：<code>http://www.baidu.com/s?wd=hi</code>中<code>wd=hi</code>是搜索请求的参数</li>
+</ul>
+</li>
+<li>anchor 锚点: 指示浏览器显示锚点的位置, 用<code>#anchorInDoc</code>表示
+<ul>
+<li><code>#</code>后的内容不会发送到服务器</li>
+</ul>
+</li>
+</ul>
+<pre><code>https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary
+</code></pre><p>在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。</p>
+<h2 id="dns">DNS</h2>
+<p>DNS (Domain Name System) 提供域名对应的IP。用户在客户端输入URL, DNS提供URL中域名对应的服务器IP, 客户端向服务器IP发送请求。<br>
+<br>
+<code>nslookup</code> 是一个命令行工具用来解析DNS域名查找。<code>nslookup a-domain-name</code>命令输出对域名<code>a-domain-name</code>的解析。例如：</p>
+<pre><code>&gt; nslookup google.com
+Server:  your-router
+Address:  192.168.0.1
+
+Non-authoritative answer:
+Name:    google.com
+Address:  8.7.198.46
+</code></pre><h2 id="ip">IP</h2>
+<p>IP (Internet Protocol) 提供网络中设备的地址, 格式为<code>xxx.xxx.xxx.xxx</code>, <code>.</code>间隔开4组0~255的数值。IP可以是静态或是动态的, 静态IP不会发生变化; 动态IP是分配给设备的地址, 会发生变化。<br>
+<br>
+<code>127.0.0.1</code>是本机地址, <code>localhost</code>被解析为<code>127.0.0.1</code>。在Windows中, 可以通过管理者权限更改<code>C:\Windows\System32\drivers\etc\hosts</code>来更新本地域名解析。在Linux中, 可以通过<code>sudo</code>来更新<code>/etc/hosts</code>文件。</p>
+<p><code>ping</code> 是一个命令行工具用来检测域名/服务器/网络是否能联通。例如：</p>
+<pre><code>&gt; ping baidu.com
+
+Pinging baidu.com [220.181.38.148] with 32 bytes of data:
+Reply from 220.181.38.148: bytes=32 time=31ms TTL=53
+Reply from 220.181.38.148: bytes=32 time=32ms TTL=53
+Reply from 220.181.38.148: bytes=32 time=31ms TTL=53
+Reply from 220.181.38.148: bytes=32 time=31ms TTL=53
+
+Ping statistics for 220.181.38.148:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 31ms, Maximum = 32ms, Average = 31ms
+</code></pre><p><code>ping</code>可以通过参数<code>-n</code>设置发送的请求数, 在Windows上默认请求数是4。还可以通过<code>-w</code>设置timeout等等。</p>
+<h2 id="domain-name">Domain Name</h2>
+<p>域名 (domain name) 是网址的名, 例如：<code>google.com</code>, <code>wikipedia.org</code>都是域名。域名分为顶级域名, 二级域名（俗称一级域名）, 三级域名（俗称二级域名）。例如, <code>com</code>是顶级域名, <code>google.com</code>是二级域名, <code>drive.google.com</code>是三级域名。<br>
+<br>
+一个域名可以对应多个IP。一个IP可以对应不同域名。</p>
+
+      </article>
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="footer">
+  <div class="ax-l-i max-w-6xl">
+    <nav class="flex items-center justify-center">
+      <a class="ml-3 first:ml-0 text-sm text-gray-600 hover:text-gray-800" href="/blog/blog/posts/">Posts</a>
+      <a class="ml-3 first:ml-0 text-sm text-gray-600 hover:text-gray-800" href="/blog/blog/contact/">Contact</a>
+    </nav>
+
+    <div class="footer-copyright text-sm text-center text-gray-500 mt-4">
+      &#169; -2020 Mia&#39;s Blog Posts
+    </div>
+    <div class="text-sm sm:text-xs text-center text-gray-500 mt-2">
+      Powered by <a href="https://www.axiomtheme.com/?utm_source=theme-footer&utm_medium=website&utm_campaign=referral">Axiom</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/bundle.js?v=1599728288"></script>
+
+
+</body>
+</html>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mia&#39;s Blog Posts</title>
+    <title>Mia&#39;s Blogs on Mia&#39;s Blog Posts</title>
     <link>https://Mia-zhao.github.io/blog/</link>
-    <description>Recent content on Mia&#39;s Blog Posts</description>
+    <description>Recent content in Mia&#39;s Blogs on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Fri, 21 Aug 2020 15:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>浅析 MVC</title>
-      <link>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-mvc/</link>
+      <link>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-mvc/</link>
       <pubDate>Fri, 21 Aug 2020 15:00:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-mvc/</guid>
+      <guid>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-mvc/</guid>
       <description>MVC MVC代表Model, View, Controller, 是一种设计模式, 其中, Model负责处理数据, View处理视图UI等, Controller控制器负责其他。下图是MVC模型的示意图: 考虑如下伪代码:
 // Model (处理数据)class Model {constructor(options) {// handle parameter options}get() {}create() {}delte() {}update() {}}// View (处理视图)class View {constructor(options) {// handle parameter options}init() {}render() {}}// Controller (控制器)class Controller {constructor(options) {handle parameter options}init() {}autoBindEvents() {}}MVC职责分工有时并不明确，可以将VC合并为一类处理。在重构过程中，值得注意的是解耦(decoupling)思想，降低模块间依赖性。
 EventBus EventBus可以用来处理模块间通信，中心思想是利用事件登记和处理模式来解耦不同模块。EventBus需要有on, trigger, off功能的函数来保证通信。一个结构可以响应另一个结构触发的事件并且结构之间没有直接依赖。以下是伪代码示例:</description>
@@ -24,10 +24,10 @@ EventBus EventBus可以用来处理模块间通信，中心思想是利用事件
     
     <item>
       <title>DOM事件和事件委托</title>
-      <link>https://Mia-zhao.github.io/blog/posts/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</link>
+      <link>https://Mia-zhao.github.io/blog/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</link>
       <pubDate>Wed, 12 Aug 2020 14:10:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</guid>
+      <guid>https://Mia-zhao.github.io/blog/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</guid>
       <description>这篇博文主要为了个人学习目的。
 简述 DOM 事件模型或 DOM 事件机制 DOM事件模型概括了事件以及DOM节点的事件注册、事件监听等。事件指在浏览器中触发的被绑定在DOM元素上的事件，例如点击按钮，提交表单，发生错误等等。
 Source:
@@ -42,10 +42,10 @@ document.getElementById(&amp;quot;myDiv&amp;quot;).addEventListener(&amp;quot;cl
     
     <item>
       <title>jQuery 的功能</title>
-      <link>https://Mia-zhao.github.io/blog/posts/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</link>
+      <link>https://Mia-zhao.github.io/blog/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Wed, 12 Aug 2020 07:06:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://Mia-zhao.github.io/blog/jquery-%E7%9A%84%E5%8A%9F%E8%83%BD/</guid>
       <description>这篇博文主要为了个人学习目的。
 jQuery 是一个功能丰富的JavaScript 工具库，提供操作HTML、事件处理等API。以下简述jQuery 操作元素的功能。
 1 获取元素 jQuery 主要用法在于返回操作元素的API，然后通过API 操作来实现操控元素的目的。jQuery 库通过window 对象的属性jQuery给开发者以使用jQuery 的函数和属性等，$是jQuery的别名。例如，
@@ -59,10 +59,10 @@ $( &amp;quot;div&amp;quot; ).addClass( &amp;quot;new-class&amp;quot; ).css( &amp
     
     <item>
       <title>JavaScript 函数的执行时机</title>
-      <link>https://Mia-zhao.github.io/blog/posts/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</link>
+      <link>https://Mia-zhao.github.io/blog/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</link>
       <pubDate>Sun, 09 Aug 2020 13:14:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</guid>
+      <guid>https://Mia-zhao.github.io/blog/javascript-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</guid>
       <description>这篇博文主要为了个人学习目的。
 首先考虑如下代码:
 let i = 0for(i = 0; i&amp;lt;6; i++){setTimeout(()=&amp;gt;{console.log(i)},0)}执行这个代码块打印6个6, 其原因在于setTimeout()函数的调用是在主线程执行完其他任务之后。依照MDN setTimeout documentation中给出的范例:
@@ -74,10 +74,10 @@ let i = 0for(i = 0; i&amp;lt;6; i++){let j = isetTimeout(()=&amp;gt;{console
     
     <item>
       <title>JavaScript 对象基本用法</title>
-      <link>https://Mia-zhao.github.io/blog/posts/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <link>https://Mia-zhao.github.io/blog/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
       <pubDate>Sat, 08 Aug 2020 14:05:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <guid>https://Mia-zhao.github.io/blog/javascript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
       <description>这篇博文主要为了个人学习目的。
 最新 ECMAScript 定义了9种类型:
  包括6种原始数据类型  undefined Boolean Number String BigInt Symbol   null Object Function 并非数据结构, 属于Object, 但是有便利的 typeof instance === &amp;quot;function&amp;quot;  注意MDN中英文翻译不太一致:
@@ -91,10 +91,10 @@ object.value = undefined; // object[&#39;value&#39;] = undefined;// result: {na
     
     <item>
       <title> JavaScript 的基本语法总结</title>
-      <link>https://Mia-zhao.github.io/blog/posts/-javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</link>
+      <link>https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sat, 08 Aug 2020 04:40:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/-javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</guid>
       <description>这篇博文主要为了个人学习目的。推荐阅读：
  网道JavaScript教程 《你不知道的JavaScript（上卷）》  表达式 (expression) 和语句 (statement) 总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例：
 var a = 1 + 4;这是一个赋值语句，其中1 + 4是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如add(1,2), console.log()等)。
@@ -104,10 +104,10 @@ var a = 1 + 4;这是一个赋值语句，其中1 + 4是一个表达式。使用
     
     <item>
       <title>JavaScript 的诞生</title>
-      <link>https://Mia-zhao.github.io/blog/posts/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
+      <link>https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
       <pubDate>Fri, 07 Aug 2020 06:12:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</guid>
+      <guid>https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E8%AF%9E%E7%94%9F/</guid>
       <description>这篇博文主要为了个人学习目的。此篇总结了JavaScript 历史, Javascript 诞生以及10个设计缺陷。
 参考：
  维基百科 JavaScript 阮一峰 《Javascript诞生记》 阮一峰 《Javascript的10个设计缺陷》  JavaScript 历史 1995年, 占据大部分浏览器市场的NetScape Communications公司招聘了Brendan Eich, 目标是将Scheme语言嵌入该公司的浏览器中。后来NetScape决定发明一种与Java搭配的辅助脚本语言。Eich花了十天设计出JavaScript原型。
@@ -120,10 +120,10 @@ JavaScript 的10个设计缺陷  不适合开发大型程序  JavaScript没有na
     
     <item>
       <title>浅析 URL</title>
-      <link>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-url/</link>
+      <link>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/</link>
       <pubDate>Thu, 06 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/%E6%B5%85%E6%9E%90-url/</guid>
+      <guid>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/</guid>
       <description>这篇博文主要为了个人学习目的。此篇内容包括URL，DNS，IP以及域名。
 URL URL (Uniform Resource Locator) 指向网络上的独特资源，URL由以下部分构成：
  protocol 协议: 表明浏览器须使用的数据交换协议, 通常是HTTP或HTTPS domain name 域名: 表明请求的服务器，也可以直接使用对应的IP port 端口: 访问服务器的服务端口  HTTP标准端口: 80 HTTPS标准端口: 443   path 路径: 服务器上访问的资源路径 extra parameters 其他参数: 参数是用&amp;amp;分隔的键值对  例如：http://www.baidu.com/s?wd=hi中wd=hi是搜索请求的参数   anchor 锚点: 指示浏览器显示锚点的位置, 用#anchorInDoc表示  #后的内容不会发送到服务器    https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Summary在这个例子中, protocol是HTTPS, domain name是developer.mozilla.org, port 443省略, path是en-US/docs/Learn/Common_questions/What_is_a_URL, anchor是Summary。这个URL会在浏览器中定位资源中的Summary。
@@ -134,10 +134,10 @@ nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain
     
     <item>
       <title>CSS 知识总结2</title>
-      <link>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</link>
+      <link>https://Mia-zhao.github.io/blog/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</link>
       <pubDate>Thu, 06 Aug 2020 08:59:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</guid>
+      <guid>https://Mia-zhao.github.io/blog/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</guid>
       <description>这篇博文主要为了个人学习目的，内容包括CSS定位，层叠上下文，浏览器渲染原理以及动画 (transition, animation)。
 1 定位 文档流和盒模型讨论的是二维平面的布局，定位讨论的是垂直于平面的z-axis布局。从上到下（或者人眼俯视屏幕的方向）分别是：
  内联子元素 浮动元素 块级子元素 边框 背景  position的默认值是static, 其余值有：
@@ -150,10 +150,10 @@ nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain
     
     <item>
       <title>CSS 知识总结1</title>
-      <link>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</link>
+      <link>https://Mia-zhao.github.io/blog/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</link>
       <pubDate>Thu, 06 Aug 2020 07:40:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</guid>
+      <guid>https://Mia-zhao.github.io/blog/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%931/</guid>
       <description>这篇博文主要为了个人学习目的，内容包括CSS基础知识，重要概念（文档流normal flow和盒模型box model）以及布局 (float, flex, grid) 。
 1 基础知识 CSS由Håkon Wium Lie 发明，CCS2.1是目前使用最广泛的版本，CSS3开始分模块更新版本。caniuse.com可以用来参考不同浏览器对CSS特性的支持。
 1.1 语法  选择器 { 属性名: 属性值; /*注释*/ }， 举例：  img {max-width: 100%;} @语法  @charset &amp;quot;UTF-8&amp;quot;;@import url(example.css);@media (min-width: 100px) and (max-width: 200px) {}1.2 资料  MDN CCS tricks 张鑫旭的博客  2 重要概念 2.1 文档流 normal flow 在默认布局下，文档流可以是左到右或是上到下。例如，span元素是默认合并的(inline), div元素是默认占一行不合并的(block): 除此以外，inline元素不能指定width/height, 元素的高度由line-height间接确定。block元素可以指定width/height,元素高度由内部文档流元素决定。
@@ -165,10 +165,10 @@ nslookup 是一个命令行工具用来解析DNS域名查找。nslookup a-domain
     
     <item>
       <title>HTML Practice</title>
-      <link>https://Mia-zhao.github.io/blog/posts/html-practice/</link>
+      <link>https://Mia-zhao.github.io/blog/html-practice/</link>
       <pubDate>Tue, 04 Aug 2020 13:00:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/html-practice/</guid>
+      <guid>https://Mia-zhao.github.io/blog/html-practice/</guid>
       <description>这篇博文主要为了个人学习目的。
 HTML实践练习作业
 Tips meta viewport &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt;
@@ -178,10 +178,10 @@ VSCode快捷键（快速生成list等）  选中多行内容 ctrl + shift + p em
     
     <item>
       <title>HTML常用标签</title>
-      <link>https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <link>https://Mia-zhao.github.io/blog/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Mon, 03 Aug 2020 13:00:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <guid>https://Mia-zhao.github.io/blog/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
       <description>这篇博文主要为了个人学习目的。此篇总结了HTML常用标签:
  a img table form  注意：应用网址浏览方式打开html文件，例如：利用工具http-server,parcel,etc.
 1. &amp;lt;a&amp;gt;标签 作用 又称anchor (锚)，用于创建超链接。按功能分，可以通向：
@@ -192,10 +192,10 @@ VSCode快捷键（快速生成list等）  选中多行内容 ctrl + shift + p em
     
     <item>
       <title>HTML入门笔记</title>
-      <link>https://Mia-zhao.github.io/blog/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <link>https://Mia-zhao.github.io/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 02 Aug 2020 22:08:23 +0800</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://Mia-zhao.github.io/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
       <description>这篇博文主要为了个人学习目的。主要总结了关于HTML的一些基础知识，包括HTML的发明，起手式，常用章节标签，全局属性，常用内容标签等。
 HTML的起源 HTML的发明者是Tim Berners-Lee。HTML作为W3(World Wide Web)三大技术构成之一，被用来呈现文本，与其他两项技术(分别是URI和HTTP)一起使网页的分享互联成为可能。
 HTML的起手 HTML并非唯一的Markup Language，为了确保浏览器照最佳规范进行渲染，HTML文本需要在第一行标明HTML的文件类型：
@@ -205,6 +205,16 @@ HTML的起手 HTML并非唯一的Markup Language，为了确保浏览器照最�
 &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; 值得注意的是编码方式应在文本head块以内，并且要尽可能靠前。 最后，为了让内容与移动设备更兼容，需加上meta标签的viewport：
 &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width&amp;quot;&amp;gt; 在Visual Studio Code里，有一个快速方式开始HTML的模范，新建一个html文档并在第一行写下!，出现Emmet Abbreviation后回车： 以下是自动生成的HTML的起手：
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 常用章节标签    标签 含义     h1~h6 标题，h1~h6有不同默认字体格式   section 章节   p 段落   header 头部   footer 脚部   main 主要内容   aside 次要内容   div 划分    以下是一个例子： 全局属性  class  用于给标签定义class 一个标签可以有多个class 多个标签可以是同一个class *，.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://Mia-zhao.github.io/blog/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/contact/</guid>
+      <description>To get in touch, send an email to the address below.
+miayunyizhao@gmail.com</description>
     </item>
     
   </channel>

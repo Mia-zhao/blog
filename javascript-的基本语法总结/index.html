@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="hugo-theme" content="Axiom 0.7.1">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/">
+  <link rel="icon" type="image/x-icon" href="/blog/">
+  <link rel="apple-touch-icon" href="/blog/">
+  <link rel="canonical" href="https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/">
+<link rel="preload" as="style" href="/blog/bundle.css?v=1599728288" media="all">
+<link rel="stylesheet" href="/blog/bundle.css?v=1599728288" media="all">
+<style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}</style>
+
+
+
+<title> JavaScript 的基本语法总结 : Mia&#39;s Blog Posts</title>
+
+<meta property="og:title" content=" JavaScript 的基本语法总结">
+<meta property="og:site_name" content="Mia&#39;s Blog Posts">
+<meta property="og:url" content="https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/">
+<link rel="image_src" href="https://Mia-zhao.github.io/blog/">
+<meta property="og:image" content="https://Mia-zhao.github.io/blog/">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_Hans">
+<meta property="og:description" content="这篇博文主要为了个人学习目的。推荐阅读：  网道JavaScript教程 《你不知道的JavaScript（上卷）》  表达式 (expression) 和语句 (statement) 总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例： var a = 1 &#43; 4;这是一个赋值语句，其中1 &#43; 4是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如add(1,2), console.log()等)。 值得注意的是 JavaScript 中的 Automatic Semicolon Insertion (ASI)。在语句末尾, 分号 (semicolon) 不是强制性的, JavaScript 会自动补全分号, 然而在某些情况下, 自动补全分号会引入意外。例如: /* 例子一 */return{// some code};/* 例子一被解析为return;{// some code};*//* 例子二 */i&#43;&#43;;/* 例子二被解析为i;&#43;&#43;;*/标识符 (identifier) 标识符用来标识变量名, 函数或属性名。标识符是大小写敏感的并且可以包含:">
+<meta name="description" content="这篇博文主要为了个人学习目的。推荐阅读：  网道JavaScript教程 《你不知道的JavaScript（上卷）》  表达式 (expression) 和语句 (statement) 总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例： var a = 1 &#43; 4;这是一个赋值语句，其中1 &#43; 4是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如add(1,2), console.log()等)。 值得注意的是 JavaScript 中的 Automatic Semicolon Insertion (ASI)。在语句末尾, 分号 (semicolon) 不是强制性的, JavaScript 会自动补全分号, 然而在某些情况下, 自动补全分号会引入意外。例如: /* 例子一 */return{// some code};/* 例子一被解析为return;{// some code};*//* 例子二 */i&#43;&#43;;/* 例子二被解析为i;&#43;&#43;;*/标识符 (identifier) 标识符用来标识变量名, 函数或属性名。标识符是大小写敏感的并且可以包含:">
+<meta property="og:updated_time" content="2020-08-08T04:40:00Z">
+<meta property="fb:app_id" content="">
+<meta name="author" content="Mia Zhao">
+<meta property="article:author" content="https://mia-zhao.gitee.io/">
+<meta property="article:published_time" content="2020-08-08T04:40:00Z">
+<meta property="article:modified_time" content="2020-08-08T04:40:00Z">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": " JavaScript 的基本语法总结",
+  "alternativeHeadline": "这篇博文主要为了个人学习目的。推荐阅读：  网道JavaScript教程 《你不知道的JavaScript（上卷）》  表达式 (expression) 和语句 (statement) 总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例： var a = 1 + 4;\r这是一个赋值语句，其中1 + 4是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如add(1,2), console.log()等)。 值得注意的是 JavaScript 中的 Automatic Semicolon Insertion (ASI)。在语句末尾, 分号 (semicolon) 不是强制性的, JavaScript 会自动补全分号, 然而在某些情况下, 自动补全分号会引入意外。例如: /* 例子一 */\rreturn\r{\r// some code\r};\r/* 例子一被解析为\rreturn;\r{\r// some code\r};\r*/\r/* 例子二 */\ri\r++;\r/* 例子二被解析为\ri;\r++;\r*/\r标识符 (identifier) 标识符用来标识变量名, 函数或属性名。标识符是大小写敏感的并且可以包含:",
+  "url": "https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/",
+  "image": "https://Mia-zhao.github.io/blog/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://Mia-zhao.github.io/blog/javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"
+  },
+  "description": "这篇博文主要为了个人学习目的。推荐阅读：  网道JavaScript教程 《你不知道的JavaScript（上卷）》  表达式 (expression) 和语句 (statement) 总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例： var a = 1 + 4;\r这是一个赋值语句，其中1 + 4是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如add(1,2), console.log()等)。 值得注意的是 JavaScript 中的 Automatic Semicolon Insertion (ASI)。在语句末尾, 分号 (semicolon) 不是强制性的, JavaScript 会自动补全分号, 然而在某些情况下, 自动补全分号会引入意外。例如: /* 例子一 */\rreturn\r{\r// some code\r};\r/* 例子一被解析为\rreturn;\r{\r// some code\r};\r*/\r/* 例子二 */\ri\r++;\r/* 例子二被解析为\ri;\r++;\r*/\r标识符 (identifier) 标识符用来标识变量名, 函数或属性名。标识符是大小写敏感的并且可以包含:",
+  "author": {
+    "@type": "Person",
+    "name": "Mia Zhao"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mia's Blog Posts",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://Mia-zhao.github.io/blog/"
+    }
+  },
+  "datePublished": "2020-08-08T04:40:00Z",
+  "dateModified": "2020-08-08T04:40:00Z",
+  "articleBody": "\u003cp\u003e这篇博文主要为了个人学习目的。推荐阅读：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://wangdoc.com/javascript/\"\u003e网道JavaScript教程\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://book.douban.com/subject/26351021/\"\u003e《你不知道的JavaScript（上卷）》\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"表达式-expression-和语句-statement\"\u003e表达式 (expression) 和语句 (statement)\u003c/h2\u003e\n\u003cp\u003e总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003evar a = 1 + 4;\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e这是一个赋值语句，其中\u003ccode\u003e1 + 4\u003c/code\u003e是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如\u003ccode\u003eadd(1,2)\u003c/code\u003e, \u003ccode\u003econsole.log()\u003c/code\u003e等)。\u003cbr\u003e\n\u003cbr\u003e\n值得注意的是 JavaScript 中的 \u003ca href=\"https://en.wikibooks.org/wiki/JavaScript/Automatic_semicolon_insertion\"\u003eAutomatic Semicolon Insertion (ASI)\u003c/a\u003e。在语句末尾, 分号 (semicolon) 不是强制性的, JavaScript 会自动补全分号, 然而在某些情况下, 自动补全分号会引入意外。例如:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e/* 例子一 */\r\nreturn\r\n{\r\n    // some code\r\n};\r\n/* 例子一被解析为\r\n    return;\r\n    {\r\n        // some code\r\n    };\r\n*/\r\n\r\n\r\n/* 例子二 */\r\ni\r\n++;\r\n/* 例子二被解析为\r\n    i;\r\n    ++;\r\n*/\r\n\u003c/code\u003e\u003c/pre\u003e\u003ch2 id=\"标识符-identifier\"\u003e标识符 (identifier)\u003c/h2\u003e\n\u003cp\u003e标识符用来标识变量名, 函数或属性名。标识符是大小写敏感的并且可以包含:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eUnicode\u003c/li\u003e\n\u003cli\u003e$\u003c/li\u003e\n\u003cli\u003e_\u003c/li\u003e\n\u003cli\u003e数字 0-9 (不能以数字开头)\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e这意味着中文字符等也能做标识符来命名变量。\u003c/p\u003e\n\u003ch2 id=\"if-else-语句\"\u003eif else 语句\u003c/h2\u003e\n\u003cp\u003e语句syntax如下, 其中\u003ccode\u003eexpression1\u003c/code\u003e, \u003ccode\u003eexpression2\u003c/code\u003e是之前提到的表达式。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eif (expression1) {\r\n    // some code\r\n} else {\r\n    // some other code\r\n}\r\n// 或者\r\nif (expression1) {\r\n    // some code\r\n} else if (expression2) {\r\n    // some other code\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003ch2 id=\"while-for-语句\"\u003ewhile for 语句\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003ewhile\u003c/code\u003e, \u003ccode\u003efor\u003c/code\u003e执行循环, 可以互相替代。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ewhile (expression) {\r\n    // some code\r\n}\r\n\r\ndo {\r\n    // some code\r\n} while (expression)\r\n\r\nfor ( initial; expression; step) {\r\n    // some code\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003ch2 id=\"break-continue\"\u003ebreak continue\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003ebreak\u003c/code\u003e用来中断执行, \u003ccode\u003econtinue\u003c/code\u003e用来跳过执行。\u003c/p\u003e\n\u003ch2 id=\"label\"\u003elabel\u003c/h2\u003e\n\u003cp\u003e标签语句与\u003ccode\u003ebreak\u003c/code\u003e以及\u003ccode\u003econtinue\u003c/code\u003e配合使用。label的格式为:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003elabel:\r\n    statement\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e\u003ccode\u003ebreak\u003c/code\u003e和\u003ccode\u003econtinue\u003c/code\u003e单独使用作用域在单层循环中, 配合label可以中断或跳过多层循环。\u003c/p\u003e"
+}
+</script>
+
+<link rel="preload" as="script" href="/blog/bundle.js?v=1599728288">
+
+
+</head>
+<body>
+
+  <header id="nav" class="header">
+  <div class="ax-l-i max-w-6xl">
+    <div class="ax-logo">
+      <a class="block" href="/blog/" title="Mia&#39;s Blog Posts"><span class="font-semibold text-raven-900">Mia's Blog Posts</span></a>
+    </div>
+    <div class="ax-user">
+      <a class="p-2 w-8 h-8 block text-raven-500 hover:text-gray-800 focus:text-gray-800 focus:outline-none" target="_blank" rel="noopener nofollow" href="https://www.google.com/search?q=site:https://Mia-zhao.github.io/blog/" title="Search">
+        <svg class="fill-current" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.67 12.804c0-5.6 4.544-10.134 10.133-10.134s10.134 4.544 10.134 10.134-4.544 10.133-10.134 10.133S2.67 18.393 2.67 12.804zm28.943 16.923l-8.868-8.868c4.287-5.3 3.68-13.012-1.378-17.57S8.564-1.066 3.75 3.75s-5.017 12.558-.46 17.618 12.28 5.665 17.57 1.378l8.868 8.868a1.33 1.33 0 0 0 2.231-.597c.123-.46-.008-.952-.345-1.29h0z"/></svg>
+
+      </a>
+      <a class="p-2 block text-base leading-none text-raven-500 hover:text-gray-800 focus:text-gray-800 focus:outline-none" href="/blog/blog/posts/">
+        Posts
+      </a>
+    </div>
+  </div>
+
+  
+</header>
+
+  <main>
+<div class="default-single">
+  <div class="ax-title ax-l-o">
+    <div class="ax-l-i max-w-680">
+      <h1 class="post-title font-content-title font-normal leading-tight tracking-default text-40"> JavaScript 的基本语法总结</h1>
+
+      <div class="ax-meta flex items-center mt-5">
+        <div class="flex-grow min-w-0">
+          <div class="flex items-center">
+  <div class="flex-shrink-0">
+    <img
+    class="w-12 h-12 sm:w-14 sm:h-14 object-cover p-3px rounded-full border border-blue-300"
+    src="/blog/images/author/default.webp"
+    alt="Mia Zhao">
+  </div>
+  <div class="flex-shrink-0 ml-2 leading-tight font-content-sans">
+    <a class="block text-sm text-raven-800 hover:text-raven-900 hover:underline focus:underline" target="_blank" rel="noopener nofollow" title="Mia Zhao" href="https://mia-zhao.gitee.io/">Mia Zhao</a>
+    <time class="text-sm text-raven-500" datetime="2020-08-08T04:40:00Z">Aug 8, 2020 12:40PM</time>
+  </div>
+</div>
+
+        </div>
+        <div>
+          <div class="flex items-center">
+  <a class="flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=%20JavaScript%20%e7%9a%84%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93%20by%20%40%25%21s%28%3cnil%3e%29%20https%3a%2f%2fMia-zhao.github.io%2fblog%2fjavascript-%25E7%259A%2584%25E5%259F%25BA%25E6%259C%25AC%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f"><svg class="w-6 h-6 fill-current" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M32 6.078c-1.2.522-2.458.868-3.78 1.036 1.36-.812 2.398-2.088 2.886-3.626a13.11 13.11 0 0 1-4.16 1.588C25.742 3.794 24.026 3 22.154 3a6.56 6.56 0 0 0-6.556 6.562c0 .52.044 1.02.152 1.496-5.454-.266-10.28-2.88-13.522-6.862-.566.982-.898 2.106-.898 3.316a6.57 6.57 0 0 0 2.914 5.452 6.48 6.48 0 0 1-2.964-.808v.072c0 3.188 2.274 5.836 5.256 6.446-.534.146-1.116.216-1.72.216-.42 0-.844-.024-1.242-.112.85 2.598 3.262 4.508 6.13 4.57a13.18 13.18 0 0 1-8.134 2.798c-.538 0-1.054-.024-1.57-.1C2.906 27.93 6.35 29 10.064 29c12.072 0 18.672-10 18.672-18.668 0-.3-.01-.57-.024-.848C30.014 8.56 31.108 7.406 32 6.078z"/></svg>
+</a>
+  <a class="ml-3 flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="Share on Facebook" href="https://www.facebook.com/dialog/share?app_id=&display=page&href=https%3a%2f%2fMia-zhao.github.io%2fblog%2fjavascript-%25E7%259A%2584%25E5%259F%25BA%25E6%259C%25AC%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f"><svg class="w-6 h-6 fill-current" viewBox="-7 -3.5 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M30.234 0H1.765C.8.001 0 .79 0 1.766v28.47C.001 31.2.79 32 1.766 32h15.328V19.625h-4.156V14.78h4.156v-3.564c0-4.134 2.523-6.384 6.21-6.384 1.766 0 3.284.13 3.726.2v4.32h-2.543c-2.006 0-2.394.953-2.394 2.352v3.085h4.797l-.625 4.844h-4.172V32h8.14C31.21 32 32 31.2 32 30.234V1.765C32 .8 31.21 0 30.234 0z"/></svg>
+</a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div><div class="ax-content ax-l-o">
+    <div class="ax-l-i max-w-680">
+      <article class="cdata">
+<p>这篇博文主要为了个人学习目的。推荐阅读：</p>
+<ul>
+<li><a href="https://wangdoc.com/javascript/">网道JavaScript教程</a></li>
+<li><a href="https://book.douban.com/subject/26351021/">《你不知道的JavaScript（上卷）》</a></li>
+</ul>
+<h2 id="表达式-expression-和语句-statement">表达式 (expression) 和语句 (statement)</h2>
+<p>总结来说，表达式是能得到返回值的式子，语句是完成某项任务的操作。以如下为例：</p>
+<pre><code>var a = 1 + 4;
+</code></pre><p>这是一个赋值语句，其中<code>1 + 4</code>是一个表达式。使用表达式的目的是为了得到它的值，表达式可以是运用运算符 operator (如逻辑运算符，算术运算符，位运算符等等) 的算式，也可以是运用函数的式子 (如<code>add(1,2)</code>, <code>console.log()</code>等)。<br>
+<br>
+值得注意的是 JavaScript 中的 <a href="https://en.wikibooks.org/wiki/JavaScript/Automatic_semicolon_insertion">Automatic Semicolon Insertion (ASI)</a>。在语句末尾, 分号 (semicolon) 不是强制性的, JavaScript 会自动补全分号, 然而在某些情况下, 自动补全分号会引入意外。例如:</p>
+<pre><code>/* 例子一 */
+return
+{
+    // some code
+};
+/* 例子一被解析为
+    return;
+    {
+        // some code
+    };
+*/
+
+
+/* 例子二 */
+i
+++;
+/* 例子二被解析为
+    i;
+    ++;
+*/
+</code></pre><h2 id="标识符-identifier">标识符 (identifier)</h2>
+<p>标识符用来标识变量名, 函数或属性名。标识符是大小写敏感的并且可以包含:</p>
+<ul>
+<li>Unicode</li>
+<li>$</li>
+<li>_</li>
+<li>数字 0-9 (不能以数字开头)</li>
+</ul>
+<p>这意味着中文字符等也能做标识符来命名变量。</p>
+<h2 id="if-else-语句">if else 语句</h2>
+<p>语句syntax如下, 其中<code>expression1</code>, <code>expression2</code>是之前提到的表达式。</p>
+<pre><code>if (expression1) {
+    // some code
+} else {
+    // some other code
+}
+// 或者
+if (expression1) {
+    // some code
+} else if (expression2) {
+    // some other code
+}
+</code></pre><h2 id="while-for-语句">while for 语句</h2>
+<p><code>while</code>, <code>for</code>执行循环, 可以互相替代。</p>
+<pre><code>while (expression) {
+    // some code
+}
+
+do {
+    // some code
+} while (expression)
+
+for ( initial; expression; step) {
+    // some code
+}
+</code></pre><h2 id="break-continue">break continue</h2>
+<p><code>break</code>用来中断执行, <code>continue</code>用来跳过执行。</p>
+<h2 id="label">label</h2>
+<p>标签语句与<code>break</code>以及<code>continue</code>配合使用。label的格式为:</p>
+<pre><code>label:
+    statement
+</code></pre><p><code>break</code>和<code>continue</code>单独使用作用域在单层循环中, 配合label可以中断或跳过多层循环。</p>
+
+      </article>
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="footer">
+  <div class="ax-l-i max-w-6xl">
+    <nav class="flex items-center justify-center">
+      <a class="ml-3 first:ml-0 text-sm text-gray-600 hover:text-gray-800" href="/blog/blog/posts/">Posts</a>
+      <a class="ml-3 first:ml-0 text-sm text-gray-600 hover:text-gray-800" href="/blog/blog/contact/">Contact</a>
+    </nav>
+
+    <div class="footer-copyright text-sm text-center text-gray-500 mt-4">
+      &#169; -2020 Mia&#39;s Blog Posts
+    </div>
+    <div class="text-sm sm:text-xs text-center text-gray-500 mt-2">
+      Powered by <a href="https://www.axiomtheme.com/?utm_source=theme-footer&utm_medium=website&utm_campaign=referral">Axiom</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/blog/bundle.js?v=1599728288"></script>
+
+
+</body>
+</html>
