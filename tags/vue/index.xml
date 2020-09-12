@@ -6,10 +6,36 @@
     <description>Recent content in Vue on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 05 Sep 2020 09:18:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 12:40:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue 之自定义指令</title>
+      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</link>
+      <pubDate>Thu, 10 Sep 2020 12:40:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</guid>
+      <description>Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，v-model指令可以双向绑定数据且自动更新。
+&amp;lt;input v-model=&amp;quot;message&amp;quot; placeholder=&amp;quot;edit me&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Message is: {{ message }}&amp;lt;/p&amp;gt;在这个例子中，任何输入数据会在p标签中实时更新。v-model=&amp;quot;message&amp;quot;等价于:value=&amp;quot;message&amp;quot; @input=&amp;quot;$emit(&#39;input&#39;, $event)&amp;quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。
+除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令:
+Vue.directive(&#39;focus&#39;, {inserted: function (el) {el.focus()}})或者在局部组件里通过directives登记:
+directives: {focus: {inserted: function (el) {el.focus()}}}这样在使用时直接用v-focus指令。</description>
+    </item>
+    
+    <item>
+      <title>Vue 之Webpack配置</title>
+      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8Bwebpack%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 10 Sep 2020 11:40:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8Bwebpack%E9%85%8D%E7%BD%AE/</guid>
+      <description>配置 ts-loader 在 Vue 项目中，可以在TypeScript声明文件custom.d.ts里自定义对象类型，包括enum。定义enum在custom.d.ts能成功编译然而运行时Webpack会报错XXX is not defined。解决办法是在vue.config.js文件中配置 ts-loader, 以使用chainWebpack为例:
+const rule = config.module.rule(&#39;ts&#39;)rule.uses.delete(&#39;thread-loader&#39;)rule.use(&#39;ts-loader&#39;).loader(&#39;ts-loader&#39;).tap(options =&amp;gt; {options.transpileOnly = falseoptions.happyPackMode = falsereturn options;})配置 svg-sprite-loader 在 Vue 项目中可以使用img标签引入图片或图标，若有大量图需要引入，逐个提供路径很冗杂低效。若要用svg标签引入svg格式的图片或图标，则需要Webpack配置svg-sprite-loader。在vue.config.js中:
+const dir = path.resolve(__dirname, &#39;src/assets/icons&#39;)config.module.rule(&#39;svg-sprite&#39;).test(/\.svg$/).include.add(dir).end().use(&#39;svg-sprite-loader&#39;).loader(&#39;svg-sprite-loader&#39;).options({ extract: false }).end()config.plugin(&#39;svg-sprite&#39;).use(require(&#39;svg-sprite-loader/plugin&#39;, [{ plainSprite: true }]))config.module.rule(&#39;svg&#39;).exclude.add(dir)这样在使用时，只需提供svg图片的文件名而不是路径就能成功引入src/assets/icons目录下的所有svg文件。
+需要注意的是若原svg文件带有fill（颜色）那么在CSS中将无法通过fill覆盖颜色。在无法保证所有svg源是不带颜色的情况下，可以通过Webpack配置提前去掉所有svg中的fill特性:
+ .use(&#39;svgo-loader&#39;).loader(&#39;svgo-loader&#39;).tap(options =&amp;gt; ({ ...options, plugins: [{ removeAttrs: { attrs: &#39;fill&#39; } }] })).end()</description>
+    </item>
     
     <item>
       <title>Vue 之组件CSS</title>

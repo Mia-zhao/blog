@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/css/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/css/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
     <loc>https://Mia-zhao.github.io/blog/</loc>
-    <lastmod>2020-09-10T12:40:00Z</lastmod>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/posts/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/react/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/react/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
+    <lastmod>2020-09-12T10:22:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/vue/</loc>
     <lastmod>2020-09-10T12:40:00Z</lastmod>
   </url>
   <url>
@@ -17,24 +49,8 @@
     <lastmod>2020-09-10T11:40:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/css/</loc>
-    <lastmod>2020-09-05T09:18:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
-    <lastmod>2020-09-05T09:18:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/vue/</loc>
-    <lastmod>2020-09-05T09:18:00Z</lastmod>
-  </url>
-  <url>
     <loc>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</loc>
     <lastmod>2020-09-05T09:18:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/categories/</loc>
-    <lastmod>2020-08-21T15:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/tags/mvc/</loc>
@@ -107,10 +123,6 @@
   <url>
     <loc>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-url/</loc>
     <lastmod>2020-08-06T10:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/categories/css/</loc>
-    <lastmod>2020-08-06T08:59:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/css-%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%932/</loc>

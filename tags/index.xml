@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 05 Sep 2020 09:18:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 10:22:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>CSS</title>
       <link>https://Mia-zhao.github.io/blog/tags/css/</link>
-      <pubDate>Sat, 05 Sep 2020 09:18:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 10:22:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>React</title>
+      <link>https://Mia-zhao.github.io/blog/tags/react/</link>
+      <pubDate>Sat, 12 Sep 2020 10:22:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Vue</title>
       <link>https://Mia-zhao.github.io/blog/tags/vue/</link>
-      <pubDate>Sat, 05 Sep 2020 09:18:00 +0000</pubDate>
+      <pubDate>Thu, 10 Sep 2020 12:40:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/tags/vue/</guid>
       <description></description>

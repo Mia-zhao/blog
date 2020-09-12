@@ -6,10 +6,22 @@
     <description>Recent content in CSS on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 06 Aug 2020 08:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 10:22:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/categories/css/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React 之CSS</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</link>
+      <pubDate>Sat, 12 Sep 2020 10:22:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</guid>
+      <description>Create React APP 中有一个添加CSS Normalize的语句，目的是让不同浏览器的样式更统一:
+/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React框架不自带sass，要使用sass需要安装node-sass。Github上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
+React直接安装使用dart-sass会报错。一个workaround是:
+yarn add node-sass@npm:dart-sass</description>
+    </item>
     
     <item>
       <title>CSS 知识总结2</title>
