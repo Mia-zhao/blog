@@ -2,7 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://Mia-zhao.github.io/blog/categories/</loc>
-    <lastmod>2020-09-12T10:22:00Z</lastmod>
+    <lastmod>2020-09-14T11:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/</loc>
+    <lastmod>2020-09-14T11:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/posts/</loc>
+    <lastmod>2020-09-14T11:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/react/</loc>
+    <lastmod>2020-09-14T11:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/react/</loc>
+    <lastmod>2020-09-14T11:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/</loc>
+    <lastmod>2020-09-14T11:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
+    <lastmod>2020-09-14T11:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/</loc>
+    <lastmod>2020-09-13T12:30:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-drag-vs-click/</loc>
+    <lastmod>2020-09-12T13:42:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/tags/css/</loc>
@@ -13,27 +45,7 @@
     <lastmod>2020-09-12T10:22:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/</loc>
-    <lastmod>2020-09-12T10:22:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/</loc>
-    <lastmod>2020-09-12T10:22:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/react/</loc>
-    <lastmod>2020-09-12T10:22:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/categories/react/</loc>
-    <lastmod>2020-09-12T10:22:00Z</lastmod>
-  </url>
-  <url>
     <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</loc>
-    <lastmod>2020-09-12T10:22:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
     <lastmod>2020-09-12T10:22:00Z</lastmod>
   </url>
   <url>

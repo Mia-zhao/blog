@@ -6,10 +6,44 @@
     <description>Recent content in React on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 12 Sep 2020 10:22:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2020 11:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React 之 Mapbox GL</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/</link>
+      <pubDate>Mon, 14 Sep 2020 11:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/</guid>
+      <description>And go...</description>
+    </item>
+    
+    <item>
+      <title>React 之 Styled Components</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/</link>
+      <pubDate>Sun, 13 Sep 2020 12:30:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/</guid>
+      <description>在Vue的组件中，CSS/SASS可以有scoped修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。
+styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。
+一个例子如下：
+const buttonWrapper = styled.div`position: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;gt; button &amp;gt; span {font-size: 20px;color: #FAFAFA;}`;const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components还可以用于React组件，例如：
+class A extends React.</description>
+    </item>
+    
+    <item>
+      <title>React 之 Drag vs Click</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-drag-vs-click/</link>
+      <pubDate>Sat, 12 Sep 2020 13:42:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-drag-vs-click/</guid>
+      <description>在写React Mapbox GL的旅行地图项目的时候遇到了关于Drag和Click事件难以区分的问题。在触屏上Drag和Click区分没有问题，然而在鼠标点击的Drag和Click事件上有些细节需要注意。
+对于一个可以拖动的元素，可以监听的拖动事件有drag、dragStart、dragEnd，拖动结束时也会触发click事件并且dragEnd先于click事件发生。因此，需要将dragEnd以及click区分开。
+有以下几个思路：
+ drag事件区别click于点击坐标是否变化，若坐标发生变化那么即使是click事件触发的也可以说是drag事件 同理增加一个值表示元素是否被拖动，若在拖动时触发click则是一个drag事件，要注意的是dragEnd早于click发生，所以在判断是否拖动时可能有race condition 用mousedown、mousemove、mouseup事件结合来判断是否是click，若是click事件那么mousemove不会被触发，判断的同时需要将click的事件处理机制移到mouseup中  </description>
+    </item>
     
     <item>
       <title>React 之CSS</title>
