@@ -17,7 +17,10 @@
       <pubDate>Mon, 14 Sep 2020 11:00:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/</guid>
-      <description>And go...</description>
+      <description>Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从gallery里添加。在React项目里可以用react-map-gl库来创建和操作地图。
+Map Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对MapboxGL中Map的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。
+import {Component} from &#39;react&#39;;import ReactMapGL from &#39;react-map-gl&#39;;class Map extends Component {render() {return (&amp;lt;ReactMapGLwidth={400}height={400}latitude={37.7577}longitude={-122.4376}zoom={8}onViewportChange={(viewport) =&amp;gt; {const {width, height, latitude, longitude, zoom} = viewport;// call `setState` and use the state to update the map.}}/&amp;gt;);}}以上提供初始viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.innerHeight、width: window.innerWidth，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加resize监听可以及时更新地图宽高。
+componentDidMount() {window.addEventListener(&#39;resize&#39;, this.updateDimensions);}componentWillUnmount() {window.removeEventListener(&#39;resize&#39;, this.updateDimensions);}updateDimensions = () =&amp;gt; {this.</description>
     </item>
     
     <item>

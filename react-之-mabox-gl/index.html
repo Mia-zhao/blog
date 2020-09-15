@@ -11,8 +11,8 @@
   <link rel="icon" type="image/x-icon" href="/blog/">
   <link rel="apple-touch-icon" href="/blog/">
   <link rel="canonical" href="https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/">
-<link rel="preload" as="style" href="/blog/bundle.css?v=1600093689" media="all">
-<link rel="stylesheet" href="/blog/bundle.css?v=1600093689" media="all">
+<link rel="preload" as="style" href="/blog/bundle.css?v=1600145968" media="all">
+<link rel="stylesheet" href="/blog/bundle.css?v=1600145968" media="all">
 <style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}</style>
 
 
@@ -28,8 +28,8 @@
 <meta property="og:image:height" content="">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:description" content="And go...">
-<meta name="description" content="And go...">
+<meta property="og:description" content="Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从gallery里添加。在React项目里可以用react-map-gl库来创建和操作地图。 Map Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对MapboxGL中Map的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。 import {Component} from &#39;react&#39;;import ReactMapGL from &#39;react-map-gl&#39;;class Map extends Component {render() {return (&amp;lt;ReactMapGLwidth={400}height={400}latitude={37.7577}longitude={-122.4376}zoom={8}onViewportChange={(viewport) =&amp;gt; {const {width, height, latitude, longitude, zoom} = viewport;// call setState and use the state to update the map.}}/&amp;gt;);}}以上提供初始viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.innerHeight、width: window.innerWidth，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加resize监听可以及时更新地图宽高。 componentDidMount() {window.addEventListener(&#39;resize&#39;, this.updateDimensions);}componentWillUnmount() {window.removeEventListener(&#39;resize&#39;, this.updateDimensions);}updateDimensions = () =&amp;gt; {this.">
+<meta name="description" content="Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从gallery里添加。在React项目里可以用react-map-gl库来创建和操作地图。 Map Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对MapboxGL中Map的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。 import {Component} from &#39;react&#39;;import ReactMapGL from &#39;react-map-gl&#39;;class Map extends Component {render() {return (&amp;lt;ReactMapGLwidth={400}height={400}latitude={37.7577}longitude={-122.4376}zoom={8}onViewportChange={(viewport) =&amp;gt; {const {width, height, latitude, longitude, zoom} = viewport;// call setState and use the state to update the map.}}/&amp;gt;);}}以上提供初始viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.innerHeight、width: window.innerWidth，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加resize监听可以及时更新地图宽高。 componentDidMount() {window.addEventListener(&#39;resize&#39;, this.updateDimensions);}componentWillUnmount() {window.removeEventListener(&#39;resize&#39;, this.updateDimensions);}updateDimensions = () =&amp;gt; {this.">
 <meta property="og:updated_time" content="2020-09-14T11:00:00Z">
 <meta property="fb:app_id" content="">
 <meta name="author" content="Mia Zhao">
@@ -41,14 +41,14 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "React 之 Mapbox GL",
-  "alternativeHeadline": "And go...",
+  "alternativeHeadline": "Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从gallery里添加。在React项目里可以用react-map-gl库来创建和操作地图。 Map Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对MapboxGL中Map的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。 import {Component} from 'react';\rimport ReactMapGL from 'react-map-gl';\rclass Map extends Component {\rrender() {\rreturn (\r\u0026lt;ReactMapGL\rwidth={400}\rheight={400}\rlatitude={37.7577}\rlongitude={-122.4376}\rzoom={8}\ronViewportChange={(viewport) =\u0026gt; {\rconst {width, height, latitude, longitude, zoom} = viewport;\r// call setState and use the state to update the map.\r}}\r/\u0026gt;\r);\r}\r}\r以上提供初始viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.innerHeight、width: window.innerWidth，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加resize监听可以及时更新地图宽高。 componentDidMount() {\rwindow.addEventListener('resize', this.updateDimensions);\r}\rcomponentWillUnmount() {\rwindow.removeEventListener('resize', this.updateDimensions);\r}\rupdateDimensions = () =\u0026gt; {\rthis.",
   "url": "https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/",
   "image": "https://Mia-zhao.github.io/blog/",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/"
   },
-  "description": "And go...",
+  "description": "Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从gallery里添加。在React项目里可以用react-map-gl库来创建和操作地图。 Map Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对MapboxGL中Map的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。 import {Component} from 'react';\rimport ReactMapGL from 'react-map-gl';\rclass Map extends Component {\rrender() {\rreturn (\r\u0026lt;ReactMapGL\rwidth={400}\rheight={400}\rlatitude={37.7577}\rlongitude={-122.4376}\rzoom={8}\ronViewportChange={(viewport) =\u0026gt; {\rconst {width, height, latitude, longitude, zoom} = viewport;\r// call setState and use the state to update the map.\r}}\r/\u0026gt;\r);\r}\r}\r以上提供初始viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.innerHeight、width: window.innerWidth，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加resize监听可以及时更新地图宽高。 componentDidMount() {\rwindow.addEventListener('resize', this.updateDimensions);\r}\rcomponentWillUnmount() {\rwindow.removeEventListener('resize', this.updateDimensions);\r}\rupdateDimensions = () =\u0026gt; {\rthis.",
   "author": {
     "@type": "Person",
     "name": "Mia Zhao"
@@ -63,11 +63,11 @@
   },
   "datePublished": "2020-09-14T11:00:00Z",
   "dateModified": "2020-09-14T11:00:00Z",
-  "articleBody": "\u003cp\u003eAnd go...\u003c/p\u003e"
+  "articleBody": "\u003cp\u003eMapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从\u003ca href=\"https://www.mapbox.com/gallery/\"\u003egallery\u003c/a\u003e里添加。在React项目里可以用\u003ccode\u003ereact-map-gl\u003c/code\u003e库来创建和操作地图。\u003c/p\u003e\n\u003ch2 id=\"map\"\u003eMap\u003c/h2\u003e\n\u003cp\u003eMap对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在\u003ccode\u003ereact-map-gl\u003c/code\u003e中，\u003ccode\u003eStaticMap\u003c/code\u003e和\u003ccode\u003eInteractiveMap\u003c/code\u003e是对MapboxGL中Map的封装，\u003ccode\u003eStaticMap\u003c/code\u003e用来生成没有互动的静态地图，若需要支持用户互动，则用\u003ccode\u003eInteractiveMap\u003c/code\u003e（库默认的导出）。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eimport {Component} from 'react';\r\nimport ReactMapGL from 'react-map-gl';\r\n\r\nclass Map extends Component {\r\n  render() {\r\n    return (\r\n      \u0026lt;ReactMapGL\r\n        width={400}\r\n        height={400}\r\n        latitude={37.7577}\r\n        longitude={-122.4376}\r\n        zoom={8}\r\n        onViewportChange={(viewport) =\u0026gt; {\r\n          const {width, height, latitude, longitude, zoom} = viewport;\r\n          // call `setState` and use the state to update the map.\r\n        }}\r\n      /\u0026gt;\r\n    );\r\n  }\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e以上提供初始viewport，在\u003ccode\u003eonViewportChange\u003c/code\u003e中通过\u003ccode\u003esetState\u003c/code\u003e更新\u003ccode\u003eviewport\u003c/code\u003e来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置\u003ccode\u003eheight: window.innerHeight\u003c/code\u003e、\u003ccode\u003ewidth: window.innerWidth\u003c/code\u003e，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加\u003ccode\u003eresize\u003c/code\u003e监听可以及时更新地图宽高。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ecomponentDidMount() {\r\n  window.addEventListener('resize', this.updateDimensions);\r\n}\r\n\r\ncomponentWillUnmount() {\r\n  window.removeEventListener('resize', this.updateDimensions);\r\n}\r\n\r\nupdateDimensions = () =\u0026gt; {\r\n  this.setState({\r\n    viewport: { ...this.state.viewport,\r\n      height: window.innerHeight,\r\n      width: window.innerWidth\r\n    }\r\n  });\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e\u003ccode\u003ereact-map-gl\u003c/code\u003e还提供NavigationControl，若需要地址搜索条，可以用\u003ccode\u003ereact-map-gl-geocoder\u003c/code\u003e。\u003c/p\u003e\n\u003ch2 id=\"marker\"\u003eMarker\u003c/h2\u003e\n\u003cp\u003eMarker用来在地图上添加自定义图标，多个图标生成用\u003ca href=\"https://reactjs.org/docs/lists-and-keys.html\"\u003eReact lists and keys\u003c/a\u003e操作：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ecoordinates.map((coord, index) =\u0026gt;\r\n  \u0026lt;Marker key={index}\r\n    latitude={coord.latitude}\r\n    longitude={coord.longitude}\r\n    offsetLeft={0} offsetTop={0}\u0026gt;\r\n    \u0026lt;div\u0026gt;icon here\u0026lt;/div\u0026gt;\r\n  \u0026lt;/Marker\u0026gt;\r\n)\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003eReact用key区分、操作多个同类组件，\u003ccode\u003ekey\u003c/code\u003e需要保证唯一，在以上例子中，若\u003ccode\u003ecoordinates\u003c/code\u003e可以变，不能用\u003ccode\u003eindex\u003c/code\u003e作为\u003ccode\u003ekey\u003c/code\u003e，需要生成保证唯一的id作\u003ccode\u003ekey\u003c/code\u003e。\u003c/p\u003e\n\u003ch2 id=\"layer\"\u003eLayer\u003c/h2\u003e\n\u003cp\u003e生成的地图是可以导出为图片的，但是Marker层面不行。若需要地图及Marker，一个解决办法是新增Layer层绘制Marker并导出然后从地图上移除Layer。Map需要添加属性\u003ccode\u003epreserveDrawingBuffer\u003c/code\u003e才能导出为图片。\u003c/p\u003e"
 }
 </script>
 
-<link rel="preload" as="script" href="/blog/bundle.js?v=1600093689">
+<link rel="preload" as="script" href="/blog/bundle.js?v=1600145968">
 
 
 </head>
@@ -128,7 +128,60 @@
   </div><div class="ax-content ax-l-o">
     <div class="ax-l-i max-w-680">
       <article class="cdata">
-<p>And go...</p>
+<p>Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从<a href="https://www.mapbox.com/gallery/">gallery</a>里添加。在React项目里可以用<code>react-map-gl</code>库来创建和操作地图。</p>
+<h2 id="map">Map</h2>
+<p>Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在<code>react-map-gl</code>中，<code>StaticMap</code>和<code>InteractiveMap</code>是对MapboxGL中Map的封装，<code>StaticMap</code>用来生成没有互动的静态地图，若需要支持用户互动，则用<code>InteractiveMap</code>（库默认的导出）。</p>
+<pre><code>import {Component} from 'react';
+import ReactMapGL from 'react-map-gl';
+
+class Map extends Component {
+  render() {
+    return (
+      &lt;ReactMapGL
+        width={400}
+        height={400}
+        latitude={37.7577}
+        longitude={-122.4376}
+        zoom={8}
+        onViewportChange={(viewport) =&gt; {
+          const {width, height, latitude, longitude, zoom} = viewport;
+          // call `setState` and use the state to update the map.
+        }}
+      /&gt;
+    );
+  }
+}
+</code></pre><p>以上提供初始viewport，在<code>onViewportChange</code>中通过<code>setState</code>更新<code>viewport</code>来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置<code>height: window.innerHeight</code>、<code>width: window.innerWidth</code>，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加<code>resize</code>监听可以及时更新地图宽高。</p>
+<pre><code>componentDidMount() {
+  window.addEventListener('resize', this.updateDimensions);
+}
+
+componentWillUnmount() {
+  window.removeEventListener('resize', this.updateDimensions);
+}
+
+updateDimensions = () =&gt; {
+  this.setState({
+    viewport: { ...this.state.viewport,
+      height: window.innerHeight,
+      width: window.innerWidth
+    }
+  });
+}
+</code></pre><p><code>react-map-gl</code>还提供NavigationControl，若需要地址搜索条，可以用<code>react-map-gl-geocoder</code>。</p>
+<h2 id="marker">Marker</h2>
+<p>Marker用来在地图上添加自定义图标，多个图标生成用<a href="https://reactjs.org/docs/lists-and-keys.html">React lists and keys</a>操作：</p>
+<pre><code>coordinates.map((coord, index) =&gt;
+  &lt;Marker key={index}
+    latitude={coord.latitude}
+    longitude={coord.longitude}
+    offsetLeft={0} offsetTop={0}&gt;
+    &lt;div&gt;icon here&lt;/div&gt;
+  &lt;/Marker&gt;
+)
+</code></pre><p>React用key区分、操作多个同类组件，<code>key</code>需要保证唯一，在以上例子中，若<code>coordinates</code>可以变，不能用<code>index</code>作为<code>key</code>，需要生成保证唯一的id作<code>key</code>。</p>
+<h2 id="layer">Layer</h2>
+<p>生成的地图是可以导出为图片的，但是Marker层面不行。若需要地图及Marker，一个解决办法是新增Layer层绘制Marker并导出然后从地图上移除Layer。Map需要添加属性<code>preserveDrawingBuffer</code>才能导出为图片。</p>
 
       </article>
       
@@ -156,7 +209,7 @@
   </div>
 </footer>
 
-<script src="/blog/bundle.js?v=1600093689"></script>
+<script src="/blog/bundle.js?v=1600145968"></script>
 
 
 </body>
