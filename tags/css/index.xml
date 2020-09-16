@@ -12,29 +12,29 @@
     
     
     <item>
-      <title>React 之CSS</title>
-      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</link>
+      <title>React 之 CSS</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</link>
       <pubDate>Sat, 12 Sep 2020 10:22:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</guid>
-      <description>Create React APP 中有一个添加CSS Normalize的语句，目的是让不同浏览器的样式更统一:
-/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React框架不自带sass，要使用sass需要安装node-sass。Github上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</guid>
+      <description>Create React APP 中有一个添加 CSS Normalize 的语句，目的是让不同浏览器的样式更统一:
+/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React 框架不自带 sass，要使用 sass 需要安装node-sass。Github 上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
 React直接安装使用dart-sass会报错。一个workaround是:
 yarn add node-sass@npm:dart-sass</description>
     </item>
     
     <item>
-      <title>Vue 之组件CSS</title>
-      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</link>
+      <title>Vue 之组件 CSS</title>
+      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6-css/</link>
       <pubDate>Sat, 05 Sep 2020 09:18:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</guid>
-      <description>在引用 Vue 组件中常遇到要更改组件CSS的情景，不管是自定义组件还是引用的库组件，都需要在正确范围内模块化的更改。下面讨论在引用自定义组件和 vuejs-datepicker 时更改CSS的做法。
+      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6-css/</guid>
+      <description>在引用 Vue 组件中常遇到要更改组件 CSS 的情景，不管是自定义组件还是引用的库组件，都需要在正确范围内模块化的更改。下面讨论在引用自定义组件和 vuejs-datepicker 时更改 CSS 的做法。
 自定义组件 假设组件&amp;quot;myDiv&amp;quot;的结构如下
-&amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;在引用这个组件时，若是直接将组件赋一个类，样式只会加在最外层的&amp;quot;wrapper&amp;quot;上，若需要提供灵活处理组件CSS的方法，可以考虑给类加上prefix:
+&amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;在引用这个组件时，若是直接将组件赋一个类，样式只会加在最外层的&amp;quot;wrapper&amp;quot;上，若需要提供灵活处理组件 CSS 的方法，可以考虑给类加上 prefix:
 &amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot; :class=&amp;quot;classPrefix &amp;amp;&amp;amp; `${classPrefix}-wrapper`&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot; :class=&amp;quot;classPrefix &amp;amp;&amp;amp; `${classPrefix}-content`&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;这样，在引用时，只需加上class-prefix=&amp;quot;custom&amp;quot;就可以通过custom-wrapper和custom-content类来覆盖原样式。
-vuejs-datepicker 根据vuejs-datepicker的documentation，组件提供两个prop来赋CSS类，分别是calendar-class和input-class来分别设置日历和输入所属的CSS类。值得注意的是，单一calendar-class的优先级低于原组件CSS，一个解决办法是赋予calendar-class两个类。例如
-&amp;lt;datepicker :language=&amp;quot;zh&amp;quot;calendar-class=&amp;quot;datepicker-css calendar-css&amp;quot; input-class=&amp;quot;input-css&amp;quot;&amp;gt;&amp;lt;/datepicker&amp;gt;在引用没有提供CSS类prop的组件时，可以考虑使用&amp;gt;&amp;gt;&amp;gt;或Sass中/deep/或::v-deep来准确选择。</description>
+vuejs-datepicker 根据 vuejs-datepicker 的 documentation，组件提供两个 prop 来赋 CSS 类，分别是calendar-class和input-class来分别设置日历和输入所属的 CSS 类。值得注意的是，单一calendar-class的优先级低于原组件CSS，一个解决办法是赋予calendar-class两个类。例如
+&amp;lt;datepicker :language=&amp;quot;zh&amp;quot;calendar-class=&amp;quot;datepicker-css calendar-css&amp;quot; input-class=&amp;quot;input-css&amp;quot;&amp;gt;&amp;lt;/datepicker&amp;gt;在引用没有提供 CSS 类 prop 的组件时，可以考虑使用&amp;gt;&amp;gt;&amp;gt;或Sass中/deep/或::v-deep来准确选择。</description>
     </item>
     
     <item>

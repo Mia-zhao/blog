@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>React 之CSS</title>
-      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</link>
+      <title>React 之 CSS</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</link>
       <pubDate>Sat, 12 Sep 2020 10:22:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</guid>
-      <description>Create React APP 中有一个添加CSS Normalize的语句，目的是让不同浏览器的样式更统一:
-/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React框架不自带sass，要使用sass需要安装node-sass。Github上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</guid>
+      <description>Create React APP 中有一个添加 CSS Normalize 的语句，目的是让不同浏览器的样式更统一:
+/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React 框架不自带 sass，要使用 sass 需要安装node-sass。Github 上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
 React直接安装使用dart-sass会报错。一个workaround是:
 yarn add node-sass@npm:dart-sass</description>
     </item>

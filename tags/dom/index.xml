@@ -6,10 +6,23 @@
     <description>Recent content in DOM on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 12 Aug 2020 14:10:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2020 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/tags/dom/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>虚拟 DOM 和 DOM Diff</title>
+      <link>https://Mia-zhao.github.io/blog/%E8%99%9A%E6%8B%9F-dom-%E5%92%8C-dom-diff/</link>
+      <pubDate>Wed, 16 Sep 2020 09:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/%E8%99%9A%E6%8B%9F-dom-%E5%92%8C-dom-diff/</guid>
+      <description>在 React 和 Vue 中，对于每一个 DOM 对象，有一个对应的虚拟 DOM (virtual DOM) 对象。React 和 Vue 对虚拟 DOM 对象的呈现语法不同，但代表的内容是一样的。
+开发者在 Vue 中使用 x-template，在 React 中使用 jsx，当渲染他们时，每一个虚拟 DOM 更新，React 和 Vue 则对比虚拟DOM以及旧版本虚拟 DOM 然后对改变了的 DOM 对象进行更新 (这个过程就是 DOM diff)。
+虚拟 DOM 是什么 以 Vue 为例，Vue 的模板接受代码&amp;lt;h1&amp;gt;{{ blogTitle }}&amp;lt;/h1&amp;gt;表示期望的h1标签内容，Vue 通过 createElement(&#39;h1&#39;, this.blogTitle) 建立 VNode 存储页面需要渲染的节点等信息。Vue 组件建立的整个 VNode 被称为虚拟 DOM。
+虚拟 DOM 的优点  快速
+虚拟 DOM 通过减少 DOM 操作达到快速渲染。相比较于 DOM 原生操作，虚拟 DOM 可以  将多个操作合并为一个操作 借助 DOM diff 省去多余操作   跨平台</description>
+    </item>
     
     <item>
       <title>DOM事件和事件委托</title>

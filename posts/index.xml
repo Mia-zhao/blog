@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 14 Sep 2020 11:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2020 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>虚拟 DOM 和 DOM Diff</title>
+      <link>https://Mia-zhao.github.io/blog/%E8%99%9A%E6%8B%9F-dom-%E5%92%8C-dom-diff/</link>
+      <pubDate>Wed, 16 Sep 2020 09:00:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/%E8%99%9A%E6%8B%9F-dom-%E5%92%8C-dom-diff/</guid>
+      <description>在 React 和 Vue 中，对于每一个 DOM 对象，有一个对应的虚拟 DOM (virtual DOM) 对象。React 和 Vue 对虚拟 DOM 对象的呈现语法不同，但代表的内容是一样的。
+开发者在 Vue 中使用 x-template，在 React 中使用 jsx，当渲染他们时，每一个虚拟 DOM 更新，React 和 Vue 则对比虚拟DOM以及旧版本虚拟 DOM 然后对改变了的 DOM 对象进行更新 (这个过程就是 DOM diff)。
+虚拟 DOM 是什么 以 Vue 为例，Vue 的模板接受代码&amp;lt;h1&amp;gt;{{ blogTitle }}&amp;lt;/h1&amp;gt;表示期望的h1标签内容，Vue 通过 createElement(&#39;h1&#39;, this.blogTitle) 建立 VNode 存储页面需要渲染的节点等信息。Vue 组件建立的整个 VNode 被称为虚拟 DOM。
+虚拟 DOM 的优点  快速
+虚拟 DOM 通过减少 DOM 操作达到快速渲染。相比较于 DOM 原生操作，虚拟 DOM 可以  将多个操作合并为一个操作 借助 DOM diff 省去多余操作   跨平台</description>
+    </item>
     
     <item>
       <title>React 之 Mapbox GL</title>
@@ -17,10 +30,9 @@
       <pubDate>Mon, 14 Sep 2020 11:00:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/</guid>
-      <description>Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从gallery里添加。在React项目里可以用react-map-gl库来创建和操作地图。
-Map Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对MapboxGL中Map的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。
-import {Component} from &#39;react&#39;;import ReactMapGL from &#39;react-map-gl&#39;;class Map extends Component {render() {return (&amp;lt;ReactMapGLwidth={400}height={400}latitude={37.7577}longitude={-122.4376}zoom={8}onViewportChange={(viewport) =&amp;gt; {const {width, height, latitude, longitude, zoom} = viewport;// call `setState` and use the state to update the map.}}/&amp;gt;);}}以上提供初始viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.innerHeight、width: window.innerWidth，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加resize监听可以及时更新地图宽高。
-componentDidMount() {window.addEventListener(&#39;resize&#39;, this.updateDimensions);}componentWillUnmount() {window.removeEventListener(&#39;resize&#39;, this.updateDimensions);}updateDimensions = () =&amp;gt; {this.</description>
+      <description>Mapbox GL JS 是一个用来生成地图的 JavaScript 库。要在项目里使用需要有 access token 和 mapbox style，token 需要在 mapbox 账号里创建，mapbox style 可以从gallery里添加。在 React 项目里可以用react-map-gl库来创建和操作地图。
+Map Map 对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对 MapboxGL 中 Map 的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。
+import {Component} from &#39;react&#39;;import ReactMapGL from &#39;react-map-gl&#39;;class Map extends Component {render() {return (&amp;lt;ReactMapGLwidth={400}height={400}latitude={37.7577}longitude={-122.4376}zoom={8}onViewportChange={(viewport) =&amp;gt; {const {width, height, latitude, longitude, zoom} = viewport;// call `setState` and use the state to update the map.}}/&amp;gt;);}}以上提供初始 viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.</description>
     </item>
     
     <item>
@@ -29,11 +41,10 @@ componentDidMount() {window.addEventListener(&#39;resize&#39;, this.updateDimen
       <pubDate>Sun, 13 Sep 2020 12:30:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/</guid>
-      <description>在Vue的组件中，CSS/SASS可以有scoped修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。
-styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。
+      <description>在 Vue 的组件中，CSS/SASS 可以有scoped修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。
+styled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。
 一个例子如下：
-const buttonWrapper = styled.div`position: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;gt; button &amp;gt; span {font-size: 20px;color: #FAFAFA;}`;const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components还可以用于React组件，例如：
-class A extends React.</description>
+const buttonWrapper = styled.div`position: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;gt; button &amp;gt; span {font-size: 20px;color: #FAFAFA;}`;const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components 还可以用于 React 组件，例如：</description>
     </item>
     
     <item>
@@ -42,20 +53,20 @@ class A extends React.</description>
       <pubDate>Sat, 12 Sep 2020 13:42:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-drag-vs-click/</guid>
-      <description>在写React Mapbox GL的旅行地图项目的时候遇到了关于Drag和Click事件难以区分的问题。在触屏上Drag和Click区分没有问题，然而在鼠标点击的Drag和Click事件上有些细节需要注意。
+      <description>在写 React Mapbox GL 的旅行地图项目的时候遇到了关于 Drag 和 Click 事件难以区分的问题。在触屏上 Drag 和 Click 区分没有问题，然而在鼠标点击的 Drag 和 Click 事件上有些细节需要注意。
 对于一个可以拖动的元素，可以监听的拖动事件有drag、dragStart、dragEnd，拖动结束时也会触发click事件并且dragEnd先于click事件发生。因此，需要将dragEnd以及click区分开。
 有以下几个思路：
- drag事件区别click于点击坐标是否变化，若坐标发生变化那么即使是click事件触发的也可以说是drag事件 同理增加一个值表示元素是否被拖动，若在拖动时触发click则是一个drag事件，要注意的是dragEnd早于click发生，所以在判断是否拖动时可能有race condition 用mousedown、mousemove、mouseup事件结合来判断是否是click，若是click事件那么mousemove不会被触发，判断的同时需要将click的事件处理机制移到mouseup中  </description>
+ drag事件区别click于点击坐标是否变化，若坐标发生变化那么即使是click事件触发的也可以说是drag事件 同理增加一个值表示元素是否被拖动，若在拖动时触发click则是一个drag事件，要注意的是dragEnd早于click发生，所以在判断是否拖动时可能有 race condition 用mousedown、mousemove、mouseup事件结合来判断是否是click，若是click事件那么mousemove不会被触发，判断的同时需要将click的事件处理机制移到mouseup中  </description>
     </item>
     
     <item>
-      <title>React 之CSS</title>
-      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</link>
+      <title>React 之 CSS</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</link>
       <pubDate>Sat, 12 Sep 2020 10:22:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</guid>
-      <description>Create React APP 中有一个添加CSS Normalize的语句，目的是让不同浏览器的样式更统一:
-/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React框架不自带sass，要使用sass需要安装node-sass。Github上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</guid>
+      <description>Create React APP 中有一个添加 CSS Normalize 的语句，目的是让不同浏览器的样式更统一:
+/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React 框架不自带 sass，要使用 sass 需要安装node-sass。Github 上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
 React直接安装使用dart-sass会报错。一个workaround是:
 yarn add node-sass@npm:dart-sass</description>
     </item>
@@ -66,7 +77,7 @@ yarn add node-sass@npm:dart-sass</description>
       <pubDate>Thu, 10 Sep 2020 12:40:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</guid>
-      <description>Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，v-model指令可以双向绑定数据且自动更新。
+      <description>Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，v-model指令可以双向绑定数据且自动更新。
 &amp;lt;input v-model=&amp;quot;message&amp;quot; placeholder=&amp;quot;edit me&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Message is: {{ message }}&amp;lt;/p&amp;gt;在这个例子中，任何输入数据会在p标签中实时更新。v-model=&amp;quot;message&amp;quot;等价于:value=&amp;quot;message&amp;quot; @input=&amp;quot;$emit(&#39;input&#39;, $event)&amp;quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。
 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令:
 Vue.directive(&#39;focus&#39;, {inserted: function (el) {el.focus()}})或者在局部组件里通过directives登记:
@@ -75,10 +86,10 @@ directives: {focus: {inserted: function (el) {el.focus()}}}这样在使�
     
     <item>
       <title>Vue 之Webpack配置</title>
-      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8Bwebpack%E9%85%8D%E7%BD%AE/</link>
+      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B-webpack%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Thu, 10 Sep 2020 11:40:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8Bwebpack%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B-webpack%E9%85%8D%E7%BD%AE/</guid>
       <description>配置 ts-loader 在 Vue 项目中，可以在TypeScript声明文件custom.d.ts里自定义对象类型，包括enum。定义enum在custom.d.ts能成功编译然而运行时Webpack会报错XXX is not defined。解决办法是在vue.config.js文件中配置 ts-loader, 以使用chainWebpack为例:
 const rule = config.module.rule(&#39;ts&#39;)rule.uses.delete(&#39;thread-loader&#39;)rule.use(&#39;ts-loader&#39;).loader(&#39;ts-loader&#39;).tap(options =&amp;gt; {options.transpileOnly = falseoptions.happyPackMode = falsereturn options;})配置 svg-sprite-loader 在 Vue 项目中可以使用img标签引入图片或图标，若有大量图需要引入，逐个提供路径很冗杂低效。若要用svg标签引入svg格式的图片或图标，则需要Webpack配置svg-sprite-loader。在vue.config.js中:
 const dir = path.resolve(__dirname, &#39;src/assets/icons&#39;)config.module.rule(&#39;svg-sprite&#39;).test(/\.svg$/).include.add(dir).end().use(&#39;svg-sprite-loader&#39;).loader(&#39;svg-sprite-loader&#39;).options({ extract: false }).end()config.plugin(&#39;svg-sprite&#39;).use(require(&#39;svg-sprite-loader/plugin&#39;, [{ plainSprite: true }]))config.module.rule(&#39;svg&#39;).exclude.add(dir)这样在使用时，只需提供svg图片的文件名而不是路径就能成功引入src/assets/icons目录下的所有svg文件。
@@ -87,17 +98,17 @@ const dir = path.resolve(__dirname, &#39;src/assets/icons&#39;)config.module.r
     </item>
     
     <item>
-      <title>Vue 之组件CSS</title>
-      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</link>
+      <title>Vue 之组件 CSS</title>
+      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6-css/</link>
       <pubDate>Sat, 05 Sep 2020 09:18:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</guid>
-      <description>在引用 Vue 组件中常遇到要更改组件CSS的情景，不管是自定义组件还是引用的库组件，都需要在正确范围内模块化的更改。下面讨论在引用自定义组件和 vuejs-datepicker 时更改CSS的做法。
+      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6-css/</guid>
+      <description>在引用 Vue 组件中常遇到要更改组件 CSS 的情景，不管是自定义组件还是引用的库组件，都需要在正确范围内模块化的更改。下面讨论在引用自定义组件和 vuejs-datepicker 时更改 CSS 的做法。
 自定义组件 假设组件&amp;quot;myDiv&amp;quot;的结构如下
-&amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;在引用这个组件时，若是直接将组件赋一个类，样式只会加在最外层的&amp;quot;wrapper&amp;quot;上，若需要提供灵活处理组件CSS的方法，可以考虑给类加上prefix:
+&amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;在引用这个组件时，若是直接将组件赋一个类，样式只会加在最外层的&amp;quot;wrapper&amp;quot;上，若需要提供灵活处理组件 CSS 的方法，可以考虑给类加上 prefix:
 &amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot; :class=&amp;quot;classPrefix &amp;amp;&amp;amp; `${classPrefix}-wrapper`&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot; :class=&amp;quot;classPrefix &amp;amp;&amp;amp; `${classPrefix}-content`&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;这样，在引用时，只需加上class-prefix=&amp;quot;custom&amp;quot;就可以通过custom-wrapper和custom-content类来覆盖原样式。
-vuejs-datepicker 根据vuejs-datepicker的documentation，组件提供两个prop来赋CSS类，分别是calendar-class和input-class来分别设置日历和输入所属的CSS类。值得注意的是，单一calendar-class的优先级低于原组件CSS，一个解决办法是赋予calendar-class两个类。例如
-&amp;lt;datepicker :language=&amp;quot;zh&amp;quot;calendar-class=&amp;quot;datepicker-css calendar-css&amp;quot; input-class=&amp;quot;input-css&amp;quot;&amp;gt;&amp;lt;/datepicker&amp;gt;在引用没有提供CSS类prop的组件时，可以考虑使用&amp;gt;&amp;gt;&amp;gt;或Sass中/deep/或::v-deep来准确选择。</description>
+vuejs-datepicker 根据 vuejs-datepicker 的 documentation，组件提供两个 prop 来赋 CSS 类，分别是calendar-class和input-class来分别设置日历和输入所属的 CSS 类。值得注意的是，单一calendar-class的优先级低于原组件CSS，一个解决办法是赋予calendar-class两个类。例如
+&amp;lt;datepicker :language=&amp;quot;zh&amp;quot;calendar-class=&amp;quot;datepicker-css calendar-css&amp;quot; input-class=&amp;quot;input-css&amp;quot;&amp;gt;&amp;lt;/datepicker&amp;gt;在引用没有提供 CSS 类 prop 的组件时，可以考虑使用&amp;gt;&amp;gt;&amp;gt;或Sass中/deep/或::v-deep来准确选择。</description>
     </item>
     
     <item>

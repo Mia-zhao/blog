@@ -11,8 +11,8 @@
   <link rel="icon" type="image/x-icon" href="/blog/">
   <link rel="apple-touch-icon" href="/blog/">
   <link rel="canonical" href="https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/">
-<link rel="preload" as="style" href="/blog/bundle.css?v=1600145968" media="all">
-<link rel="stylesheet" href="/blog/bundle.css?v=1600145968" media="all">
+<link rel="preload" as="style" href="/blog/bundle.css?v=1600258186" media="all">
+<link rel="stylesheet" href="/blog/bundle.css?v=1600258186" media="all">
 <style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}</style>
 
 
@@ -28,8 +28,8 @@
 <meta property="og:image:height" content="">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:description" content="Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，v-model指令可以双向绑定数据且自动更新。 &amp;lt;input v-model=&amp;quot;message&amp;quot; placeholder=&amp;quot;edit me&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Message is: {{ message }}&amp;lt;/p&amp;gt;在这个例子中，任何输入数据会在p标签中实时更新。v-model=&amp;quot;message&amp;quot;等价于:value=&amp;quot;message&amp;quot; @input=&amp;quot;$emit(&#39;input&#39;, $event)&amp;quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive(&#39;focus&#39;, {inserted: function (el) {el.focus()}})或者在局部组件里通过directives登记: directives: {focus: {inserted: function (el) {el.focus()}}}这样在使用时直接用v-focus指令。">
-<meta name="description" content="Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，v-model指令可以双向绑定数据且自动更新。 &amp;lt;input v-model=&amp;quot;message&amp;quot; placeholder=&amp;quot;edit me&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Message is: {{ message }}&amp;lt;/p&amp;gt;在这个例子中，任何输入数据会在p标签中实时更新。v-model=&amp;quot;message&amp;quot;等价于:value=&amp;quot;message&amp;quot; @input=&amp;quot;$emit(&#39;input&#39;, $event)&amp;quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive(&#39;focus&#39;, {inserted: function (el) {el.focus()}})或者在局部组件里通过directives登记: directives: {focus: {inserted: function (el) {el.focus()}}}这样在使用时直接用v-focus指令。">
+<meta property="og:description" content="Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，v-model指令可以双向绑定数据且自动更新。 &amp;lt;input v-model=&amp;quot;message&amp;quot; placeholder=&amp;quot;edit me&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Message is: {{ message }}&amp;lt;/p&amp;gt;在这个例子中，任何输入数据会在p标签中实时更新。v-model=&amp;quot;message&amp;quot;等价于:value=&amp;quot;message&amp;quot; @input=&amp;quot;$emit(&#39;input&#39;, $event)&amp;quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive(&#39;focus&#39;, {inserted: function (el) {el.focus()}})或者在局部组件里通过directives登记: directives: {focus: {inserted: function (el) {el.focus()}}}这样在使用时直接用v-focus指令。">
+<meta name="description" content="Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，v-model指令可以双向绑定数据且自动更新。 &amp;lt;input v-model=&amp;quot;message&amp;quot; placeholder=&amp;quot;edit me&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Message is: {{ message }}&amp;lt;/p&amp;gt;在这个例子中，任何输入数据会在p标签中实时更新。v-model=&amp;quot;message&amp;quot;等价于:value=&amp;quot;message&amp;quot; @input=&amp;quot;$emit(&#39;input&#39;, $event)&amp;quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive(&#39;focus&#39;, {inserted: function (el) {el.focus()}})或者在局部组件里通过directives登记: directives: {focus: {inserted: function (el) {el.focus()}}}这样在使用时直接用v-focus指令。">
 <meta property="og:updated_time" content="2020-09-10T12:40:00Z">
 <meta property="fb:app_id" content="">
 <meta name="author" content="Mia Zhao">
@@ -41,14 +41,14 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Vue 之自定义指令",
-  "alternativeHeadline": "Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，v-model指令可以双向绑定数据且自动更新。 \u0026lt;input v-model=\u0026quot;message\u0026quot; placeholder=\u0026quot;edit me\u0026quot;\u0026gt;\r\u0026lt;p\u0026gt;Message is: {{ message }}\u0026lt;/p\u0026gt;\r在这个例子中，任何输入数据会在p标签中实时更新。v-model=\u0026quot;message\u0026quot;等价于:value=\u0026quot;message\u0026quot; @input=\u0026quot;$emit('input', $event)\u0026quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive('focus', {\rinserted: function (el) {\rel.focus()\r}\r})\r或者在局部组件里通过directives登记: directives: {\rfocus: {\rinserted: function (el) {\rel.focus()\r}\r}\r}\r这样在使用时直接用v-focus指令。",
+  "alternativeHeadline": "Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，v-model指令可以双向绑定数据且自动更新。 \u0026lt;input v-model=\u0026quot;message\u0026quot; placeholder=\u0026quot;edit me\u0026quot;\u0026gt;\r\u0026lt;p\u0026gt;Message is: {{ message }}\u0026lt;/p\u0026gt;\r在这个例子中，任何输入数据会在p标签中实时更新。v-model=\u0026quot;message\u0026quot;等价于:value=\u0026quot;message\u0026quot; @input=\u0026quot;$emit('input', $event)\u0026quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive('focus', {\rinserted: function (el) {\rel.focus()\r}\r})\r或者在局部组件里通过directives登记: directives: {\rfocus: {\rinserted: function (el) {\rel.focus()\r}\r}\r}\r这样在使用时直接用v-focus指令。",
   "url": "https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/",
   "image": "https://Mia-zhao.github.io/blog/",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"
   },
-  "description": "Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，v-model指令可以双向绑定数据且自动更新。 \u0026lt;input v-model=\u0026quot;message\u0026quot; placeholder=\u0026quot;edit me\u0026quot;\u0026gt;\r\u0026lt;p\u0026gt;Message is: {{ message }}\u0026lt;/p\u0026gt;\r在这个例子中，任何输入数据会在p标签中实时更新。v-model=\u0026quot;message\u0026quot;等价于:value=\u0026quot;message\u0026quot; @input=\u0026quot;$emit('input', $event)\u0026quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive('focus', {\rinserted: function (el) {\rel.focus()\r}\r})\r或者在局部组件里通过directives登记: directives: {\rfocus: {\rinserted: function (el) {\rel.focus()\r}\r}\r}\r这样在使用时直接用v-focus指令。",
+  "description": "Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，v-model指令可以双向绑定数据且自动更新。 \u0026lt;input v-model=\u0026quot;message\u0026quot; placeholder=\u0026quot;edit me\u0026quot;\u0026gt;\r\u0026lt;p\u0026gt;Message is: {{ message }}\u0026lt;/p\u0026gt;\r在这个例子中，任何输入数据会在p标签中实时更新。v-model=\u0026quot;message\u0026quot;等价于:value=\u0026quot;message\u0026quot; @input=\u0026quot;$emit('input', $event)\u0026quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令: Vue.directive('focus', {\rinserted: function (el) {\rel.focus()\r}\r})\r或者在局部组件里通过directives登记: directives: {\rfocus: {\rinserted: function (el) {\rel.focus()\r}\r}\r}\r这样在使用时直接用v-focus指令。",
   "author": {
     "@type": "Person",
     "name": "Mia Zhao"
@@ -63,11 +63,11 @@
   },
   "datePublished": "2020-09-10T12:40:00Z",
   "dateModified": "2020-09-10T12:40:00Z",
-  "articleBody": "\u003cp\u003eVue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，\u003ccode\u003ev-model\u003c/code\u003e指令可以双向绑定数据且自动更新。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;input v-model=\u0026quot;message\u0026quot; placeholder=\u0026quot;edit me\u0026quot;\u0026gt;\r\n\u0026lt;p\u0026gt;Message is: {{ message }}\u0026lt;/p\u0026gt;\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e在这个例子中，任何输入数据会在\u003ccode\u003ep\u003c/code\u003e标签中实时更新。\u003ccode\u003ev-model=\u0026quot;message\u0026quot;\u003c/code\u003e等价于\u003ccode\u003e:value=\u0026quot;message\u0026quot; @input=\u0026quot;$emit('input', $event)\u0026quot;\u003c/code\u003e。除了\u003ccode\u003ev-model\u003c/code\u003e，Vue 还提供\u003ccode\u003ev-text\u003c/code\u003e、\u003ccode\u003ev-on\u003c/code\u003e、\u003ccode\u003ev-show\u003c/code\u003e、\u003ccode\u003ev-if\u003c/code\u003e等指令。\u003cbr\u003e\n\u003cbr\u003e\n除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eVue.directive('focus', {\r\n  inserted: function (el) {\r\n    el.focus()\r\n  }\r\n})\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e或者在局部组件里通过\u003ccode\u003edirectives\u003c/code\u003e登记:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edirectives: {\r\n  focus: {\r\n    inserted: function (el) {\r\n      el.focus()\r\n    }\r\n  }\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e这样在使用时直接用\u003ccode\u003ev-focus\u003c/code\u003e指令。\u003c/p\u003e"
+  "articleBody": "\u003cp\u003eVue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，\u003ccode\u003ev-model\u003c/code\u003e指令可以双向绑定数据且自动更新。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;input v-model=\u0026quot;message\u0026quot; placeholder=\u0026quot;edit me\u0026quot;\u0026gt;\r\n\u0026lt;p\u0026gt;Message is: {{ message }}\u0026lt;/p\u0026gt;\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e在这个例子中，任何输入数据会在\u003ccode\u003ep\u003c/code\u003e标签中实时更新。\u003ccode\u003ev-model=\u0026quot;message\u0026quot;\u003c/code\u003e等价于\u003ccode\u003e:value=\u0026quot;message\u0026quot; @input=\u0026quot;$emit('input', $event)\u0026quot;\u003c/code\u003e。除了\u003ccode\u003ev-model\u003c/code\u003e，Vue 还提供\u003ccode\u003ev-text\u003c/code\u003e、\u003ccode\u003ev-on\u003c/code\u003e、\u003ccode\u003ev-show\u003c/code\u003e、\u003ccode\u003ev-if\u003c/code\u003e等指令。\u003cbr\u003e\n\u003cbr\u003e\n除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eVue.directive('focus', {\r\n  inserted: function (el) {\r\n    el.focus()\r\n  }\r\n})\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e或者在局部组件里通过\u003ccode\u003edirectives\u003c/code\u003e登记:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edirectives: {\r\n  focus: {\r\n    inserted: function (el) {\r\n      el.focus()\r\n    }\r\n  }\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e这样在使用时直接用\u003ccode\u003ev-focus\u003c/code\u003e指令。\u003c/p\u003e"
 }
 </script>
 
-<link rel="preload" as="script" href="/blog/bundle.js?v=1600145968">
+<link rel="preload" as="script" href="/blog/bundle.js?v=1600258186">
 
 
 </head>
@@ -128,7 +128,7 @@
   </div><div class="ax-content ax-l-o">
     <div class="ax-l-i max-w-680">
       <article class="cdata">
-<p>Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，<code>v-model</code>指令可以双向绑定数据且自动更新。</p>
+<p>Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，<code>v-model</code>指令可以双向绑定数据且自动更新。</p>
 <pre><code>&lt;input v-model=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
 &lt;p&gt;Message is: {{ message }}&lt;/p&gt;
 </code></pre><p>在这个例子中，任何输入数据会在<code>p</code>标签中实时更新。<code>v-model=&quot;message&quot;</code>等价于<code>:value=&quot;message&quot; @input=&quot;$emit('input', $event)&quot;</code>。除了<code>v-model</code>，Vue 还提供<code>v-text</code>、<code>v-on</code>、<code>v-show</code>、<code>v-if</code>等指令。<br>
@@ -175,7 +175,7 @@
   </div>
 </footer>
 
-<script src="/blog/bundle.js?v=1600145968"></script>
+<script src="/blog/bundle.js?v=1600258186"></script>
 
 
 </body>

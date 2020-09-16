@@ -17,10 +17,9 @@
       <pubDate>Mon, 14 Sep 2020 11:00:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/</guid>
-      <description>Mapbox GL JS是一个用来生成地图的JavaScript库。要在项目里使用需要有access token和mapbox style，token需要在mapbox账号里创建，mapbox style可以从gallery里添加。在React项目里可以用react-map-gl库来创建和操作地图。
-Map Map对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对MapboxGL中Map的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。
-import {Component} from &#39;react&#39;;import ReactMapGL from &#39;react-map-gl&#39;;class Map extends Component {render() {return (&amp;lt;ReactMapGLwidth={400}height={400}latitude={37.7577}longitude={-122.4376}zoom={8}onViewportChange={(viewport) =&amp;gt; {const {width, height, latitude, longitude, zoom} = viewport;// call `setState` and use the state to update the map.}}/&amp;gt;);}}以上提供初始viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.innerHeight、width: window.innerWidth，但此时地图高宽并不随窗口变化而更新，需要页面刷新。添加resize监听可以及时更新地图宽高。
-componentDidMount() {window.addEventListener(&#39;resize&#39;, this.updateDimensions);}componentWillUnmount() {window.removeEventListener(&#39;resize&#39;, this.updateDimensions);}updateDimensions = () =&amp;gt; {this.</description>
+      <description>Mapbox GL JS 是一个用来生成地图的 JavaScript 库。要在项目里使用需要有 access token 和 mapbox style，token 需要在 mapbox 账号里创建，mapbox style 可以从gallery里添加。在 React 项目里可以用react-map-gl库来创建和操作地图。
+Map Map 对象代表页面中地图，自带可以更改地图的属性和方法，也能触发用户事件。在react-map-gl中，StaticMap和InteractiveMap是对 MapboxGL 中 Map 的封装，StaticMap用来生成没有互动的静态地图，若需要支持用户互动，则用InteractiveMap（库默认的导出）。
+import {Component} from &#39;react&#39;;import ReactMapGL from &#39;react-map-gl&#39;;class Map extends Component {render() {return (&amp;lt;ReactMapGLwidth={400}height={400}latitude={37.7577}longitude={-122.4376}zoom={8}onViewportChange={(viewport) =&amp;gt; {const {width, height, latitude, longitude, zoom} = viewport;// call `setState` and use the state to update the map.}}/&amp;gt;);}}以上提供初始 viewport，在onViewportChange中通过setState更新viewport来达到地图随缩放、移动而更新。目前高宽是固定的，若要全屏地图，可以设置height: window.</description>
     </item>
     
     <item>
@@ -29,11 +28,10 @@ componentDidMount() {window.addEventListener(&#39;resize&#39;, this.updateDimen
       <pubDate>Sun, 13 Sep 2020 12:30:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/</guid>
-      <description>在Vue的组件中，CSS/SASS可以有scoped修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。
-styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。
+      <description>在 Vue 的组件中，CSS/SASS 可以有scoped修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。
+styled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。
 一个例子如下：
-const buttonWrapper = styled.div`position: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;gt; button &amp;gt; span {font-size: 20px;color: #FAFAFA;}`;const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components还可以用于React组件，例如：
-class A extends React.</description>
+const buttonWrapper = styled.div`position: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;gt; button &amp;gt; span {font-size: 20px;color: #FAFAFA;}`;const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components 还可以用于 React 组件，例如：</description>
     </item>
     
     <item>
@@ -42,20 +40,20 @@ class A extends React.</description>
       <pubDate>Sat, 12 Sep 2020 13:42:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-drag-vs-click/</guid>
-      <description>在写React Mapbox GL的旅行地图项目的时候遇到了关于Drag和Click事件难以区分的问题。在触屏上Drag和Click区分没有问题，然而在鼠标点击的Drag和Click事件上有些细节需要注意。
+      <description>在写 React Mapbox GL 的旅行地图项目的时候遇到了关于 Drag 和 Click 事件难以区分的问题。在触屏上 Drag 和 Click 区分没有问题，然而在鼠标点击的 Drag 和 Click 事件上有些细节需要注意。
 对于一个可以拖动的元素，可以监听的拖动事件有drag、dragStart、dragEnd，拖动结束时也会触发click事件并且dragEnd先于click事件发生。因此，需要将dragEnd以及click区分开。
 有以下几个思路：
- drag事件区别click于点击坐标是否变化，若坐标发生变化那么即使是click事件触发的也可以说是drag事件 同理增加一个值表示元素是否被拖动，若在拖动时触发click则是一个drag事件，要注意的是dragEnd早于click发生，所以在判断是否拖动时可能有race condition 用mousedown、mousemove、mouseup事件结合来判断是否是click，若是click事件那么mousemove不会被触发，判断的同时需要将click的事件处理机制移到mouseup中  </description>
+ drag事件区别click于点击坐标是否变化，若坐标发生变化那么即使是click事件触发的也可以说是drag事件 同理增加一个值表示元素是否被拖动，若在拖动时触发click则是一个drag事件，要注意的是dragEnd早于click发生，所以在判断是否拖动时可能有 race condition 用mousedown、mousemove、mouseup事件结合来判断是否是click，若是click事件那么mousemove不会被触发，判断的同时需要将click的事件处理机制移到mouseup中  </description>
     </item>
     
     <item>
-      <title>React 之CSS</title>
-      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</link>
+      <title>React 之 CSS</title>
+      <link>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</link>
       <pubDate>Sat, 12 Sep 2020 10:22:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</guid>
-      <description>Create React APP 中有一个添加CSS Normalize的语句，目的是让不同浏览器的样式更统一:
-/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React框架不自带sass，要使用sass需要安装node-sass。Github上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
+      <guid>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</guid>
+      <description>Create React APP 中有一个添加 CSS Normalize 的语句，目的是让不同浏览器的样式更统一:
+/* 在index.css中加入: */@import-normalize;与 Vue 不同的是，React 框架不自带 sass，要使用 sass 需要安装node-sass。Github 上有不少关于node-sass和dart-sass的讨论，讨论的重点在于编译时间以及跨平台兼容性以及可靠性等问题。
 React直接安装使用dart-sass会报错。一个workaround是:
 yarn add node-sass@npm:dart-sass</description>
     </item>

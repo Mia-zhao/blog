@@ -11,8 +11,8 @@
   <link rel="icon" type="image/x-icon" href="/blog/">
   <link rel="apple-touch-icon" href="/blog/">
   <link rel="canonical" href="https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/">
-<link rel="preload" as="style" href="/blog/bundle.css?v=1600145968" media="all">
-<link rel="stylesheet" href="/blog/bundle.css?v=1600145968" media="all">
+<link rel="preload" as="style" href="/blog/bundle.css?v=1600258186" media="all">
+<link rel="stylesheet" href="/blog/bundle.css?v=1600258186" media="all">
 <style>.cdata pre{color:#edf2f7;background-color:#2d3748}.cdata :not(pre)>code{color:#805ad5;background-color:#f7fafc}.chroma .err{color:#fed7d7;background-color:#9b2c2c}.chroma .hl{background-color:#4a5568}.chroma .ln{color:#a0aec0}.chroma .k,.chroma .kc,.chroma .kd,.chroma .kn,.chroma .kp,.chroma .kr{color:#63b3ed}.chroma .kt{color:#b794f4}.chroma .na{color:#f6e05e}.chroma .nb{color:#f6ad55}.chroma .nc{color:#fc8181}.chroma .no{color:#68d391}.chroma .nd{color:#fc8181}.chroma .ne{color:#fc8181}.chroma .nf{color:#f6ad55}.chroma .nt{color:#fc8181}.chroma .l{color:#b794f4}.chroma .dl,.chroma .ld,.chroma .s,.chroma .s2,.chroma .sa,.chroma .sb,.chroma .sc,.chroma .sd{color:#68d391}.chroma .se{color:#a0aec0}.chroma .s1,.chroma .sh,.chroma .si,.chroma .sr,.chroma .ss,.chroma .sx{color:#68d391}.chroma .il,.chroma .m,.chroma .mb,.chroma .mf,.chroma .mh,.chroma .mi,.chroma .mo{color:#b794f4}.chroma .o,.chroma .ow{color:#90cdf4}.chroma .p{color:#cbd5e0}.chroma .c,.chroma .c1,.chroma .ch,.chroma .cm,.chroma .cp,.chroma .cpf,.chroma .cs{color:#a0aec0}.chroma .ge{font-style:italic}.chroma .gs{font-weight:700}</style>
 
 
@@ -28,8 +28,8 @@
 <meta property="og:image:height" content="">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:description" content="在Vue的组件中，CSS/SASS可以有scoped修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.divposition: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;amp;gt; button &amp;amp;gt; span {font-size: 20px;color: #FAFAFA;};const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components还可以用于React组件，例如： class A extends React.">
-<meta name="description" content="在Vue的组件中，CSS/SASS可以有scoped修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.divposition: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;amp;gt; button &amp;amp;gt; span {font-size: 20px;color: #FAFAFA;};const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components还可以用于React组件，例如： class A extends React.">
+<meta property="og:description" content="在 Vue 的组件中，CSS/SASS 可以有scoped修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.divposition: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;amp;gt; button &amp;amp;gt; span {font-size: 20px;color: #FAFAFA;};const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components 还可以用于 React 组件，例如：">
+<meta name="description" content="在 Vue 的组件中，CSS/SASS 可以有scoped修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.divposition: absolute;bottom: 30px;left: 30px;background: rgba(105, 163, 220, 0.8);border-radius: 4px;box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);&amp;amp;gt; button {border: none;background: transparent;padding: 8px;}&amp;amp;gt; button &amp;amp;gt; span {font-size: 20px;color: #FAFAFA;};const Button = () =&amp;gt; {return (&amp;lt;buttonWrapper&amp;gt;&amp;lt;button&amp;gt;&amp;lt;span&amp;gt;点击&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/buttonWrapper&amp;gt;);}除了用在div等基本标签上，styled components 还可以用于 React 组件，例如：">
 <meta property="og:updated_time" content="2020-09-13T12:30:00Z">
 <meta property="fb:app_id" content="">
 <meta name="author" content="Mia Zhao">
@@ -41,14 +41,14 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "React 之 Styled Components",
-  "alternativeHeadline": "在Vue的组件中，CSS/SASS可以有scoped修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.div\rposition: absolute;\rbottom: 30px;\rleft: 30px;\rbackground: rgba(105, 163, 220, 0.8);\rborder-radius: 4px;\rbox-shadow: 0 0 3px rgba(0, 0, 0, 0.4);\r\u0026amp;gt; button {\rborder: none;\rbackground: transparent;\rpadding: 8px;\r}\r\u0026amp;gt; button \u0026amp;gt; span {\rfont-size: 20px;\rcolor: #FAFAFA;\r}\r;\rconst Button = () =\u0026gt; {\rreturn (\r\u0026lt;buttonWrapper\u0026gt;\r\u0026lt;button\u0026gt;\r\u0026lt;span\u0026gt;点击\u0026lt;/span\u0026gt;\r\u0026lt;/button\u0026gt;\r\u0026lt;/buttonWrapper\u0026gt;\r);\r}\r除了用在div等基本标签上，styled components还可以用于React组件，例如： class A extends React.",
+  "alternativeHeadline": "在 Vue 的组件中，CSS/SASS 可以有scoped修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.div\rposition: absolute;\rbottom: 30px;\rleft: 30px;\rbackground: rgba(105, 163, 220, 0.8);\rborder-radius: 4px;\rbox-shadow: 0 0 3px rgba(0, 0, 0, 0.4);\r\u0026amp;gt; button {\rborder: none;\rbackground: transparent;\rpadding: 8px;\r}\r\u0026amp;gt; button \u0026amp;gt; span {\rfont-size: 20px;\rcolor: #FAFAFA;\r}\r;\rconst Button = () =\u0026gt; {\rreturn (\r\u0026lt;buttonWrapper\u0026gt;\r\u0026lt;button\u0026gt;\r\u0026lt;span\u0026gt;点击\u0026lt;/span\u0026gt;\r\u0026lt;/button\u0026gt;\r\u0026lt;/buttonWrapper\u0026gt;\r);\r}\r除了用在div等基本标签上，styled components 还可以用于 React 组件，例如：",
   "url": "https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/",
   "image": "https://Mia-zhao.github.io/blog/",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://Mia-zhao.github.io/blog/react-%E4%B9%8B-styled-components/"
   },
-  "description": "在Vue的组件中，CSS/SASS可以有scoped修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.div\rposition: absolute;\rbottom: 30px;\rleft: 30px;\rbackground: rgba(105, 163, 220, 0.8);\rborder-radius: 4px;\rbox-shadow: 0 0 3px rgba(0, 0, 0, 0.4);\r\u0026amp;gt; button {\rborder: none;\rbackground: transparent;\rpadding: 8px;\r}\r\u0026amp;gt; button \u0026amp;gt; span {\rfont-size: 20px;\rcolor: #FAFAFA;\r}\r;\rconst Button = () =\u0026gt; {\rreturn (\r\u0026lt;buttonWrapper\u0026gt;\r\u0026lt;button\u0026gt;\r\u0026lt;span\u0026gt;点击\u0026lt;/span\u0026gt;\r\u0026lt;/button\u0026gt;\r\u0026lt;/buttonWrapper\u0026gt;\r);\r}\r除了用在div等基本标签上，styled components还可以用于React组件，例如： class A extends React.",
+  "description": "在 Vue 的组件中，CSS/SASS 可以有scoped修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成tsx/jsx以及独立的css，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。 styled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。 一个例子如下： const buttonWrapper = styled.div\rposition: absolute;\rbottom: 30px;\rleft: 30px;\rbackground: rgba(105, 163, 220, 0.8);\rborder-radius: 4px;\rbox-shadow: 0 0 3px rgba(0, 0, 0, 0.4);\r\u0026amp;gt; button {\rborder: none;\rbackground: transparent;\rpadding: 8px;\r}\r\u0026amp;gt; button \u0026amp;gt; span {\rfont-size: 20px;\rcolor: #FAFAFA;\r}\r;\rconst Button = () =\u0026gt; {\rreturn (\r\u0026lt;buttonWrapper\u0026gt;\r\u0026lt;button\u0026gt;\r\u0026lt;span\u0026gt;点击\u0026lt;/span\u0026gt;\r\u0026lt;/button\u0026gt;\r\u0026lt;/buttonWrapper\u0026gt;\r);\r}\r除了用在div等基本标签上，styled components 还可以用于 React 组件，例如：",
   "author": {
     "@type": "Person",
     "name": "Mia Zhao"
@@ -63,11 +63,11 @@
   },
   "datePublished": "2020-09-13T12:30:00Z",
   "dateModified": "2020-09-13T12:30:00Z",
-  "articleBody": "\u003cp\u003e在Vue的组件中，CSS/SASS可以有\u003ccode\u003escoped\u003c/code\u003e修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成\u003ccode\u003etsx\u003c/code\u003e/\u003ccode\u003ejsx\u003c/code\u003e以及独立的\u003ccode\u003ecss\u003c/code\u003e，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。\u003cbr\u003e\n\u003cbr\u003e\nstyled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。\u003cbr\u003e\n\u003cbr\u003e\n一个例子如下：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003econst buttonWrapper = styled.div`\r\n  position: absolute;\r\n  bottom: 30px;\r\n  left: 30px;\r\n  background: rgba(105, 163, 220, 0.8);\r\n  border-radius: 4px;\r\n  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);\r\n  \u0026gt; button {\r\n    border: none;\r\n    background: transparent;\r\n    padding: 8px;\r\n  }\r\n  \u0026gt; button \u0026gt; span {\r\n    font-size: 20px;\r\n    color: #FAFAFA;\r\n  }\r\n`;\r\nconst Button = () =\u0026gt; {\r\n  return (\r\n    \u0026lt;buttonWrapper\u0026gt;\r\n      \u0026lt;button\u0026gt;\r\n        \u0026lt;span\u0026gt;点击\u0026lt;/span\u0026gt;\r\n      \u0026lt;/button\u0026gt;\r\n    \u0026lt;/buttonWrapper\u0026gt;\r\n  );\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e除了用在\u003ccode\u003ediv\u003c/code\u003e等基本标签上，styled components还可以用于React组件，例如：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eclass A extends React.Component {\r\n  render() {\r\n    return \u0026lt;div className={this.props.className} /\u0026gt;\r\n  }\r\n}\r\n\r\nconst StyledA = styled(A)``\r\n\r\nconst B = styled.div`\r\n  ${StyledA} {\r\n  }\r\n`\r\n\u003c/code\u003e\u003c/pre\u003e"
+  "articleBody": "\u003cp\u003e在 Vue 的组件中，CSS/SASS 可以有\u003ccode\u003escoped\u003c/code\u003e修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成\u003ccode\u003etsx\u003c/code\u003e/\u003ccode\u003ejsx\u003c/code\u003e以及独立的\u003ccode\u003ecss\u003c/code\u003e，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。\u003cbr\u003e\n\u003cbr\u003e\nstyled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。\u003cbr\u003e\n\u003cbr\u003e\n一个例子如下：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003econst buttonWrapper = styled.div`\r\n  position: absolute;\r\n  bottom: 30px;\r\n  left: 30px;\r\n  background: rgba(105, 163, 220, 0.8);\r\n  border-radius: 4px;\r\n  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);\r\n  \u0026gt; button {\r\n    border: none;\r\n    background: transparent;\r\n    padding: 8px;\r\n  }\r\n  \u0026gt; button \u0026gt; span {\r\n    font-size: 20px;\r\n    color: #FAFAFA;\r\n  }\r\n`;\r\nconst Button = () =\u0026gt; {\r\n  return (\r\n    \u0026lt;buttonWrapper\u0026gt;\r\n      \u0026lt;button\u0026gt;\r\n        \u0026lt;span\u0026gt;点击\u0026lt;/span\u0026gt;\r\n      \u0026lt;/button\u0026gt;\r\n    \u0026lt;/buttonWrapper\u0026gt;\r\n  );\r\n}\r\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003e除了用在\u003ccode\u003ediv\u003c/code\u003e等基本标签上，styled components 还可以用于 React 组件，例如：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eclass A extends React.Component {\r\n  render() {\r\n    return \u0026lt;div className={this.props.className} /\u0026gt;\r\n  }\r\n}\r\n\r\nconst StyledA = styled(A)``\r\n\r\nconst B = styled.div`\r\n  ${StyledA} {\r\n  }\r\n`\r\n\u003c/code\u003e\u003c/pre\u003e"
 }
 </script>
 
-<link rel="preload" as="script" href="/blog/bundle.js?v=1600145968">
+<link rel="preload" as="script" href="/blog/bundle.js?v=1600258186">
 
 
 </head>
@@ -128,9 +128,9 @@
   </div><div class="ax-content ax-l-o">
     <div class="ax-l-i max-w-680">
       <article class="cdata">
-<p>在Vue的组件中，CSS/SASS可以有<code>scoped</code>修饰并且样式与HTML处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React的模板生成<code>tsx</code>/<code>jsx</code>以及独立的<code>css</code>，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。<br>
+<p>在 Vue 的组件中，CSS/SASS 可以有<code>scoped</code>修饰并且样式与 HTML 处于同一文件中，这样对于组件的抽离及样式分析都较为清晰明了。React 的模板生成<code>tsx</code>/<code>jsx</code>以及独立的<code>css</code>，虽然可以通过文件名以及文件结构区分不同模块的样式，然而大量样式代码以及类命名的存在使组件的结构不那么直观。<br>
 <br>
-styled components能够解决以上问题，在CSS和模块处于同一文件的同时，去掉了不必要的样式类命名。<br>
+styled components 能够解决以上问题，在 CSS 和模块处于同一文件的同时，去掉了不必要的样式类命名。<br>
 <br>
 一个例子如下：</p>
 <pre><code>const buttonWrapper = styled.div`
@@ -159,7 +159,7 @@ const Button = () =&gt; {
     &lt;/buttonWrapper&gt;
   );
 }
-</code></pre><p>除了用在<code>div</code>等基本标签上，styled components还可以用于React组件，例如：</p>
+</code></pre><p>除了用在<code>div</code>等基本标签上，styled components 还可以用于 React 组件，例如：</p>
 <pre><code>class A extends React.Component {
   render() {
     return &lt;div className={this.props.className} /&gt;
@@ -199,7 +199,7 @@ const B = styled.div`
   </div>
 </footer>
 
-<script src="/blog/bundle.js?v=1600145968"></script>
+<script src="/blog/bundle.js?v=1600258186"></script>
 
 
 </body>

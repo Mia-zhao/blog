@@ -2,15 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://Mia-zhao.github.io/blog/categories/</loc>
-    <lastmod>2020-09-14T11:00:00Z</lastmod>
+    <lastmod>2020-09-16T09:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/dom/</loc>
+    <lastmod>2020-09-16T09:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/dom/</loc>
+    <lastmod>2020-09-16T09:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/</loc>
-    <lastmod>2020-09-14T11:00:00Z</lastmod>
+    <lastmod>2020-09-16T09:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/posts/</loc>
-    <lastmod>2020-09-14T11:00:00Z</lastmod>
+    <lastmod>2020-09-16T09:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
+    <lastmod>2020-09-16T09:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/%E8%99%9A%E6%8B%9F-dom-%E5%92%8C-dom-diff/</loc>
+    <lastmod>2020-09-16T09:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/tags/react/</loc>
@@ -22,10 +38,6 @@
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-mabox-gl/</loc>
-    <lastmod>2020-09-14T11:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
     <lastmod>2020-09-14T11:00:00Z</lastmod>
   </url>
   <url>
@@ -45,7 +57,7 @@
     <lastmod>2020-09-12T10:22:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8Bcss/</loc>
+    <loc>https://Mia-zhao.github.io/blog/react-%E4%B9%8B-css/</loc>
     <lastmod>2020-09-12T10:22:00Z</lastmod>
   </url>
   <url>
@@ -57,11 +69,11 @@
     <lastmod>2020-09-10T12:40:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/vue-%E4%B9%8Bwebpack%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B-webpack%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2020-09-10T11:40:00Z</lastmod>
   </url>
   <url>
-    <loc>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</loc>
+    <loc>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6-css/</loc>
     <lastmod>2020-09-05T09:18:00Z</lastmod>
   </url>
   <url>
@@ -75,14 +87,6 @@
   <url>
     <loc>https://Mia-zhao.github.io/blog/%E6%B5%85%E6%9E%90-mvc/</loc>
     <lastmod>2020-08-21T15:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/dom/</loc>
-    <lastmod>2020-08-12T14:10:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/categories/dom/</loc>
-    <lastmod>2020-08-12T14:10:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/dom%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</loc>

@@ -17,7 +17,7 @@
       <pubDate>Thu, 10 Sep 2020 12:40:00 +0000</pubDate>
       
       <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</guid>
-      <description>Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input为例，v-model指令可以双向绑定数据且自动更新。
+      <description>Vue 框架提供数据绑定给接受输入的标签（如: input, select 等等）。以 input 为例，v-model指令可以双向绑定数据且自动更新。
 &amp;lt;input v-model=&amp;quot;message&amp;quot; placeholder=&amp;quot;edit me&amp;quot;&amp;gt;&amp;lt;p&amp;gt;Message is: {{ message }}&amp;lt;/p&amp;gt;在这个例子中，任何输入数据会在p标签中实时更新。v-model=&amp;quot;message&amp;quot;等价于:value=&amp;quot;message&amp;quot; @input=&amp;quot;$emit(&#39;input&#39;, $event)&amp;quot;。除了v-model，Vue 还提供v-text、v-on、v-show、v-if等指令。
 除以上提供指令，Vue 还支持自定义指令。例如可以定义一个全局自定义指令:
 Vue.directive(&#39;focus&#39;, {inserted: function (el) {el.focus()}})或者在局部组件里通过directives登记:
@@ -26,10 +26,10 @@ directives: {focus: {inserted: function (el) {el.focus()}}}这样在使�
     
     <item>
       <title>Vue 之Webpack配置</title>
-      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8Bwebpack%E9%85%8D%E7%BD%AE/</link>
+      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B-webpack%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Thu, 10 Sep 2020 11:40:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8Bwebpack%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B-webpack%E9%85%8D%E7%BD%AE/</guid>
       <description>配置 ts-loader 在 Vue 项目中，可以在TypeScript声明文件custom.d.ts里自定义对象类型，包括enum。定义enum在custom.d.ts能成功编译然而运行时Webpack会报错XXX is not defined。解决办法是在vue.config.js文件中配置 ts-loader, 以使用chainWebpack为例:
 const rule = config.module.rule(&#39;ts&#39;)rule.uses.delete(&#39;thread-loader&#39;)rule.use(&#39;ts-loader&#39;).loader(&#39;ts-loader&#39;).tap(options =&amp;gt; {options.transpileOnly = falseoptions.happyPackMode = falsereturn options;})配置 svg-sprite-loader 在 Vue 项目中可以使用img标签引入图片或图标，若有大量图需要引入，逐个提供路径很冗杂低效。若要用svg标签引入svg格式的图片或图标，则需要Webpack配置svg-sprite-loader。在vue.config.js中:
 const dir = path.resolve(__dirname, &#39;src/assets/icons&#39;)config.module.rule(&#39;svg-sprite&#39;).test(/\.svg$/).include.add(dir).end().use(&#39;svg-sprite-loader&#39;).loader(&#39;svg-sprite-loader&#39;).options({ extract: false }).end()config.plugin(&#39;svg-sprite&#39;).use(require(&#39;svg-sprite-loader/plugin&#39;, [{ plainSprite: true }]))config.module.rule(&#39;svg&#39;).exclude.add(dir)这样在使用时，只需提供svg图片的文件名而不是路径就能成功引入src/assets/icons目录下的所有svg文件。
@@ -38,17 +38,17 @@ const dir = path.resolve(__dirname, &#39;src/assets/icons&#39;)config.module.r
     </item>
     
     <item>
-      <title>Vue 之组件CSS</title>
-      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</link>
+      <title>Vue 之组件 CSS</title>
+      <link>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6-css/</link>
       <pubDate>Sat, 05 Sep 2020 09:18:00 +0000</pubDate>
       
-      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6css/</guid>
-      <description>在引用 Vue 组件中常遇到要更改组件CSS的情景，不管是自定义组件还是引用的库组件，都需要在正确范围内模块化的更改。下面讨论在引用自定义组件和 vuejs-datepicker 时更改CSS的做法。
+      <guid>https://Mia-zhao.github.io/blog/vue-%E4%B9%8B%E7%BB%84%E4%BB%B6-css/</guid>
+      <description>在引用 Vue 组件中常遇到要更改组件 CSS 的情景，不管是自定义组件还是引用的库组件，都需要在正确范围内模块化的更改。下面讨论在引用自定义组件和 vuejs-datepicker 时更改 CSS 的做法。
 自定义组件 假设组件&amp;quot;myDiv&amp;quot;的结构如下
-&amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;在引用这个组件时，若是直接将组件赋一个类，样式只会加在最外层的&amp;quot;wrapper&amp;quot;上，若需要提供灵活处理组件CSS的方法，可以考虑给类加上prefix:
+&amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;在引用这个组件时，若是直接将组件赋一个类，样式只会加在最外层的&amp;quot;wrapper&amp;quot;上，若需要提供灵活处理组件 CSS 的方法，可以考虑给类加上 prefix:
 &amp;lt;template&amp;gt;&amp;lt;div class=&amp;quot;wrapper&amp;quot; :class=&amp;quot;classPrefix &amp;amp;&amp;amp; `${classPrefix}-wrapper`&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;content&amp;quot; :class=&amp;quot;classPrefix &amp;amp;&amp;amp; `${classPrefix}-content`&amp;quot;&amp;gt;&amp;lt;slot /&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;这样，在引用时，只需加上class-prefix=&amp;quot;custom&amp;quot;就可以通过custom-wrapper和custom-content类来覆盖原样式。
-vuejs-datepicker 根据vuejs-datepicker的documentation，组件提供两个prop来赋CSS类，分别是calendar-class和input-class来分别设置日历和输入所属的CSS类。值得注意的是，单一calendar-class的优先级低于原组件CSS，一个解决办法是赋予calendar-class两个类。例如
-&amp;lt;datepicker :language=&amp;quot;zh&amp;quot;calendar-class=&amp;quot;datepicker-css calendar-css&amp;quot; input-class=&amp;quot;input-css&amp;quot;&amp;gt;&amp;lt;/datepicker&amp;gt;在引用没有提供CSS类prop的组件时，可以考虑使用&amp;gt;&amp;gt;&amp;gt;或Sass中/deep/或::v-deep来准确选择。</description>
+vuejs-datepicker 根据 vuejs-datepicker 的 documentation，组件提供两个 prop 来赋 CSS 类，分别是calendar-class和input-class来分别设置日历和输入所属的 CSS 类。值得注意的是，单一calendar-class的优先级低于原组件CSS，一个解决办法是赋予calendar-class两个类。例如
+&amp;lt;datepicker :language=&amp;quot;zh&amp;quot;calendar-class=&amp;quot;datepicker-css calendar-css&amp;quot; input-class=&amp;quot;input-css&amp;quot;&amp;gt;&amp;lt;/datepicker&amp;gt;在引用没有提供 CSS 类 prop 的组件时，可以考虑使用&amp;gt;&amp;gt;&amp;gt;或Sass中/deep/或::v-deep来准确选择。</description>
     </item>
     
   </channel>
