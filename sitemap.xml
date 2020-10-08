@@ -2,7 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://Mia-zhao.github.io/blog/categories/</loc>
-    <lastmod>2020-09-16T09:00:00Z</lastmod>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/posts/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/vue-3/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/vue-3/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/vue-3-%E4%B9%8B-i18n/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/tags/vue-i18n/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Mia-zhao.github.io/blog/categories/vue-i18n/</loc>
+    <lastmod>2020-10-07T04:20:00Z</lastmod>
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/tags/dom/</loc>
@@ -10,18 +42,6 @@
   </url>
   <url>
     <loc>https://Mia-zhao.github.io/blog/categories/dom/</loc>
-    <lastmod>2020-09-16T09:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/</loc>
-    <lastmod>2020-09-16T09:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/posts/</loc>
-    <lastmod>2020-09-16T09:00:00Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Mia-zhao.github.io/blog/tags/</loc>
     <lastmod>2020-09-16T09:00:00Z</lastmod>
   </url>
   <url>

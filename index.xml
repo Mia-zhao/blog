@@ -6,10 +6,23 @@
     <description>Recent content in Mia&#39;s Blogs on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 16 Sep 2020 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2020 04:20:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue 3 之 i18n</title>
+      <link>https://Mia-zhao.github.io/blog/vue-3-%E4%B9%8B-i18n/</link>
+      <pubDate>Wed, 07 Oct 2020 04:20:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/vue-3-%E4%B9%8B-i18n/</guid>
+      <description>vue-i18n为 Vue 提供 i18n (internationalization) 插件支持，在 Vue 3 中使用 vue-i18n 对比 Vue 2 稍有不同。
+安装 需要安装支持 Vue 3 的插件版本npm install vue-i18n@next或者yarn add vue-i18n@next。
+使用 在main.js/main.ts同一路径下创建i18n.js/i18n.ts:
+import { createI18n } from &#39;vue-i18n&#39;const i18n = createI18n({locale: &#39;zh&#39;,messages: {en: {message: {hello: &#39;Hello&#39;}},zh: {message: {hello: &#39;你好&#39;}}}})export default i18n在main.js/main.ts中:
+import { createApp } from &#39;vue&#39;import App from &#39;.</description>
+    </item>
     
     <item>
       <title>虚拟 DOM 和 DOM Diff</title>

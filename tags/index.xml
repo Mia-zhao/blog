@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Mia&#39;s Blog Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 16 Sep 2020 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2020 04:20:00 +0000</lastBuildDate>
     
 	<atom:link href="https://Mia-zhao.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue 3</title>
+      <link>https://Mia-zhao.github.io/blog/tags/vue-3/</link>
+      <pubDate>Wed, 07 Oct 2020 04:20:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/vue-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue-i18n</title>
+      <link>https://Mia-zhao.github.io/blog/tags/vue-i18n/</link>
+      <pubDate>Wed, 07 Oct 2020 04:20:00 +0000</pubDate>
+      
+      <guid>https://Mia-zhao.github.io/blog/tags/vue-i18n/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>DOM</title>
